@@ -15,7 +15,6 @@ const UserMapPage = () => {
                 <div className='theTrackingDetails'>
                     <div className='productDetails'>
                         <h5>Product details</h5>
-                        <h6>name</h6>
                         <p>Iphone 11</p>
                     </div>
                     <div className='theTrackingDetailsDivider'></div>
