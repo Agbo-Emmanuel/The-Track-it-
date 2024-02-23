@@ -1,0 +1,216 @@
+.tractPage{
+    width: 100%;
+    height: 450px;
+    background-color: #FAF5EC;
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+}
+.trackpageTrack{
+    width: 100%;
+    height: 269px;
+    background-color: #F2F0F0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.trackpageTrack > h1{
+    font-family: Arial;
+    font-size: 30px;
+    font-weight: 600;
+}
+.trackpart{
+    width: 50%;
+    height: 25%;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.trackpart >input{
+    width: 80%;
+    height: 100%;
+    outline: none;
+    padding-left: 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.trackPageTrackBtn{
+    width: 20%;
+    height: 100%;
+    background-color: #FFA500;
+    border-radius: 6px;
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    cursor: pointer;
+}
+.trackPageTrackBtn:hover{
+    background-color: #f09c00;
+    color: rgb(239, 239, 239);
+
+}
+
+.tractPageFooter{
+    width: 100%;
+    height: 400px;
+    background-color: #1F1F1F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.tractPageFooterTop{
+    width: 80%;
+    height: 30%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+.tractPageFooterTop > h5{
+    font-size: 25px;
+    font-family: 'Arial';
+    color: whitesmoke;
+}
+.tractPageFooterTop > p{
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Arial';
+    color: whitesmoke;
+}
+.tractPageFooterCenter{
+    width: 80%;
+    height: 50%;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tractPageFooterCenterLogo{
+    width: 15%;
+    height: 60%;
+    /* background-color: green; */
+}
+.tractPageFooterCenterLogo > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.tractPageFooterCenterText{
+    width: 60%;
+    height: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 30px;
+}
+.tractPageFooterCompany{
+    width: 30%;
+    height: 100%;
+    /* background-color: orange; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.tractPageFooterLink{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+.tractPageFooterLink:hover{
+    color: orange;
+}
+.tractPageFooterSocialMedia{
+    width: 40%;
+    height: 100%;
+    /* background-color: orange; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.tractPageFooterSocialMedia > h6{
+    font-size: 20px;
+    color: whitesmoke;
+}
+.socialMediaImg{
+    width: 100%;
+    height: 50px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.facebook{
+    width: 15%;
+    height: 70%;
+    /* background-color: blue; */
+}
+.facebook > img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.twitter{
+    width: 15%;
+    height: 70%;
+    /* background-color: blue; */
+}
+.twitter > img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.instagram{
+    width: 15%;
+    height: 70%;
+    /* background-color: blue; */
+}
+.instagram > img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.getStarted{
+    width: 20%;
+    height: 50px;
+    background-color: #FFA500;
+    border: none;
+    border-radius: 6px;
+    color: black;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tractPageFooterButton:hover{
+    color: rgb(230, 230, 230);
+    background-color: #f5a003;
+}
+.tractPageFooterBottom{
+    width: 100%;
+    height: 20%;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tractPageFooterLine{
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    margin-top: 30px;
+}
+.tractPageFooterBottom > p{
+    color: white;
+    font-size: 15px;
+    margin-top: 20px;
+}

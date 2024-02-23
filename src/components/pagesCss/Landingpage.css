@@ -1,0 +1,597 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.Landingpage{
+    width: 100%;
+    height: auto;
+    background-color: #FAF5EC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.landingHeader{
+    width: 100%;
+    height: 80px;
+    background-color: #FFD996;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 9999999999;
+    top: 0px;
+}
+.landingHeaderHolder{
+    width: 85%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.leftHeader{
+    width: 10%;
+    height: 100%;
+    /* background-color: red; */
+}
+.leftHeader > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.rightHeader{
+    width: 50%;
+    height: 100%;
+    /* background-color: green; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.headerNavMenu{
+    width: 70%;
+    height: 100%;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.active{
+    text-decoration: none;
+    color: orange;
+}
+.notactive{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+.getStartedButton{
+    width: 20%;
+    height: 50%;
+    background-color: #FFA500;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.getStartedButton:hover{
+    background-color: #faa404;
+}
+
+.heroSection{
+    width: 85%;
+    height: 500px;
+    border-right: 1px solid #FFA500;  
+    border-bottom: 1px solid #FFA500;  
+    display: flex;
+}
+.heroSectionLeft{
+    width: 50%;
+    height: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.heroSectionRight{
+    width: 50%;
+    height: 100%;
+    /* background-color: green; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.heroText{
+    width: 100%;
+    height: 50%;
+    /* background-color: yellow; */
+}
+.heroText > h1{
+    font-size: 60px;
+    font-family: Lora
+}
+.heroText > h1 > span{
+    color: #FFA500;
+}
+.heroText > h6{
+    font-size: 18px;
+    font-family: Lora;
+    margin-top: 10px;
+    color: #8A8C8F;
+}
+
+.heroSectionButton{
+    width: 30%;
+    height: 50px;
+    background-color: #FFA500;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.heroSectionButton:hover{
+    background-color: #ee9c03;
+}
+.heroSectionImg{
+    width: 80%;
+    height: 90%;
+    /* background-color: red; */
+}
+.heroSectionImg > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section2{
+    width: 85%;
+    height: 350px;
+    background-color: #C5C1C6;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    display: flex;
+}
+.section2Left{
+    width: 50%;
+    height: 100%;
+    /* background-color: yellow;c */
+}
+.section2Left > img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.section2Right{
+    width: 50%;
+    height: 100%;
+    background-color: #FFA500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section2Right > p{
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.section3{
+    width: 85%;
+    height: 350px;
+    background-color: #FAF8F9;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.section3Left{
+    width: 50%;
+    height: 100%;
+    /* background-color: yellow;c */
+}
+.section3Left > img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.section3Right{
+    width: 50%;
+    height: 100%;
+    /* background-color: #FFA500; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section3Text{
+    width: 90%;
+    height: 80%;
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.section3Text > h1{
+    font-size: 40px;
+    font-family: 'Segoe UI';
+}
+.section3Text > p{
+    font-size: 18px;
+    font-family: 'Segoe UI';
+    font-weight: 500;
+    margin-bottom: 40px;
+    margin-top: 15px;
+}
+.section3Text > p > span{
+    color: orange;
+    cursor: pointer;
+}
+
+.section4{
+    width: 100%;
+    height: 400px;
+    background-color: #FFA500;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.section4Left{
+    width: 20%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.section4LeftTop{
+    width: 90%;
+    height: 40%;
+    /* background-color: blue; */
+    margin-top: 10px;
+}
+.section4LeftTop > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.section4LeftBottom{
+    width: 90%;
+    height: 40%;
+    /* background-color: blue; */
+    margin-bottom: 10px;
+}
+.section4LeftBottom > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section4Center{
+    width: 60%;
+    height: 100%;
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.section4Center > h1{
+    font-size: 27px;
+    font-family: segoe UI;
+    font-weight: 800;
+    color: white;
+    text-align: center;
+}
+.section4Button{
+    width: 20%;
+    height: 40px;
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 6px;
+    color: #071B63;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.packagewriteup{
+    width: 50%;
+    height: 20px;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.fastsecure{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.check{
+    width: 10px;
+    height: 10px;
+    /* background-color: red; */
+    margin-bottom: 10px;
+}
+.fastsecure > p{
+    font-size: 13px;
+    color: whitesmoke;
+}
+.fastsecure > .check > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.watchpackage{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.watchpackage > p{
+    font-size: 13px;
+    color: whitesmoke;
+}
+.watchpackage > .check > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section4Right{
+    width: 20%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.section4RightTop{
+    width: 90%;
+    height: 40%;
+    /* background-color: blue; */
+    margin-top: 10px;
+}
+.section4RightTop > img{
+    width: 90%;
+    height: 100%;
+    object-fit: fill;
+}
+.section4RightBottom{
+    width: 90%;
+    height: 40%;
+    /* background-color: blue; */
+    margin-bottom: 10px;
+}
+.section4RightBottom > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section5{
+    width: 85%;
+    height: 350px;
+    background-color: #FAF8F9;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    display: flex;
+}
+.section5Left{
+    width: 50%;
+    height: 100%;
+    /* background-color: yellow;c */
+}
+.section5Left > img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.section5Right{
+    width: 50%;
+    height: 100%;
+    /* background-color: #FFA500; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section5Text{
+    width: 90%;
+    height: 80%;
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section5Text > h1{
+    font-size: 40px;
+    font-family: 'Segoe UI';
+}
+.section5Text > p{
+    font-size: 15px;
+    font-family: 'Segoe UI';
+    font-weight: 500;
+    margin-bottom: 40px;
+    margin-top: 15px;
+    text-align: center;
+}
+.section5Text > p > span{
+    color: orange;
+    cursor: pointer;
+}
+
+.landingFooter{
+    width: 100%;
+    height: 400px;
+    background-color: #1F1F1F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.landingFooterTop{
+    width: 80%;
+    height: 30%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+.landingFooterTop > h5{
+    font-size: 25px;
+    font-family: 'Arial';
+    color: whitesmoke;
+}
+.landingFooterTop > p{
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Arial';
+    color: whitesmoke;
+}
+.landingFooterCenter{
+    width: 80%;
+    height: 50%;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.landingFooterCenterLogo{
+    width: 15%;
+    height: 60%;
+    /* background-color: green; */
+}
+.landingFooterCenterLogo > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.landingFooterCenterText{
+    width: 60%;
+    height: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 30px;
+}
+.landingFooterCompany{
+    width: 30%;
+    height: 100%;
+    /* background-color: orange; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.landingFooterLink{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+.landingFooterLink:hover{
+    color: orange;
+}
+.landingFooterSocialMedia{
+    width: 40%;
+    height: 100%;
+    /* background-color: orange; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.landingFooterSocialMedia > h6{
+    font-size: 20px;
+    color: whitesmoke;
+}
+.socialMediaImg{
+    width: 100%;
+    height: 50px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.facebook{
+    width: 15%;
+    height: 70%;
+    /* background-color: blue; */
+}
+.facebook > img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.twitter{
+    width: 15%;
+    height: 70%;
+    /* background-color: blue; */
+}
+.twitter > img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.instagram{
+    width: 15%;
+    height: 70%;
+    /* background-color: blue; */
+}
+.instagram > img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.landingFooterButton{
+    width: 20%;
+    height: 50px;
+    background-color: #FFA500;
+    border: none;
+    border-radius: 6px;
+    color: black;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.landingFooterButton:hover{
+    color: rgb(230, 230, 230);
+    background-color: #f5a003;
+}
+.landingFooterBottom{
+    width: 100%;
+    height: 20%;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.landingFooterLine{
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    margin-top: 30px;
+}
+.landingFooterBottom > p{
+    color: white;
+    font-size: 15px;
+    margin-top: 20px;
+}
