@@ -14,8 +14,8 @@ const UserMapPage = () => {
                 <h5>Ongoing Tracking</h5>
                 <div className='theTrackingDetails'>
                     <div className='productDetails'>
-                        <h5>Product details</h5>
-                        <p>Iphone 11</p>
+                        <h5>Item</h5>
+                        <p>Shoe</p>
                     </div>
                     <div className='theTrackingDetailsDivider'></div>
                     <div className='locationDetails'>
