@@ -542,7 +542,7 @@
 .facebook{
     width: 15%;
     height: 70%;
-    /* background-color: blue; */
+    background-color: transparent!important;
 }
 .facebook > img{
     width: 100%;
@@ -552,7 +552,7 @@
 .twitter{
     width: 15%;
     height: 70%;
-    /* background-color: blue; */
+    background-color: transparent!important;
 }
 .twitter > img{
     width: 100%;
@@ -562,7 +562,7 @@
 .instagram{
     width: 15%;
     height: 70%;
-    /* background-color: blue; */
+    background-color: transparent!important;
 }
 .instagram > img{
     width: 100%;
