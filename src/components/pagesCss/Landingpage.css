@@ -646,6 +646,9 @@
     .section2Left > img{
         object-fit: cover;
     }
+    .section4Center{
+        width: 60%;
+    }
     .section4RightTop > img{
         object-fit: contain;
     }
@@ -657,5 +660,16 @@
     }
     .section4LeftBottom > img{
         object-fit: contain;
+    }
+    .packagewriteup{
+        width: 70%;
+        height: 20px;
+        /* background-color: aqua; */
+    }
+    .fastsecure > p{
+        font-size: 10px;
+    }
+    .watchpackage > p{
+        font-size: 10px;
     }
 }
