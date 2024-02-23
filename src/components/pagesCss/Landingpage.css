@@ -856,23 +856,28 @@
         font-size: 15px;
         text-align: center;
     }
+    .section4{
+        margin-bottom: 10px;
+    }
     .section4Left{
         width: 30%;
         height: 100%;
-        /* background-color: red; */
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
     }
     .section4Right{
         width: 30%;
         height: 100%;
         /* background-color: red; */
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
+    }
+    .section4Center{
+        width: 60%;
+        height: 100%;
+    }
+    .section4Center > h1{
+        font-size: 20px;
+    }
+    .section4Button{
+        width: 50%;
+        height: 40px;
     }
     .section4LeftTop{
         width: 90%;
@@ -885,36 +890,32 @@
         width: 40%;
         /* background-color: blue; */
     }
-    .section4RightTop{
-        /* background-color: yellow; */
-    }
-    .section4RightTop > img{
-        object-fit: contain;
-    }
-    .section4RightBottom > img{
-        object-fit: contain;
-    }
-    .section4LeftTop > img{
-        object-fit: contain;
-    }
-    .section4LeftBottom > img{
-        object-fit: contain;
-    }
     .packagewriteup{
-        width: 70%;
+        width: 100%;
         height: 20px;
         /* background-color: aqua; */
     }
     .fastsecure > p{
-        font-size: 10px;
+        font-size: 7px;
     }
     .watchpackage > p{
-        font-size: 10px;
+        font-size: 7px;
     }
-    .section5Left > img{
+    .section5{
+        width: 70%;
+        height: 400px;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 50px;
+    }
+    .section5Left{
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        /* background-color: yellow;c */
+    }
+    .section5Right{
+        width: 100%;
+        height: 100%;
     }
     .section5Text{
         width: 90%;
