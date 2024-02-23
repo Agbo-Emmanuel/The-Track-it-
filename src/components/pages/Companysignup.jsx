@@ -1,12 +1,15 @@
 import React from 'react'
 import '../pagesCss/Companysignup.css'
+import Signupimg from '../images/Signupimg.svg'
 
 const Companysignup = () => {
   return (
     <>
     
         <div className='Companysignup'>
-            <div className='Companysignupimg'></div>
+            <div className='Companysignupimg'>
+                <img src={Signupimg} alt=''/>
+            </div>
             <div className='signupContainer'>
                 <h1>Sign Up</h1>
                 <p>Create your account now</p>
