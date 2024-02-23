@@ -14,6 +14,7 @@ import trackitLogo from '../images/trackitLogo.png'
 import facebookimg from '../images/facebookimg.png'
 import twitterimg from '../images/twitterimg.png'
 import instagramimg from '../images/instagramimg.png'
+import buggerMenu from '../images/buggerMenu.svg'
 
 
 
@@ -36,6 +37,7 @@ const Landingpage = () => {
                     </div>
                     <NavLink to='/track' className='getStartedButton'>Get Started</NavLink>
                 </div>
+                <div className='buggerMenu'><img src={buggerMenu} alt=''/></div>
             </div>
         </header>
         <div className='heroSection'>
