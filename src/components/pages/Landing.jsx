@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
 import '../pagesCss/Landing.css'
 import trackitLogo from '../images/trackitLogo.png'
+import buggerMenu from '../images/buggerMenu.svg'
 
 
 const Landing = () => {
@@ -22,6 +23,7 @@ const Landing = () => {
                         <NavLink to='about'className={({ isActive }) => isActive ? 'active' : 'notactive'}>About</NavLink>
                     </div>
                 </div>
+                <div className='buggerMenu'><img src={buggerMenu} alt=''/></div>
             </div>
         </header>
 

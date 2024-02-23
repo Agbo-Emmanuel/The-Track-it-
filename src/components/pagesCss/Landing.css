@@ -51,6 +51,18 @@
     color: black;
     font-weight: 500;
 }
+.buggerMenu{
+    width: 9%;
+    height: 40%;
+    /* background-color: red; */
+    display: none;
+}
+.buggerMenu > img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 .getStartedButton{
     width: 20%;
     height: 50%;
@@ -204,4 +216,23 @@
     color: white;
     font-size: 15px;
     margin-top: 20px;
+}
+
+
+
+@media screen and (max-width: 500px){
+
+    .leftHeader{
+        width: 20%!important;
+    }
+    .active{
+        display: none;
+    }
+    .notactive{
+        display: none;
+    }
+    .buggerMenu{
+        display: flex;
+    }
+
 }

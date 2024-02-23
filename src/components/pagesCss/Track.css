@@ -214,3 +214,163 @@
     font-size: 15px;
     margin-top: 20px;
 }
+
+
+
+
+@media screen and (max-width: 500px){
+
+    .trackpageTrack{
+        width: 100%;
+        height: 269px;
+        background-color: #F2F0F0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+    .trackpageTrack > h1{
+        font-family: Arial;
+        font-size: 25px;
+        font-weight: 600;
+    }
+    .trackpart{
+        width: 70%;
+        height: 50%;
+        /* background-color: yellow; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+    }
+    .trackpart >input{
+        width: 100%;
+        height: 40%;
+        outline: none;
+        padding-left: 20px;
+        font-size: 20px;
+        border-radius: 5px;
+        border: 1px solid black;
+    }
+    .trackPageTrackBtn{
+        width: 100%;
+        height: 50%;
+        background-color: #FFA500;
+        border-radius: 6px;
+        border: none;
+        color: white;
+        font-size: 30px;
+        font-weight: 800;
+        cursor: pointer;
+    }
+    .trackPageTrackBtn:hover{
+        background-color: #f09c00;
+        color: rgb(239, 239, 239);
+    
+    }
+    .landingFooter{
+        width: 100%;
+        height: 400px;
+        background-color: #1F1F1F;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .tractPageFooterTop{
+        width: 80%;
+        height: 30%;
+    }
+    .tractPageFooterTop > h5{
+        font-size: 20px!important;
+    }
+    .tractPageFooterTop > p{
+        font-size: 14px!important;
+    }
+    .tractPageFooterCenter{
+        width: 80%;
+        height: 50%;
+        /* background-color: yellow; */
+    }
+    .tractPageFooterCenterLogo{
+        width: 15%!important;
+        height: 40%!important;
+        /* background-color: green; */
+        margin-right: 20px;
+    }
+    .tractPageFooterCenterText{
+        width: 80%!important;
+        height: 100%;
+        /* background-color: aqua; */
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        gap: 30px;
+    }
+    .tractPageFooterCompany{
+        width: 30%;
+        height: 100%;
+        /* background-color: orange; */
+        justify-content: center!important;
+        gap: 25px;
+    }
+    .tractPageFooterLink{
+        font-size: 15px!important;
+    }
+    .tractPageFooterSocialMedia{
+        width: 40%;
+        height: 100%;
+        /* background-color: orange; */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    .tractPageFooterSocialMedia > h6{
+        font-size: 15px!important;
+        color: whitesmoke;
+    }
+    .socialMediaImg{
+        width: 100%;
+        height: 50px;
+        /* background-color: red; */
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    .facebook{
+        width: 15%;
+        height: 50%!important;
+        background-color: transparent!important;
+    }
+    .twitter{
+        height: 50%!important;
+        background-color: transparent!important;
+    }
+    .instagram{
+        width: 15%;
+        height: 50%!important;
+        background-color: transparent!important;
+    }
+    .tractPageFooterButton{
+        width: 30%;
+        height: 50px;
+        background-color: #FFA500;
+        border: none;
+        border-radius: 6px;
+        color: black;
+        cursor: pointer;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+    }
+    .tractPageFooterBottom > p{
+        color: white;
+        font-size: 10px!important;
+        margin-top: 20px;
+    }
+    
+    
+}
