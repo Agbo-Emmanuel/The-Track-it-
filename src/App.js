@@ -7,6 +7,7 @@ import Landing from './components/pages/Landing'
 import UserMapPage from './components/pages/UserMapPage'
 import Companysignup from './components/pages/Companysignup'
 import Login from './components/pages/Login'
+import VerifyEmail from './components/pages/VerifyEmail'
 
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
         <Route path='/companysignup' element= { <Companysignup/> }/>
         <Route path='/login' element= { <Login/> }/>
         <Route path='/' element= { <Landingpage/> }/>
+        <Route path='/verifyemail' element= { <VerifyEmail/> }/>
         <Route element= { <Landing/> }>
           <Route path='/track' element= { <Track/> }/>
           <Route path='/about' element= { <About/> }/>

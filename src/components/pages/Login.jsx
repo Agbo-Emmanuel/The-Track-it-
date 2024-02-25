@@ -1,5 +1,6 @@
 import React from 'react'
 import '../pagesCss/Login.css'
+import { Link } from 'react-router-dom'
 
 const Login = () => {
 
@@ -24,7 +25,8 @@ const Login = () => {
               />
             </div>
           </div>
-          <button className='loginButton'>Create Account</button>
+          <button className='loginButton'>Login</button>
+          <p className='linkToLoginPage'>Don't have an Account?<Link to='/companysignup' className='loginLink'>Signup</Link></p>
         </div>
       </div>
     

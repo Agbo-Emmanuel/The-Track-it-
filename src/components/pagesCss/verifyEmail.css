@@ -1,0 +1,91 @@
+.verifyEmail{
+    width: 100%;
+    height: 100vh;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: center;
+}
+
+.verifyEmailPart{
+    width: 50%;
+    height: 80%;
+    /* background-color: aqua; */
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.verifyTrackLogo{
+    width: 20%;
+    height: 70px;
+    /* background-color: red; */
+}
+.verifyTrackLogo > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.verifyEmailPart > h1{
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 20px;
+}
+.verifyEmailPart > h5{
+    font-size: 17px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 10px;
+}
+
+.verifyBoxPart{
+    width: 80%;
+    height: 20%;
+    /* background-color: red; */
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.verifyBox{
+    width: 15%;
+    height: 100%;
+    /* background-color: blue; */
+    border-radius: 9px;
+    border: 2px solid orange;
+    outline: none;
+    padding-left: 30px;
+    font-size: 30px;
+}
+
+.theVerifyPart{
+    width: 80%;
+    height: 12%;
+    /* background-color: green; */
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.resendEMaill{
+    width: 20%;
+    height: 40%;
+    /* background-color: red; */
+    border: none;
+    font-size: 17px;
+    font-weight: 500;
+    color: orange;
+    cursor: pointer;
+}
+.verifyButton{
+    width: 60%;
+    height: 100%;
+    background-color: orange;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
