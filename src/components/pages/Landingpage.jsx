@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../pagesCss/Landingpage.css'
 import heroSectionImg from '../images/heroSectionImg.png'
 import landingpageimg2 from '../images/landingpageimg2.png'
@@ -20,10 +20,25 @@ import buggerMenu from '../images/buggerMenu.svg'
 
 const Landingpage = () => {
 
+    const [menuBar, setMenuBar] = useState(false)
+
+    const handleMenuBar = ()=>{
+        setMenuBar(!menuBar)
+    }
+
   return (
 
     <div className='Landingpage'>
 
+        {
+            menuBar ?   <div className='landingPageMenuBar'>
+                            <div className='landingPageMenuBarMenu'>
+                                <NavLink to='/' className={({ isActive }) => isActive ? 'menuactive' : 'menunotactive'}>Home</NavLink>
+                                <NavLink to='/track'className={({ isActive }) => isActive ? 'menuactive' : 'menunotactive'}>Track</NavLink>
+                                <NavLink to='about'className={({ isActive }) => isActive ? 'menuactive' : 'menunotactive'}>About</NavLink>
+                            </div>
+                        </div> : null
+        }
         <header className='landingHeader'>
             <div className='landingHeaderHolder'>
                 <div className='leftHeader'>
@@ -37,7 +52,7 @@ const Landingpage = () => {
                     </div>
                     <NavLink to='/track' className='getStartedButton'>Get Started</NavLink>
                 </div>
-                <div className='buggerMenu'><img src={buggerMenu} alt=''/></div>
+                <div className='buggerMenu' onClick={handleMenuBar}><img src={buggerMenu} alt=''/></div>
             </div>
         </header>
         <div className='heroSection'>

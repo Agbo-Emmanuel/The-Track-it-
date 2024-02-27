@@ -8,6 +8,9 @@ import UserMapPage from './components/pages/UserMapPage'
 import Companysignup from './components/pages/Companysignup'
 import Login from './components/pages/Login'
 import VerifyEmail from './components/pages/VerifyEmail'
+import CompanyDashboard from './components/dashBoardPart/companyDashBoard/CompanyDashboard'
+import Riders from './components/dashBoardPart/companyDashBoard/Riders'
+import TheCompanyDashBoard from './components/dashBoardPart/companyDashBoard/TheCompanyDashBoard'
 
 
 const App = () => {
@@ -15,15 +18,23 @@ const App = () => {
 
     <BrowserRouter>
       <Routes>
+
         <Route path='/companysignup' element= { <Companysignup/> }/>
         <Route path='/login' element= { <Login/> }/>
         <Route path='/' element= { <Landingpage/> }/>
         <Route path='/verifyemail' element= { <VerifyEmail/> }/>
+        
         <Route element= { <Landing/> }>
           <Route path='/track' element= { <Track/> }/>
           <Route path='/about' element= { <About/> }/>
           <Route path='/usermap' element= { <UserMapPage/> }/>
         </Route>
+
+        <Route element= { <CompanyDashboard/> }>
+          <Route path='/companydashboard' element= { <TheCompanyDashBoard/> }/>
+          <Route path='/riders' element= { <Riders/> }/>
+        </Route>
+
       </Routes>
     </BrowserRouter>
 
