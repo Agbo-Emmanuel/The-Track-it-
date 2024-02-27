@@ -50,7 +50,7 @@ const Landingpage = () => {
                         <NavLink to='/track'className={({ isActive }) => isActive ? 'active' : 'notactive'}>Track</NavLink>
                         <NavLink to='about'className={({ isActive }) => isActive ? 'active' : 'notactive'}>About</NavLink>
                     </div>
-                    <NavLink to='/track' className='getStartedButton'>Get Started</NavLink>
+                    <NavLink to='/companysignup' className='getStartedButton'>Get Started</NavLink>
                 </div>
                 <div className='buggerMenu' onClick={handleMenuBar}><img src={buggerMenu} alt=''/></div>
             </div>
