@@ -18,20 +18,20 @@ const Companysignup = () => {
                     <div className='nameinputPart'>
                         <label>Company's name</label>
                         <input
-                            placeholder="enter company's name"
+                            placeholder="company's name"
                         />
                     </div>
                     <div className='twoInputJoin'>
                         <div className='inputPart'>
                             <label>Phone number</label>
                             <input
-                                placeholder="enter phone number"
+                                placeholder="phone number"
                             />
                         </div>
                         <div className='inputPart'>
                             <label>Email</label>
                             <input
-                                placeholder="enter email"
+                                placeholder="email"
                             />
                         </div>
                     </div>
@@ -39,13 +39,13 @@ const Companysignup = () => {
                         <div className='inputPart'>
                             <label>Password</label>
                             <input
-                                placeholder="enter password"
+                                placeholder="password"
                             />
                         </div>
                         <div className='inputPart'>
                             <label>Confirm password</label>
                             <input
-                                placeholder="confirm password"
+                                placeholder="password"
                             />
                         </div>
                     </div>

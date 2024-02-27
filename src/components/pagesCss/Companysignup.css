@@ -309,7 +309,7 @@
 
     .signupContainer{
         width: 80vw;
-        height: 90%;
+        height: auto;
         /* background-color: yellow; */
         display: flex;
         flex-direction: column;
@@ -323,6 +323,48 @@
         /* background-color: aqua; */
         margin-bottom: 10px;
     }
+
+    .twoInputJoin{
+        width: 100%;
+        height: auto;
+        /* background-color: red; */
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .inputPart{
+        width: 100%;
+        height: 70px;
+        /* background-color: bisque; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .inputPart > label{
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .inputPart > input{
+        width: 100%;
+        height: 60%;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 6px;
+        border: 1px solid lightgrey;
+    }
+
+    .CompanysignupButton{
+        width: 100%;
+        height: 55px;
+        background-color: #FFA500;
+        color: whitesmoke;
+        font-size: 20px;
+        font-weight: 700;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    
 
 }
 
