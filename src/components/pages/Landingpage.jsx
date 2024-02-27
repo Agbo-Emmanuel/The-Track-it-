@@ -61,7 +61,7 @@ const Landingpage = () => {
                     <h1>Your <span>Product</span> Our Priority</h1>
                     <h6>Track it protects you from getting scammed. Ensuring that you can track your product with your mobile device.</h6>
                 </div>
-                <NavLink to='/track' className='heroSectionButton'>Get Started</NavLink>
+                <NavLink to='/companysignup' className='heroSectionButton'>Get Started</NavLink>
             </div>
             <div className='heroSectionRight'>
                 <div className='heroSectionImg'>
@@ -97,7 +97,7 @@ const Landingpage = () => {
             </div>
             <div className='section4Center'>
                 <h1>Your package is delivered fast when you<br/> use Track it</h1>
-                <NavLink to='/track' className='section4Button'>Get Started</NavLink>
+                <NavLink to='/companysignup' className='section4Button'>Get Started</NavLink>
                 <div className='packagewriteup'>
                     <div className='fastsecure'>
                         <div className='check'><img src={check} alt=''/></div>
@@ -150,7 +150,7 @@ const Landingpage = () => {
                             <div className='instagram'><img src={instagramimg} alt=''/></div>
                         </div>
                     </div>
-                    <NavLink to='/track' className='landingFooterButton'>Get Started</NavLink>
+                    <NavLink to='/companysignup' className='landingFooterButton'>Get Started</NavLink>
                 </div>
             </div>
             <div className='landingFooterBottom'>
