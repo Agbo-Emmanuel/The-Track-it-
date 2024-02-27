@@ -15,18 +15,18 @@ const Login = () => {
             <div className='logininputPart'>
               <label>Email</label>
               <input
-                placeholder="enter email"
+                placeholder="email"
               />
             </div>
             <div className='logininputPart'>
               <label>Password</label>
               <input
-                placeholder="enter password"
+                placeholder="password"
               />
             </div>
           </div>
           <button className='loginButton'>Login</button>
-          <p className='linkToLoginPage'>Don't have an Account?<Link to='/companysignup' className='loginLink'>Signup</Link></p>
+          <p className='linkToLoginPage'>Don't have an Account? <Link to='/companysignup' className='loginLink'>Signup</Link></p>
         </div>
       </div>
     
