@@ -15,76 +15,82 @@ const Landing = () => {
     const handleLandingMenu = ()=>{
         setLandingMenu(!landingMenu)
     }
+    const handleCloseMenu = ()=>{
+        setLandingMenu(false)
+    }
 
   return (
-
-    <div style={{width: "100%", height: "auto", position: "relative"}}>
+    <>
 
         {
             landingMenu ?   <div className='landingMenuBar'>
                                 <div className='landingMenuBarMenu'>
+                                    <div className='closeMenuBar' onClick={handleCloseMenu}>x</div>
                                     <NavLink to='/' className={({ isActive }) => isActive ? 'landingmenuactive' : 'landingmenunotactive'}>Home</NavLink>
                                     <NavLink to='/track'className={({ isActive }) => isActive ? 'landingmenuactive' : 'landingmenunotactive'}>Track</NavLink>
                                     <NavLink to='about'className={({ isActive }) => isActive ? 'landingmenuactive' : 'landingmenunotactive'}>About</NavLink>
+                                    <div className='menuSignup'>Sign in</div>
                                 </div>
-                            </div>  : null
+                            </div>  
+                            
+                        :   <div style={{width: "100%", height: "auto"}}>
+
+                        <header className='landingHeader'>
+                            <div className='landingHeaderHolder'>
+                                <div className='leftHeader'>
+                                    <img src={trackitLogo} alt=''/>
+                                </div>
+                                <div className='rightHeader'>
+                                    <div className='headerNavMenu'>
+                                        <NavLink to='/' className={({ isActive }) => isActive ? 'active' : 'notactive'}>Home</NavLink>
+                                        <NavLink to='/track'className={({ isActive }) => isActive ? 'active' : 'notactive'}>Track</NavLink>
+                                        <NavLink to='about'className={({ isActive }) => isActive ? 'active' : 'notactive'}>About</NavLink>
+                                    </div>
+                                </div>
+                                <div className='buggerMenu' onClick={handleLandingMenu}><img src={buggerMenu} alt=''/></div>
+                            </div>
+                        </header>
+            
+                        <Outlet/>
+            
+                        <footer className='landingFooter'>
+                            <div className='landingFooterTop'>
+                                <h5>Get started with Track it.</h5>
+                                <p>We’re here to help you track your goods<br/> nation wide. </p>
+                            </div>
+                            <div className='landingFooterCenter'>
+                                <div className='landingFooterCenterLogo'>
+                                    <img src={trackitLogo} alt=''/>
+                                </div>
+                                <div className='landingFooterCenterText'>
+                                    <div className='landingFooterCompany'>
+                                        <Link className='landingFooterLink'>About us</Link>
+                                        <Link className='landingFooterLink'>Contact us</Link>
+                                        <Link className='landingFooterLink'>Tracking</Link>
+                                    </div>
+                                    <div className='landingFooterSocialMedia'>
+                                        <h6>Social Media</h6>
+                                        <div className='socialMediaImg'>
+                                            <div className='facebook'><img src={facebookimg} alt=''/></div>
+                                            <div className='twitter'><img src={twitterimg} alt=''/></div>
+                                            <div className='instagram'><img src={instagramimg} alt=''/></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='landingFooterBottom'>
+                                <div className='landingFooterLine'></div>
+                                <p>©2024 Track it | All rights reserved</p>
+                            </div>
+                        </footer>
+            
+                    </div>
         }
 
-        <header className='landingHeader'>
-            <div className='landingHeaderHolder'>
-                <div className='leftHeader'>
-                    <img src={trackitLogo} alt=''/>
-                </div>
-                <div className='rightHeader'>
-                    <div className='headerNavMenu'>
-                        <NavLink to='/' className={({ isActive }) => isActive ? 'active' : 'notactive'}>Home</NavLink>
-                        <NavLink to='/track'className={({ isActive }) => isActive ? 'active' : 'notactive'}>Track</NavLink>
-                        <NavLink to='about'className={({ isActive }) => isActive ? 'active' : 'notactive'}>About</NavLink>
-                    </div>
-                </div>
-                <div className='buggerMenu' onClick={handleLandingMenu}><img src={buggerMenu} alt=''/></div>
-            </div>
-        </header>
-        <div>
-            <NavLink to='/' className={({ isActive }) => isActive ? 'menuactive' : 'menunotactive'}>Home</NavLink>
-            <NavLink to='/track'className={({ isActive }) => isActive ? 'menuactive' : 'menunotactive'}>Track</NavLink>
-            <NavLink to='about'className={({ isActive }) => isActive ? 'menuactive' : 'menunotactive'}>About</NavLink>
-        </div>
+        
 
-        <Outlet/>
+    </>
 
-        <footer className='landingFooter'>
-            <div className='landingFooterTop'>
-                <h5>Get started with Track it.</h5>
-                <p>We’re here to help you track your goods<br/> nation wide. </p>
-            </div>
-              <div className='landingFooterCenter'>
-                <div className='landingFooterCenterLogo'>
-                    <img src={trackitLogo} alt=''/>
-                </div>
-                <div className='landingFooterCenterText'>
-                    <div className='landingFooterCompany'>
-                        <Link className='landingFooterLink'>About us</Link>
-                        <Link className='landingFooterLink'>Contact us</Link>
-                        <Link className='landingFooterLink'>Tracking</Link>
-                    </div>
-                    <div className='landingFooterSocialMedia'>
-                        <h6>Social Media</h6>
-                        <div className='socialMediaImg'>
-                            <div className='facebook'><img src={facebookimg} alt=''/></div>
-                            <div className='twitter'><img src={twitterimg} alt=''/></div>
-                            <div className='instagram'><img src={instagramimg} alt=''/></div>
-                        </div>
-                    </div>
-                  </div>
-              </div>
-              <div className='landingFooterBottom'>
-                <div className='landingFooterLine'></div>
-                <p>©2024 Track it | All rights reserved</p>
-              </div>
-          </footer>
-
-    </div>
 
   )
 }

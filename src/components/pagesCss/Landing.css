@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     position: fixed;
-    z-index: 9999999999;
+    z-index: 5;
     top: 0px;
 }
 
@@ -14,26 +14,48 @@
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.304);
-    position: fixed;
-    right: 0;
-    top: 0;
     display: flex;
     justify-content: flex-end;
-    margin-top: 80px;
+    top: 0px;
+    position: fixed;
+    z-index: 20px;
 }
 
 .landingMenuBarMenu{
-    width: 60%;
-    height: 20%;
+    width: 90%;
+    height: 80%;
     background-color: rgb(41, 41, 41);
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    justify-content: space-between;
+    gap: 10px;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+.closeMenuBar{
+    width: 15%;
+    height: 10%;
+    background-color: rgba(255, 215, 140, 0.23);
+    position: absolute;
+    right: 0;
+    top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 500;
+    color: white;
+    border-radius: 6px;
+    padding-bottom: 10px;
+    transition: all 350ms ease-in-out;
+}
+.closeMenuBar:hover{
+    transform: scale(1);
+    background-color: orange;
 }
 .landingmenuactive{
     width: 100%;
-    height: 30%;
+    height: 15%;
     background-color: orange;
     color: white;
     display: flex;
@@ -41,13 +63,12 @@
     padding-left: 10px;
     font-size: 20px;
     font-weight: 500;
-    transition: all 350ms ease-in-out;
     cursor: pointer;
     text-decoration: none;
 }
 .landingmenunotactive{
     width: 100%;
-    height: 30%;
+    height: 15%;
     /* background-color: orange; */
     color: white;
     display: flex;
@@ -63,6 +84,22 @@
     transform: scale(1);
     background-color: #ffbc3e;
 }
+.menuSignup{
+    width: 80%;
+    height: 15%;
+    background-color: orange;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
 .landingHeaderHolder{
     width: 85%;
     height: 100%;
