@@ -158,3 +158,201 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+
+
+
+
+@media screen and (max-width: 500px) {
+
+    .AboutPage{
+        gap: 50px;
+    }
+    .aboutHeroSection > h1{
+        font-size: 40px;
+    }
+    .aboutHeroSection > p{
+        font-size: 12px;
+    }
+
+    .aboutpageintro{
+        width: 50vw;
+        height: 100px;
+    }
+    .aboutpageintro > h1{
+        font-size: 25px;
+    }
+    .aboutpageintrounderline{
+        width: 100%;
+        height: 25px;
+    }
+
+    .aboutPageTrackingProductSection{
+        width: 70vw;
+        height: 450px;
+        /* background-color: aqua; */
+        flex-direction: column;
+    }
+    .aboutPageTrackingProductSectionText{
+        width: 100%;
+        height: 100%;
+        /* background-color: yellow; */
+    }
+    .aboutPageTrackingProductSectionText > h2{
+        font-size: 20px;
+    }
+    .aboutPageTrackingProductSectionText > p{
+        font-size: 13px;
+    }
+    .aboutPageTrackingProductSectionImg{
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .aboutPageGoalsMissionSection{
+        width: 70vw;
+        height: 450px;
+        /* background-color: aqua; */
+        flex-direction: column;
+    }
+    .aboutPageGoalsMissionSectionText{
+        width: 100%;
+        height: 100%;
+        /* background-color: yellow; */
+    }
+    .aboutPageGoalsMissionSectionText > h2{
+        font-size: 20px;
+    }
+    .aboutPageGoalsMissionSectionText > p{
+        font-size: 13px;
+    }
+    .aboutPageGoalsMissionSectionImg{
+        width: 100%;
+        height: 100%;
+    }
+
+    .aboutPageVisionSection{
+        width: 70vw;
+        height: 450px;
+        /* background-color: aqua; */
+        flex-direction: column;
+    }
+    .aboutPageVisionSectionText{
+        width: 100%;
+        height: 100%;
+        /* background-color: yellow; */
+    }
+    .aboutPageVisionSectionText > h2{
+        font-size: 20px;
+    }
+    .aboutPageVisionSectionText > p{
+        font-size: 13px;
+    }
+    .aboutPageVisionSectionImg{
+        width: 100%;
+        height: 100%;
+    }
+    
+    
+
+}
+
+
+
+
+
+@media screen and (max-width: 345px) {
+
+    .AboutPage{
+        gap: 50px;
+    }
+    .aboutHeroSection > h1{
+        font-size: 30px;
+    }
+    .aboutHeroSection > p{
+        font-size: 10px;
+    }
+
+    .aboutpageintro{
+        width: 50vw;
+        height: 100px;
+    }
+    .aboutpageintro > h1{
+        font-size: 20px;
+    }
+    .aboutpageintrounderline{
+        width: 90%;
+        height: 25px;
+    }
+
+    .aboutPageTrackingProductSection{
+        width: 70vw;
+        height: 450px;
+        /* background-color: aqua; */
+        flex-direction: column;
+    }
+    .aboutPageTrackingProductSectionText{
+        width: 100%;
+        height: 100%;
+        /* background-color: yellow; */
+    }
+    .aboutPageTrackingProductSectionText > h2{
+        font-size: 18px;
+    }
+    .aboutPageTrackingProductSectionText > p{
+        font-size: 10px;
+    }
+    .aboutPageTrackingProductSectionImg{
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .aboutPageGoalsMissionSection{
+        width: 70vw;
+        height: 450px;
+        /* background-color: aqua; */
+        flex-direction: column;
+    }
+    .aboutPageGoalsMissionSectionText{
+        width: 100%;
+        height: 100%;
+        /* background-color: yellow; */
+    }
+    .aboutPageGoalsMissionSectionText > h2{
+        font-size: 18px;
+    }
+    .aboutPageGoalsMissionSectionText > p{
+        font-size: 10px;
+    }
+    .aboutPageGoalsMissionSectionImg{
+        width: 100%;
+        height: 100%;
+    }
+
+    .aboutPageVisionSection{
+        width: 70vw;
+        height: 450px;
+        /* background-color: aqua; */
+        flex-direction: column;
+    }
+    .aboutPageVisionSectionText{
+        width: 100%;
+        height: 100%;
+        /* background-color: yellow; */
+    }
+    .aboutPageVisionSectionText > h2{
+        font-size: 18px;
+    }
+    .aboutPageVisionSectionText > p{
+        font-size: 10px;
+    }
+    .aboutPageVisionSectionImg{
+        width: 100%;
+        height: 100%;
+    }
+    
+    
+
+}
