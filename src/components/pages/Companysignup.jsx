@@ -1,9 +1,17 @@
 import React from 'react'
 import '../pagesCss/Companysignup.css'
 import Signupimg from '../images/Signupimg.svg'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Companysignup = () => {
+
+    
+    const navigate = useNavigate();
+
+    const handleCreateAccount = ()=>{
+        navigate("/companydashboard");
+    }
+
   return (
     <>
     
@@ -51,7 +59,7 @@ const Companysignup = () => {
                     </div>
                     
                 </div>
-                <button className='CompanysignupButton'>Create Account</button>
+                <button className='CompanysignupButton' onClick={handleCreateAccount}>Create Account</button>
                 <p className='linkToLoginPage'>Already have an Account?<Link to='/login' className='loginLink'>Login</Link></p>
             </div>
         </div>

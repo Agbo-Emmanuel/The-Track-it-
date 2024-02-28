@@ -5,6 +5,8 @@ import { Link, NavLink, Outlet } from 'react-router-dom'
 import dashboardimg from '../../images/dashboardimg.png'
 import accountimg from '../../images/accountimg.png'
 import logoutimg from '../../images/logoutimg.png'
+import notificationimage from '../../images/notificationimage.png'
+import packageimage from '../../images/packageimage.png'
 
 
 
@@ -31,6 +33,10 @@ const companyDashboard = () => {
               <div className='comapanyMenuBarnavLogo'><img src={accountimg} alt=''/></div>
               <nav>Riders</nav>
             </NavLink>
+            <NavLink to='/packages' className={({ isActive }) => isActive ? 'isactive' : 'isnotactive'}>
+              <div className='comapanyMenuBarnavLogo'><img src={packageimage} alt=''/></div>
+              <nav>Packages</nav>
+            </NavLink>
           </div>
           <div className="companyMenuBarBottom">
             <div className='logOutImg'><img src={logoutimg} alt=''/></div>
@@ -40,8 +46,16 @@ const companyDashboard = () => {
 
         <div className='companyBody'>
           <div className='companyBodyTop'>
-            <div className='companyBodyTopLeft'></div>
-            <div className='companyBodyTopRight'></div>
+            <div className='companyBodyTopLeft'>
+              <p>Welcome, Dangote</p>
+            </div>
+            <div className='companyBodyTopRight'>
+              <div className='companyBodyTopNotification'>
+                <img src={notificationimage} alt=''/>
+                <div className='notifyDot'></div>
+              </div>
+              <div className='companyBodyTopRightProfile'>D</div>
+            </div>
           </div>
           <div className="companyBodyDown">
             <Outlet/>

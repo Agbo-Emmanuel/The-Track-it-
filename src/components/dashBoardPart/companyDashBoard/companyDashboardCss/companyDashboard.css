@@ -52,7 +52,7 @@
     color: white;
     font-size: 18px;
     font-weight: 500;
-    border-radius: 6px;
+    border-radius: 3px;
 }
 .isnotactive{
     width: 100%;
@@ -138,14 +138,58 @@
 .companyBodyTopLeft{
     width: 25%;
     height: 100%;
-    background-color: blue;
+    /* background-color: blue; */
     margin-left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.companyBodyTopLeft > p{
+    font-size: 20px;
+    font-weight: 500;
 }
 .companyBodyTopRight{
-    width: 30%;
+    width: 10%;
     height: 100%;
-    background-color: purple;
+    /* background-color: purple; */
     margin-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 100px;
+}
+.companyBodyTopNotification{
+    width: 20%;
+    height: 40%;
+    /* background-color: red; */
+    cursor: pointer;
+    position: relative;
+}
+.companyBodyTopNotification > img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.notifyDot{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: red;
+    top: -9px;
+    left: 9px;
+}
+.companyBodyTopRightProfile{
+    width: 40%;
+    height: 60%;
+    background-color: orange;
+    border-radius: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 500;
 }
 .companyBodyDown{
     width: 99%;

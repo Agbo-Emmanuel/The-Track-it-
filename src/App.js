@@ -11,6 +11,7 @@ import VerifyEmail from './components/pages/VerifyEmail'
 import CompanyDashboard from './components/dashBoardPart/companyDashBoard/CompanyDashboard'
 import Riders from './components/dashBoardPart/companyDashBoard/Riders'
 import TheCompanyDashBoard from './components/dashBoardPart/companyDashBoard/TheCompanyDashBoard'
+import Package from './components/dashBoardPart/companyDashBoard/Package'
 
 
 const App = () => {
@@ -33,6 +34,7 @@ const App = () => {
         <Route element= { <CompanyDashboard/> }>
           <Route path='/companydashboard' element= { <TheCompanyDashBoard/> }/>
           <Route path='/riders' element= { <Riders/> }/>
+          <Route path='/packages' element= { <Package/> }/>
         </Route>
 
       </Routes>
