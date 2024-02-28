@@ -1,10 +1,6 @@
 import React from 'react'
 import '../pagesCss/Track.css'
-import { Link, useNavigate } from 'react-router-dom'
-import trackitLogo from '../images/trackitLogo.png'
-import facebookimg from '../images/facebookimg.png'
-import twitterimg from '../images/twitterimg.png'
-import instagramimg from '../images/instagramimg.png'
+import {  useNavigate } from 'react-router-dom'
 
 
 const Track = () => {

@@ -15,6 +15,7 @@ import facebookimg from '../images/facebookimg.png'
 import twitterimg from '../images/twitterimg.png'
 import instagramimg from '../images/instagramimg.png'
 import buggerMenu from '../images/buggerMenu.svg'
+import 'animate.css';
 
 
 

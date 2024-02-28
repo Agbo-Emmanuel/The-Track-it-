@@ -24,6 +24,8 @@
     top: 0px;
     position: fixed;
     z-index: 20px;
+    animation: slideInRight;
+    animation-duration: 2s; 
 }
 .landingPageMenuBarMenu{
     width: 90%;
