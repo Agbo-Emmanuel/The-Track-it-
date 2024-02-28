@@ -11,7 +11,7 @@ const Riders = () => {
     <>
     
       <div className='RidersPage'>
-
+        rider
       </div>
     
     </>

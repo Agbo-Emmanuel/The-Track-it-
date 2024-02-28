@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { Link, NavLink } from 'react-router-dom'
+import 'animate.css';
 import '../pagesCss/Landingpage.css'
 import heroSectionImg from '../images/heroSectionImg.png'
 import landingpageimg2 from '../images/landingpageimg2.png'
@@ -9,13 +11,11 @@ import bottomleftsection4vector from '../images/bottomleftsection4vector.png'
 import toprightsection4vector from '../images/toprightsection4vector.png'
 import bottomrightsection4vector from '../images/bottomrightsection4vector.png'
 import check from '../images/check.png'
-import { Link, NavLink } from 'react-router-dom'
 import trackitLogo from '../images/trackitLogo.png'
 import facebookimg from '../images/facebookimg.png'
 import twitterimg from '../images/twitterimg.png'
 import instagramimg from '../images/instagramimg.png'
 import buggerMenu from '../images/buggerMenu.svg'
-import 'animate.css';
 
 
 

@@ -29,11 +29,11 @@ const companyDashboard = () => {
               <div className='comapanyMenuBarnavLogo'><img src={dashboardimg} alt=''/></div>
               <nav>Dashboard</nav>
             </NavLink>
-            <NavLink to='/riders' className={({ isActive }) => isActive ? 'isactive' : 'isnotactive'}>
+            <NavLink to='/companyriders' className={({ isActive }) => isActive ? 'isactive' : 'isnotactive'}>
               <div className='comapanyMenuBarnavLogo'><img src={accountimg} alt=''/></div>
               <nav>Riders</nav>
             </NavLink>
-            <NavLink to='/packages' className={({ isActive }) => isActive ? 'isactive' : 'isnotactive'}>
+            <NavLink to='/companypackages' className={({ isActive }) => isActive ? 'isactive' : 'isnotactive'}>
               <div className='comapanyMenuBarnavLogo'><img src={packageimage} alt=''/></div>
               <nav>Packages</nav>
             </NavLink>

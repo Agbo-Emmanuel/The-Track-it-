@@ -12,6 +12,10 @@ import CompanyDashboard from './components/dashBoardPart/companyDashBoard/Compan
 import Riders from './components/dashBoardPart/companyDashBoard/Riders'
 import TheCompanyDashBoard from './components/dashBoardPart/companyDashBoard/TheCompanyDashBoard'
 import Package from './components/dashBoardPart/companyDashBoard/Package'
+import RiderDashboardPart from './components/dashBoardPart/riderDashboard/RiderDashboardPart'
+import RiderDashboard from './components/dashBoardPart/riderDashboard/RiderDashboard'
+import RiderPackages from './components/dashBoardPart/riderDashboard/RiderPackages'
+import RiderLocation from './components/dashBoardPart/riderDashboard/RiderLocation'
 
 
 const App = () => {
@@ -33,8 +37,14 @@ const App = () => {
 
         <Route element= { <CompanyDashboard/> }>
           <Route path='/companydashboard' element= { <TheCompanyDashBoard/> }/>
-          <Route path='/riders' element= { <Riders/> }/>
-          <Route path='/packages' element= { <Package/> }/>
+          <Route path='/companyriders' element= { <Riders/> }/>
+          <Route path='/companypackages' element= { <Package/> }/>
+        </Route>
+
+        <Route element= { <RiderDashboardPart/> }>
+          <Route path='/riderdashboard' element= { <RiderDashboard/> }/>
+          <Route path='/riderlocation' element= { <RiderLocation/> }/>
+          <Route path='/riderpackages' element= { <RiderPackages/> }/>
         </Route>
 
       </Routes>

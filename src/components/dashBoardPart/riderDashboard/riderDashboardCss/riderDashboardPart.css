@@ -1,11 +1,11 @@
-.CompanyDashboard{
+.RiderDashboardPart{
     width: 100vw;
     height: 100vh;
     /* background-color: yellow; */
     display: flex;
 }
 
-.companyMenuBar{
+.riderDashboardPartMenuBar{
     width: 15%;
     height: 100vh;
     background-color: #fde2b4;
@@ -13,7 +13,7 @@
     flex-direction: column;
     justify-content: space-between;
 }
-.companyMenuBarTop{
+.riderDashboardPartMenuBarTop{
     width: 100%;
     height: 20%;
     /* background-color: blue; */
@@ -21,18 +21,18 @@
     align-items: center;
     margin-left: 10px;
 }
-.companyMenuTopLogo{
+.riderDashboardPartMenuBarTopLogo{
     width: 50%;
     height: 90%;
     /* background-color: white; */
 }
-.companyMenuTopLogo >img{
+.riderDashboardPartMenuBarTopLogo >img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.companyMenuBarBody{
+.riderMenuBarBody{
     width: 100%;
     height: 60%;
     /* background-color: yellow; */
@@ -40,7 +40,7 @@
     flex-direction: column;
     gap: 20px;
 }
-.isactive{
+.riderisactive{
     width: 100%;
     height: 10%;
     background-color: orange;
@@ -54,7 +54,7 @@
     font-weight: 500;
     border-radius: 3px;
 }
-.isnotactive{
+.riderisnotactive{
     width: 100%;
     height: 10%;
     /* background-color: blue; */
@@ -70,23 +70,23 @@
     border-radius: 6px;
 }
 
-.isnotactive:hover{
+.riderisnotactive:hover{
     transform: scale(1);
     background-color: rgb(255, 221, 157);
     color: white;
 }
-.comapanyMenuBarnavLogo{
+.riderMenuBarnavLogo{
     width: 12%;
     height: 60%;
     /* background-color: blue; */
 }
-.comapanyMenuBarnavLogo > img{
+.riderMenuBarnavLogo > img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.companyMenuBarBottom{
+.riderMenuBarBottom{
     width: 100%;
     height: 15%;
     /* background-color: green; */
@@ -115,9 +115,9 @@
 }
 .logOutLink:hover{
     color: orange;
-}
+}   
 
-.companyBody{
+.riderBody{
     width: 85%;
     height: 100vh;
     /* background-color: red; */
@@ -126,7 +126,7 @@
     align-items: center;
     gap: 10px;
 }
-.companyBodyTop{
+.riderBodyTop{
     width: 99%;
     height: 12%;
     background-color: whitesmoke;
@@ -135,7 +135,7 @@
     display: flex;
     justify-content: space-between;
 }
-.companyBodyTopLeft{
+.riderBodyTopLeft{
     width: 25%;
     height: 100%;
     /* background-color: blue; */
@@ -144,11 +144,11 @@
     align-items: center;
     justify-content: center;
 }
-.companyBodyTopLeft > p{
+.riderBodyTopLeft > p{
     font-size: 20px;
     font-weight: 500;
 }
-.companyBodyTopRight{
+.riderBodyTopRight{
     width: 10%;
     height: 100%;
     /* background-color: purple; */
@@ -158,14 +158,14 @@
     justify-content: space-between;
     margin-right: 100px;
 }
-.companyBodyTopNotification{
+.riderBodyTopNotification{
     width: 20%;
     height: 40%;
     /* background-color: red; */
     cursor: pointer;
     position: relative;
 }
-.companyBodyTopNotification > img{
+.riderBodyTopNotification > img{
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -179,7 +179,7 @@
     top: -9px;
     left: 9px;
 }
-.companyBodyTopRightProfile{
+.riderTopRightProfile{
     width: 40%;
     height: 60%;
     background-color: orange;
@@ -191,7 +191,7 @@
     font-size: 30px;
     font-weight: 500;
 }
-.companyBodyDown{
+.riderBodyDown{
     width: 99%;
     height: 86%;
     background-color: white;

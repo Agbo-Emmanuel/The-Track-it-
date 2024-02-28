@@ -1,0 +1,22 @@
+.RiderLocation{
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+    border-radius: 6px;
+    overflow-y: scroll;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.riderLocationPageLeft{
+    width: 30%;
+    height: 95%;
+    background-color: blue;
+}
+
+.riderLocationPageRight{
+    width: 60%;
+    height: 95%;
+    background-color: red;
+}
