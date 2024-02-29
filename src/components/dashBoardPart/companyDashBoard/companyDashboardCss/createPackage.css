@@ -1,0 +1,107 @@
+.CreatePackage{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.47);
+    position: fixed;
+    z-index: 99999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.creatingPackagePart{
+    width: 35%;
+    height: 90%;
+    background-color: whitesmoke;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.creatingPackagePartTop{
+    width: 100%;
+    height: 10%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.creatingPackageTopText{
+    width: 50%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 100px;
+}
+.creatingPackageTopText > h1{
+    font-size: 20px;
+    font-weight: 500;
+}
+.creatingPackageTopBtn{
+    width: 10%;
+    height: 80%;
+    background-color: rgb(250, 204, 119);
+    color: black;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: all 350ms ease-in-out;
+}
+.creatingPackageTopBtn:hover{
+    transform: scale(1);
+    background-color: orange;
+}
+
+.creatingPackagePartLine{
+    width: 100%;
+    height: 1px;
+    background-color: lightgrey;margin-top: 10px;
+}
+
+.creatingPackagePartInputPart{
+    width: 80%;
+    height: 70%;
+    /* background-color: yellow; */
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.creatingPackageInputPartInput{
+    width: 100%;
+    height: 17%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.creatingPackageInputPartInput > label{
+    font-size: 16px;
+    font-weight: 500;
+}
+.creatingPackageInputPartInput > input{
+    width: 100%;
+    height: 60%;
+    padding-left: 10px;
+    outline: none;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+}
+
+.creatingPackageBtn{
+    width: 80%;
+    height: 10%;
+    background-color: orange;
+    border: none;
+    border-radius: 6px;
+    margin-top: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}

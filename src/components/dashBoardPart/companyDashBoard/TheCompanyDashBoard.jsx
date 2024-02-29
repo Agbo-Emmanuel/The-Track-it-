@@ -1,19 +1,23 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import '../companyDashBoard/companyDashboardCss/theCompanyDashboard.css'
 import { useNavigate } from 'react-router-dom';
+import { Thecontext } from '../../../App'
+
 
 
 
 const TheCompanyDashBoard = () => {
 
+  const {setShowCreateRider, setShowCreatePackage} = useContext(Thecontext)
+
   const navigate = useNavigate();
 
     const handleToRider = ()=>{
-        navigate('/riders');
+        navigate('/companyriders');
     }
 
     const handleToPackage = ()=>{
-        navigate('/packages');
+        navigate('/companypackages');
     }
 
   return (
@@ -27,7 +31,7 @@ const TheCompanyDashBoard = () => {
                 <h3>Total Riders</h3>
                 <h5>54</h5>
               </div>
-              <div className='companyDashboardCreateRider'>
+              <div className='companyDashboardCreateRider' onClick={()=>setShowCreateRider(true)}>
                 <h5>Create Rider</h5>
               </div>
             </div>
@@ -36,7 +40,7 @@ const TheCompanyDashBoard = () => {
                 <h3>Total Packages</h3>
                 <h5>10</h5>
               </div>
-              <div className='companyDashboardCreatePackage'>
+              <div className='companyDashboardCreatePackage' onClick={()=>setShowCreatePackage(true)}>
                 <h5>Create Package</h5>
               </div>
             </div>

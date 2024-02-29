@@ -8,9 +8,9 @@ const RiderDashboard = () => {
 
     const navigate = useNavigate();
 
-    const handleToRider = ()=>{
-        navigate('/riderlocation');
-    }
+    // const handleToRider = ()=>{
+    //     navigate('/riderlocation');
+    // }
 
     const handleToPackage = ()=>{
         navigate('/riderpackages');
@@ -28,7 +28,7 @@ const RiderDashboard = () => {
                     </div>
                 </div>
                 <div className='riderLocation'>
-                    <div className='riderLocationLeft' onClick={handleToRider}>
+                    <div className='riderLocationLeft'>
                         <h3>Location</h3>
                         <h5>muyibi 167</h5>
                     </div>

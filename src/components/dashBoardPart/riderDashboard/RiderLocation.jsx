@@ -13,7 +13,9 @@ const RiderLocation = () => {
     <>
     
       <div className='RiderLocation'>
-        <div className='riderLocationPageLeft'></div>
+        <div className='riderLocationPageLeft'>
+          <div></div>
+        </div>
         <div className='riderLocationPageRight'></div>
       </div>
     

@@ -1,23 +1,49 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import '../companyDashBoard/companyDashboardCss/companyDashboard.css'
 import trackitLogo from '../../images/trackitLogo.png'
-import { Link, NavLink, Outlet } from 'react-router-dom'
+import { NavLink, Outlet } from 'react-router-dom'
 import dashboardimg from '../../images/dashboardimg.png'
 import accountimg from '../../images/accountimg.png'
 import logoutimg from '../../images/logoutimg.png'
 import notificationimage from '../../images/notificationimage.png'
 import packageimage from '../../images/packageimage.png'
+import CreateRider from './CreateRider'
+import { Thecontext } from '../../../App'
+import CreatePackage from './CreatePackage'
+import CompanyLogout from './CompanyLogout'
 
 
 
-const companyDashboard = () => {
 
+const CompanyDashboard = () => {
+
+  const {
+          showCreateRider, showCreatePackage,
+          showCompanyLogout,setShowCompanyLogout,
+          profileShow, setProfileShow
+        } = useContext(Thecontext)
 
 
   return (
    
     <>
+
+      {
+        showCompanyLogout ? <CompanyLogout/> : null
+      }
+      {
+        showCreateRider ? <CreateRider/> : null
+      }
+      {
+        showCreatePackage ? <CreatePackage/> : null
+      }
     
+      {
+        profileShow ? <div className='profileShow'>
+                        <div className='profileShowProfile'>My Profile</div>
+                        <button className='profileShowLogoutBtn' onClick={()=>setShowCompanyLogout(true)}>Logout</button>
+                      </div> : null
+      }
       <div className='CompanyDashboard'>
 
         <div className='companyMenuBar'>
@@ -40,7 +66,7 @@ const companyDashboard = () => {
           </div>
           <div className="companyMenuBarBottom">
             <div className='logOutImg'><img src={logoutimg} alt=''/></div>
-            <Link to='/login' className='logOutLink'>Logout</Link>
+            <div className='logOutLink' onClick={()=>setShowCompanyLogout(true)}>Logout</div>
           </div>
         </div>
 
@@ -54,7 +80,7 @@ const companyDashboard = () => {
                 <img src={notificationimage} alt=''/>
                 <div className='notifyDot'></div>
               </div>
-              <div className='companyBodyTopRightProfile'>D</div>
+              <div className='companyBodyTopRightProfile' onClick={()=>setProfileShow(!profileShow)}>D</div>
             </div>
           </div>
           <div className="companyBodyDown">
@@ -67,4 +93,4 @@ const companyDashboard = () => {
   )
 }
 
-export default companyDashboard
+export default CompanyDashboard

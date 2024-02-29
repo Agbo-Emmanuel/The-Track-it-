@@ -9,8 +9,8 @@ const RiderPackages = () => {
   return (
     <>
     
-        <div>
-            packagesdd
+        <div className='RiderPackages'>
+          <div></div>
         </div>
     
     </>
