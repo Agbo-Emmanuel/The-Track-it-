@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import '../pagesCss/Companysignup.css'
-import Signupimg from '../images/Signupimg.svg'
+// import Signupimg from '../images/Signupimg.svg'
 import { Link, useNavigate } from 'react-router-dom'
-import axios from "axios"
-import Swal from 'sweetalert2'
+// import axios from "axios"
+// import Swal from 'sweetalert2'
+import trackitLogo from '../images/trackitLogo.png'
 
 const Companysignup = () => {
 
@@ -115,9 +116,12 @@ const Companysignup = () => {
     <>
     
         <div className='Companysignup'>
-            <div className='Companysignupimg'>
+          <div className='companySignupLogo'>
+            <img src={trackitLogo} alt=''/>
+          </div>
+            {/* <div className='Companysignupimg'>
                 <img src={Signupimg} alt=''/>
-            </div>
+            </div> */}
             <div className='signupContainer'>
                 <h1>Sign Up</h1>
                 <p>Create your account now</p>
