@@ -68,7 +68,7 @@ const Landingpage = () => {
                         </div>
                         <div className="section2Right">
                             <div className='section2RightContentFirst'>
-                                <div className='section2RightContentLeft'><div className='section2RightContentLeftCircle'></div></div>
+                                <div className='section2RightContentLeft'><div className='section2RightContentLeftCircleFirst'></div></div>
                                 <div className='section2RightContentRight'>
                                     Do you need to keep track of important<br></br> 
                                     items or people on the go?Our tracking<br></br>
@@ -76,7 +76,7 @@ const Landingpage = () => {
                                 </div>
                             </div>
                             <div className='section2RightContentSecond'>
-                                <div className='section2RightContentLeft'><div className='section2RightContentLeftCircle'></div></div>
+                                <div className='section2RightContentLeft'><div className='section2RightContentLeftCircleSecond'></div></div>
                                 <div className='section2RightContentRight'>
                                     With our easy-to-use app, you can monitor <br></br> 
                                     the location of your valued items or loved<br></br>
@@ -85,7 +85,7 @@ const Landingpage = () => {
                                 </div>
                             </div>
                             <div className='section2RightContentThird'>
-                                <div className='section2RightContentLeft'><div className='section2RightContentLeftCircle'></div></div>
+                                <div className='section2RightContentLeft'><div className='section2RightContentLeftCircleThird'></div></div>
                                 <div className='section2RightContentRight'>
                                     With our easy-to-use app, you can monitor <br></br> 
                                     the location of your valued items or loved <br></br>
@@ -95,6 +95,8 @@ const Landingpage = () => {
                             </div>
                         </div>
                     </div>
+                    <h1 className='landingPageH1'>Our tracking application offers the 
+following features</h1>
                     <div className='section3'>
                         <div className="section3Left"> 
                             <img src={landingpageimg3} alt=''/>

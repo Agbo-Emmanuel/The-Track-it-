@@ -326,18 +326,30 @@
     /* background-color: #FFBC42; */
     display: flex;
     align-items: center;
-    color: #6E6E6E;
+    color: white;
     font-size: 18px;
 }
-.section2RightContentLeftCircle{
+.section2RightContentLeftCircleFirst{
     width: 35%;
-    height: 17%;
+    height: 16%;
+    background-color: #575757;
+    border-radius: 100%;
+}
+.section2RightContentLeftCircleSecond{
+    width: 35%;
+    height: 13%;
+    background-color: #575757;
+    border-radius: 100%;
+}
+.section2RightContentLeftCircleThird{
+    width: 35%;
+    height: 13%;
     background-color: #575757;
     border-radius: 100%;
 }
 
 .section3{
-    width: 85%;
+    width: 80%;
     height: 350px;
     background-color: #FAF8F9;
     margin-top: 50px;
