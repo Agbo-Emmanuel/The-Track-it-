@@ -81,6 +81,9 @@
 .nameinputPart > input:hover{
     border: 1px solid rgb(209, 209, 209);
 }
+.nameinputPart > input:focus{
+    border: 1px solid orange;
+}
 
 .inputPart{
     width: 100%;
@@ -105,7 +108,9 @@
 .inputPart > input:hover{
     border: 1px solid rgb(209, 209, 209);
 }
-
+.inputPart > input:focus{
+    border: 1px solid orange;
+}
 .CompanysignupButton{
     width: 90%;
     height: 55px;
@@ -116,6 +121,7 @@
     border: none;
     border-radius: 6px;
     cursor: pointer;
+    margin-top: 20px;
 }
 .CompanysignupButton:hover{
     background-color: #f2a008;
@@ -136,16 +142,16 @@
 
 @media screen and (max-width: 821px){
 
-    .Companysignup{
+    /* .Companysignup{
         width: 100vw;
         height: 100vh;
         background-color: #FAF5EC;
         display: flex;
         justify-content: center;
-        /* align-items: center; */
+        align-items: center;
         justify-content: center;
         gap: 10px;
-    }
+    } */
 
     .signupContainer{
         width: 45vw;
@@ -164,16 +170,16 @@
 
 @media screen and (max-width: 500px){
 
-    .Companysignup{
+    /* .Companysignup{
         width: 100vw;
         height: auto;
         background-color: #FAF5EC;
         display: flex;
         justify-content: center!important;
         align-items: center;
-        /* justify-content: center; */
+        justify-content: center;
         gap: 40px;
-    }
+    } */
 
     .Companysignupimg{
         display: none;

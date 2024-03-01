@@ -61,12 +61,38 @@ const Landingpage = () => {
                             <img src= {heroSectionImg} alt=''/>
                         </div>
                     </div>
+                    <h1 className='landingPageH1'>Welcome to Track it</h1>
                     <div className='section2'>
                         <div className="section2Left"> 
                             <img src={landingpageimg2} alt=''/>
                         </div>
                         <div className="section2Right">
-                            <p>Keep Track of your product to<br/> ensure safe delivery</p>
+                            <div className='section2RightContentFirst'>
+                                <div className='section2RightContentLeft'><div className='section2RightContentLeftCircle'></div></div>
+                                <div className='section2RightContentRight'>
+                                    Do you need to keep track of important<br></br> 
+                                    items or people on the go?Our tracking<br></br>
+                                    application is the perfect solution for you.
+                                </div>
+                            </div>
+                            <div className='section2RightContentSecond'>
+                                <div className='section2RightContentLeft'><div className='section2RightContentLeftCircle'></div></div>
+                                <div className='section2RightContentRight'>
+                                    With our easy-to-use app, you can monitor <br></br> 
+                                    the location of your valued items or loved<br></br>
+                                    ones in real-time, giving you peace of<br></br>
+                                    mind and control over your belongings.
+                                </div>
+                            </div>
+                            <div className='section2RightContentThird'>
+                                <div className='section2RightContentLeft'><div className='section2RightContentLeftCircle'></div></div>
+                                <div className='section2RightContentRight'>
+                                    With our easy-to-use app, you can monitor <br></br> 
+                                    the location of your valued items or loved <br></br>
+                                    ones in real-time, giving you peace of <br></br>
+                                    mind and control over your belongings.
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div className='section3'>

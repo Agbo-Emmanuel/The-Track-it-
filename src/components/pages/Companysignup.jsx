@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import '../pagesCss/Companysignup.css'
 // import Signupimg from '../images/Signupimg.svg'
 import { Link, useNavigate } from 'react-router-dom'
-// import axios from "axios"
-// import Swal from 'sweetalert2'
+import axios from "axios"
+import Swal from 'sweetalert2'
 import trackitLogo from '../images/trackitLogo.png'
 
 const Companysignup = () => {
@@ -16,7 +16,7 @@ const Companysignup = () => {
 
 
     const [formErrors, setFormErrors]  = useState()
-  console.log(formErrors)
+  // console.log(formErrors)
 
 //   const handleImageChange = (e)=>{
 //      setProfileImage(URL.createObjectURL(e.target.files[0]))
@@ -40,8 +40,8 @@ const Companysignup = () => {
 // }
 
 
-//   const theData = {firstname:userData.firstName, lastname: userData.lastName, phoneNumber: userData.phoneNumber, email: userData.email, userPassword: userData.password, confirmPassword: userData.confirmPassword, transactionPin: userData.pin}
-//     const url = "https://flipcash-banking.onrender.com/api/v1/user/sign-up"
+  const theData = {CompanyName:userData.CompanyName, CompanyAddress: userData.CompanyAddress, Telephone: userData.Telephone, Email: userData.Email, password: userData.Password}
+    const url = "https://track-it-crh5.onrender.com/api/v1/register"
 
 
   const handleCreateAccount = async(e)=>{
@@ -50,29 +50,29 @@ const Companysignup = () => {
     setFormErrors(validate(userData));
     // console.log(formErrors)
 
-    //   try{
-    //       const response = await axios.post(url, theData)
-    //       console.log(response)
-    //       localStorage.setItem("userToken", response.data.token)
+      try{
+          const response = await axios.post(url, theData)
+          console.log(response.data.data.CompanyName.charAt(0))
+          // localStorage.setItem("companyFirstLetter", response.data.CompanyName.charAt(0))
           
-    //       Swal.fire({
-    //         title: "Success!",
-    //         text: response.data.message,
-    //         icon: "success",
-    //         confirmButtonText: "ok",
-    //       }).then(function() {
-    //              window.location.href = "/dashboard";
-    //           }) 
-    //   }
-    //   catch(err){
-    //     Swal.fire({
-    //       title: "error!",
-    //       text: err.response.message,
-    //       icon: "error",
-    //       confirmButtonText: "ok",
-    //       }) 
-    //       console.log(err)
-    //   }
+          Swal.fire({
+            title: "Success!",
+            text: response.data.message,
+            icon: "success",
+            confirmButtonText: "ok",
+          }).then(function() {
+                 window.location.href = "/companydashboard";
+              }) 
+      }
+      catch(err){
+        Swal.fire({
+          title: "error!",
+          text: err.response.message,
+          icon: "error",
+          confirmButtonText: "ok",
+          }) 
+          console.log(err)
+      }
   }
 
   const validate = (values)=>{
@@ -185,7 +185,7 @@ const Companysignup = () => {
                     
                 </div>
                 <button className='CompanysignupButton' onClick={handleCreateAccount}>Create Account</button>
-                <p className='linkToLoginPage'>Already have an Account?<Link to='/login' className='loginLink'>Login</Link></p>
+                <p className='linkToLoginPage'>Already have an Account? <Link to='/login' className='loginLink'>Login</Link></p>
             </div>
         </div>
     
