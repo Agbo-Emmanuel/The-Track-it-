@@ -23,9 +23,7 @@ const Landingpage = () => {
 
     const [menuBar, setMenuBar] = useState(false)
 
-    const handleMenuBar = ()=>{
-        setMenuBar(!menuBar)
-    }
+    
 
     const handleCloseMenu = ()=>{
         setMenuBar(false)
@@ -47,34 +45,20 @@ const Landingpage = () => {
                         </div> 
 
                     :   <div className='Landingpage'>
-                    <header className='landingHeader'>
-                        <div className='landingHeaderHolder'>
-                            <div className='leftHeader'>
-                                <img src={trackitLogo} alt=''/>
-                            </div>
-                            <div className='rightHeader'>
-                                <div className='headerNavMenu'>
-                                    <NavLink to='/' className={({ isActive }) => isActive ? 'active' : 'notactive'}>Home</NavLink>
-                                    <NavLink to='/track'className={({ isActive }) => isActive ? 'active' : 'notactive'}>Track</NavLink>
-                                    <NavLink to='about'className={({ isActive }) => isActive ? 'active' : 'notactive'}>About</NavLink>
-                                </div>
-                                <NavLink to='/companysignup' className='getStartedButton'>Get Started</NavLink>
-                            </div>
-                            <div className='buggerMenu' onClick={handleMenuBar}><img src={buggerMenu} alt=''/></div>
-                        </div>
-                    </header>
+                    
                     <div className='heroSection'>
                         <div className='heroSectionLeft'>
                             <div className='heroText'>
                                 <h1>Your <span>Product</span> Our Priority</h1>
-                                <h6>Track it protects you from getting scammed. Ensuring that you can track your product with your mobile device.</h6>
+                                <h6>Track it protects you from getting scammed.<br></br> 
+                                    Ensuring that you can track your product with your<br></br> 
+                                    mobile device.Track on the go and monitor your<br></br> Product anywhere, anytime
+                                </h6>
                             </div>
                             <NavLink to='/companysignup' className='heroSectionButton'>Get Started</NavLink>
                         </div>
                         <div className='heroSectionRight'>
-                            <div className='heroSectionImg'>
-                                <img src= {heroSectionImg} alt=''/>
-                            </div>
+                            <img src= {heroSectionImg} alt=''/>
                         </div>
                     </div>
                     <div className='section2'>
@@ -133,39 +117,9 @@ const Landingpage = () => {
                                     all you need to do is to track your package and make sure it’s been delivered to the right destination.
                                 </p>
                             </div>
-                        </div>
+                        </div>s
                     </div>
-                    <footer className='landingFooter'>
-                        <div className='landingFooterTop'>
-                            <h5>Get started with Track it.</h5>
-                            <p>We’re here to help you track your goods<br/> nation wide. </p>
-                        </div>
-                        <div className='landingFooterCenter'>
-                            <div className='landingFooterCenterLogo'>
-                                <img src={trackitLogo} alt=''/>
-                            </div>
-                            <div className='landingFooterCenterText'>
-                                <div className='landingFooterCompany'>
-                                    <Link className='landingFooterLink'>About us</Link>
-                                    <Link className='landingFooterLink'>Contact us</Link>
-                                    <Link className='landingFooterLink'>Tracking</Link>
-                                </div>
-                                <div className='landingFooterSocialMedia'>
-                                    <h6>Social Media</h6>
-                                    <div className='socialMediaImg'>
-                                        <div className='facebook'><img src={facebookimg} alt=''/></div>
-                                        <div className='twitter'><img src={twitterimg} alt=''/></div>
-                                        <div className='instagram'><img src={instagramimg} alt=''/></div>
-                                    </div>
-                                </div>
-                                <NavLink to='/companysignup' className='landingFooterButton'>Get Started</NavLink>
-                            </div>
-                        </div>
-                        <div className='landingFooterBottom'>
-                            <div className='landingFooterLine'></div>
-                            <p>©2024 Track it | All rights reserved</p>
-                        </div>
-                    </footer>
+                    
             
                 </div>
         }

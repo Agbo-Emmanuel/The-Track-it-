@@ -188,11 +188,12 @@
 }
 
 .heroSection{
-    width: 85%;
+    width: 80%;
     height: 500px;
     border-right: 1px solid #FFA500;  
     border-bottom: 1px solid #FFA500;  
     display: flex;
+    margin-top: 30px;
 }
 .heroSectionLeft{
     width: 50%;
@@ -201,6 +202,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 40px;
 }
 .heroSectionRight{
     width: 50%;
@@ -216,14 +218,14 @@
     /* background-color: yellow; */
 }
 .heroText > h1{
-    font-size: 60px;
+    font-size: 70px;
     font-family: Lora
 }
 .heroText > h1 > span{
     color: #FFA500;
 }
 .heroText > h6{
-    font-size: 18px;
+    font-size: 20px;
     font-family: Lora;
     margin-top: 10px;
     color: #8A8C8F;
@@ -246,15 +248,10 @@
 .heroSectionButton:hover{
     background-color: #ee9c03;
 }
-.heroSectionImg{
-    width: 80%;
-    height: 90%;
-    /* background-color: red; */
-}
-.heroSectionImg > img{
+.heroSectionRight > img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .section2{
@@ -549,7 +546,7 @@
 }
 .landingFooterTop{
     width: 80%;
-    height: 30%;
+    height: 60%!important;
     /* background-color: red; */
     display: flex;
     flex-direction: column;
@@ -567,20 +564,46 @@
     font-family: 'Arial';
     color: whitesmoke;
 }
-.landingFooterCenter{
-    width: 80%;
-    height: 50%;
-    /* background-color: yellow; */
+.landingPageFooterButton{
+    width: 10%;
+    height: 58px;
+    background-color: orange;
+    border-radius: 6px;
+    text-decoration: none;
     display: flex;
     justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 20px;
+}
+.landingFooterCenter{
+    width: 80%;
+    height: 30%;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: flex-start!important;
     align-items: center;
 }
 .landingFooterCenterLogo{
     width: 15%;
     height: 60%;
     /* background-color: green; */
+    position: relative;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.landingFooterCenterLogo > img{
+.landingFooterCenterLogoimg{
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/trackitLogo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: -30px;
+}
+.landingFooterCenterLogoimg > img{
     width: 100%;
     height: 100%;
     object-fit: cover;

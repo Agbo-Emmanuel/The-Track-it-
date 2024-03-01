@@ -49,10 +49,10 @@ const App = () => {
 
           <Route path='/companysignup' element= { <Companysignup/> }/>
           <Route path='/login' element= { <Login/> }/>
-          <Route path='/' element= { <Landingpage/> }/>
           <Route path='/verifyemail' element= { <VerifyEmail/> }/>
           
           <Route element= { <Landing/> }>
+            <Route path='/' element= { <Landingpage/> }/>
             <Route path='/track' element= { <Track/> }/>
             <Route path='/about' element= { <About/> }/>
             <Route path='/usermap' element= { <UserMapPage/> }/>

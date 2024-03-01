@@ -169,7 +169,7 @@ const Companysignup = () => {
                         <div className='inputPart'>
                             <label>Password</label>
                             <input
-                                type='text'
+                                type='password'
                                 placeholder="password"
                                 name='Password'
                                 value={userData.Password}

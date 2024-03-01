@@ -35,21 +35,22 @@ const Landing = () => {
                             
                         :   <div style={{width: "100%", height: "auto"}}>
 
-                        <header className='landingHeader'>
-                            <div className='landingHeaderHolder'>
-                                <div className='leftHeader'>
-                                    <img src={trackitLogo} alt=''/>
-                                </div>
-                                <div className='rightHeader'>
-                                    <div className='headerNavMenu'>
-                                        <NavLink to='/' className={({ isActive }) => isActive ? 'active' : 'notactive'}>Home</NavLink>
-                                        <NavLink to='/track'className={({ isActive }) => isActive ? 'active' : 'notactive'}>Track</NavLink>
-                                        <NavLink to='about'className={({ isActive }) => isActive ? 'active' : 'notactive'}>About</NavLink>
+                            <header className='landingHeader'>
+                                <div className='landingHeaderHolder'>
+                                    <div className='leftHeader'>
+                                        <img src={trackitLogo} alt=''/>
                                     </div>
+                                    <div className='rightHeader'>
+                                        <div className='headerNavMenu'>
+                                            <NavLink to='/' className={({ isActive }) => isActive ? 'active' : 'notactive'}>Home</NavLink>
+                                            <NavLink to='/track'className={({ isActive }) => isActive ? 'active' : 'notactive'}>Track</NavLink>
+                                            <NavLink to='about'className={({ isActive }) => isActive ? 'active' : 'notactive'}>About</NavLink>
+                                        </div>
+                                        <NavLink to='/companysignup' className='getStartedButton'>Get Started</NavLink>
+                                    </div>
+                                    <div className='buggerMenu' onClick={handleLandingMenu}><img src={buggerMenu} alt=''/></div>
                                 </div>
-                                <div className='buggerMenu' onClick={handleLandingMenu}><img src={buggerMenu} alt=''/></div>
-                            </div>
-                        </header>
+                            </header>
             
                         <Outlet/>
             
@@ -57,10 +58,11 @@ const Landing = () => {
                             <div className='landingFooterTop'>
                                 <h5>Get started with Track it.</h5>
                                 <p>We’re here to help you track your goods<br/> nation wide. </p>
+                                <NavLink to='/companysignup' className='landingPageFooterButton'>Get Started</NavLink>
                             </div>
                             <div className='landingFooterCenter'>
                                 <div className='landingFooterCenterLogo'>
-                                    <img src={trackitLogo} alt=''/>
+                                    <div className='landingFooterCenterLogoimg'>{/* <img src={trackitLogo} alt=''/> */}</div>
                                 </div>
                                 <div className='landingFooterCenterText'>
                                     <div className='landingFooterCompany'>

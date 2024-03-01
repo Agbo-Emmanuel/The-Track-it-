@@ -25,6 +25,7 @@ const Login = () => {
             <div className='logininputPart'>
               <label>Password</label>
               <input
+                type='password'
                 placeholder="password"
               />
             </div>
