@@ -39,9 +39,9 @@ const UserMapPage = () => {
                     </div>
                 </div>
             </div>
-            <div className='userMap'>
+            {/* <div className='userMap'>
                 <img src={mapimg} alt='' />
-            </div>
+            </div> */}
         </div>
     
     </>
