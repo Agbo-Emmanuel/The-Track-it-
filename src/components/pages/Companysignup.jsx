@@ -32,7 +32,7 @@ const Companysignup = () => {
   const handleInputChange = (e)=>{
     const { name, value } = e.target
     setUserData({...userData, [name]: value})
-    console.log(userData)
+    // console.log(userData)
 }
 // const handleCreateAccount = ()=>{
 //     navigate("/companydashboard");
@@ -47,7 +47,7 @@ const Companysignup = () => {
     
     e.preventDefault();
     setFormErrors(validate(userData));
-    console.log(formErrors)
+    // console.log(formErrors)
 
     //   try{
     //       const response = await axios.post(url, theData)
@@ -128,6 +128,7 @@ const Companysignup = () => {
                             placeholder="company's name"
                             name='CompanyName'
                             value={userData.CompanyName}
+                            onChange={handleInputChange}
                         />
                         {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.CompanyName}</p> : null }
                     </div>
