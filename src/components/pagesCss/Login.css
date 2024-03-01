@@ -3,14 +3,26 @@
     height: 100vh;
     background-color: #FAF5EC;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 20px;
+}
+
+.loginLogo{
+    width: 10vw;
+    height: 100px;
+    /* background-color: red; */
+}
+.loginLogo > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .loginContainer{
     width: 30vw;
-    height: 70%;
+    height: auto;
     /* background-color: yellow; */
     display: flex;
     flex-direction: column;
@@ -24,6 +36,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    margin-bottom: 20px;
 }
 .logininputPart{
     width: 100%;
@@ -48,7 +61,7 @@
 
 .loginButton{
     width: 100%;
-    height: 50px;
+    height: 55px;
     background-color: #FFA500;
     color: whitesmoke;
     font-size: 20px;
@@ -56,7 +69,7 @@
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: -10px;
 }
 
 .linkToLoginPage{
@@ -81,7 +94,7 @@
     
     .loginButton{
         width: 100%;
-        height: 50px;
+        height: 30%!important;
         background-color: #FFA500;
         color: whitesmoke;
         font-size: 20px;

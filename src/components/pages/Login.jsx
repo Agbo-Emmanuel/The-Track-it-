@@ -1,6 +1,7 @@
 import React from 'react'
 import '../pagesCss/Login.css'
 import { Link } from 'react-router-dom'
+import trackitLogo from '../images/trackitLogo.png'
 
 const Login = () => {
 
@@ -8,6 +9,9 @@ const Login = () => {
     <>
     
       <div className='Login'>
+        <div className='loginLogo'>
+          <img src={trackitLogo} alt=''/>
+        </div>
         <div className='loginContainer'>
           <h1>Login</h1>
           <p>Welcome back</p>
