@@ -58,25 +58,23 @@ const Landing = () => {
                             <div className='landingFooterTop'>
                                 <h5>Get started with Track it.</h5>
                                 <p>We’re here to help you track your goods<br/> nation wide. </p>
-                                <NavLink to='/companysignup' className='landingPageFooterButton'>Get Started</NavLink>
                             </div>
                             <div className='landingFooterCenter'>
                                 <div className='landingFooterCenterLogo'>
-                                    <div className='landingFooterCenterLogoimg'>{/* <img src={trackitLogo} alt=''/> */}</div>
+                                    <NavLink to='/companysignup' className='landingPageFooterButton'>Get Started</NavLink>
+                                    <div className='landingFooterCenterLogoimg'><img src={trackitLogo} alt=''/></div>
                                 </div>
-                                <div className='landingFooterCenterText'>
-                                    <div className='landingFooterCompany'>
-                                        <Link className='landingFooterLink'>About us</Link>
-                                        <Link className='landingFooterLink'>Contact us</Link>
-                                        <Link className='landingFooterLink'>Tracking</Link>
-                                    </div>
-                                    <div className='landingFooterSocialMedia'>
-                                        <h6>Social Media</h6>
-                                        <div className='socialMediaImg'>
-                                            <div className='facebook'><img src={facebookimg} alt=''/></div>
-                                            <div className='twitter'><img src={twitterimg} alt=''/></div>
-                                            <div className='instagram'><img src={instagramimg} alt=''/></div>
-                                        </div>
+                                <div className='landingFooterCompany'>
+                                    <Link className='landingFooterLink'>About us</Link>
+                                    <Link className='landingFooterLink'>Contact us</Link>
+                                    <Link className='landingFooterLink'>Tracking</Link>
+                                </div>
+                                <div className='landingFooterSocialMedia'>
+                                    <h6>Social Media</h6>
+                                    <div className='socialMediaImg'>
+                                        <div className='facebook'><img src={facebookimg} alt=''/></div>
+                                        <div className='twitter'><img src={twitterimg} alt=''/></div>
+                                        <div className='instagram'><img src={instagramimg} alt=''/></div>
                                     </div>
                                 </div>
                             </div>
