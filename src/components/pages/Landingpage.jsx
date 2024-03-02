@@ -95,8 +95,7 @@ const Landingpage = () => {
                             </div>
                         </div>
                     </div>
-                    <h1 className='landingPageH1'>Our tracking application offers the 
-following features</h1>
+                    <h1 className='landingPageH2'>Our tracking application offers the <p>following features</p></h1>
                     <div className='section3'>
                         <div className="section3Left"> 
                             <img src={landingpageimg3} alt=''/>

@@ -347,6 +347,11 @@
     background-color: #575757;
     border-radius: 100%;
 }
+.landingPageH2{
+    font-size: 40px;
+    /* margin-top: 50px; */
+    text-align: center;
+}
 
 .section3{
     width: 80%;
