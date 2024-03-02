@@ -15,97 +15,6 @@
     position: relative;
 }
 
-.landingPageMenuBar{
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.304);
-    display: flex;
-    justify-content: flex-end;
-    top: 0px;
-    position: fixed;
-    z-index: 20px;
-    animation: slideInRight;
-    animation-duration: 2s; 
-}
-.landingPageMenuBarMenu{
-    width: 90%;
-    height: 90%;
-    background-color: rgb(41, 41, 41);
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    justify-content: flex-end;
-    align-items: center;
-    position: relative;
-}
-.landingPagecloseMenuBar{
-    width: 15%;
-    height: 10%;
-    background-color: rgba(255, 215, 140, 0.23);
-    position: absolute;
-    right: 0;
-    top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    font-weight: 500;
-    color: white;
-    border-radius: 6px;
-    padding-bottom: 10px;
-    transition: all 350ms ease-in-out;
-}
-.closeMenuBar:hover{
-    transform: scale(1);
-    background-color: orange;
-}
-.menuactive{
-    width: 100%;
-    height: 15%;
-    background-color: orange;
-    color: white;
-    display: flex;
-    align-items: center;
-    padding-left: 10px;
-    font-size: 20px;
-    font-weight: 500;
-    cursor: pointer;
-    text-decoration: none;
-}
-.menunotactive{
-    width: 100%;
-    height: 15%;
-    /* background-color: orange; */
-    color: white;
-    display: flex;
-    align-items: center;
-    padding-left: 10px;
-    font-size: 20px;
-    font-weight: 500;
-    transition: all 350ms ease-in-out;
-    cursor: pointer;
-    text-decoration: none;
-}
-.menunotactive:hover{
-    transform: scale(1);
-    background-color: #ffbc3e;
-}
-.landingPagemenuSignup{
-    width: 80%;
-    height: 13%;
-    background-color: orange;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 20px;
-    font-weight: 500;
-    border-radius: 6px;
-    margin-top: 30px;
-    margin-bottom: 20px;
-}
-
 .heroSection{
     width: 80%;
     height: 500px;
@@ -336,6 +245,7 @@
     width: 50%;
     height: 100%;
     /* background-color: red; */
+    display: flex;
 }
 .section3TopRight > img{
     width: 100%;
@@ -354,6 +264,7 @@
     width: 50%;
     height: 100%;
     /* background-color: blue; */
+    display: flex;
 }
 .section3BottomLeft > img{
     width: 100%;
@@ -445,7 +356,7 @@
 }
 .section4Center > h1{
     font-size: 35px;
-    font-family: segoe UI;
+    font-family: 'Roboto';
     font-weight: 800;
     color: white;
     text-align: center;
@@ -458,6 +369,7 @@
     border-radius: 6px;
     color: #071B63;
     cursor: pointer;
+    font-family: 'Poppins';
     display: flex;
     align-items: center;
     justify-content: center;
@@ -594,18 +506,6 @@
 
 @media screen and (max-width:775px){
 
-    .landingHeaderHolder{
-        width: 85%;
-        height: 100%;
-        /* background-color: blue; */
-    }
-    .rightHeader{
-        width: 70%!important;
-    }
-    .getStartedButton{
-        width: 20%!important;
-        height: 50%;
-    }
     .heroSection{
         width: 85%;
         height: 400px;
@@ -623,7 +523,7 @@
         height: 50%;
         /* background-color: yellow; */
     }
-    .heroText > h1{
+    /* .heroText > h1{
         font-size: 40px;
     }
     .heroText > h6{
@@ -634,7 +534,7 @@
         width: 40%;
         height: 50px;
         margin-top: -10px;
-    }
+    } */
     .section2Left > img{
         object-fit: cover;
     }
@@ -687,24 +587,9 @@
 
 @media screen and (max-width: 500px){
 
-    .leftHeader{
-        width: 20%!important;
-    }
-    .active{
-        display: none;
-    }
-    .notactive{
-        display: none;
-    }
-    .buggerMenu{
-        display: flex;
-    }
-    .getStartedButton{
-        display: none;
-    }
     .heroSection{
         width: 85%;
-        height: 400px;
+        height: 300px!important;
         /* background-color: yellow; */
     }
     .heroSectionLeft{
@@ -721,183 +606,203 @@
     }
     .heroText{
         width: 100%;
-        height: 40%;
-        /* background-color: yellow; */
+        height: 60%!important;
+        /* background-color: red; */
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     .heroText > h1{
         font-size: 40px;
+        font-family: 'Roboto'
     }
-    .heroText > h6{
-        font-size: 20px;
+    .heroText > h1 > span{
+        color: #FFA500;
     }
+    .heroText > p{
+        font-size: 12px;
+        font-weight: 500;
+        font-family: 'Poppins';
+        margin-top: 10px;
+        color: #8A8C8F;
+    }
+    .heroSectionButton{
+        width: 30%!important;
+        height: 40px!important;
+        font-size: 15px;
+        margin-top: 0px!important;
+    }
+     
+    .landingPageH1{
+        font-size: 25px;
+        font-family: 'Roboto';
+        margin-top: 50px;
+    }
+
     .section2{
-        width: 85%;
-        height: 500px;
+        width: 80%;
+        height: 600px;
+        /* background-color: yellow; */
         flex-direction: column;
+        justify-content: space-around;
+        margin-top: 50px;
+        margin-bottom: 30px;
+        border-radius: 6px;
+        border: 1px solid orange;
     }
     .section2Left{
-        width: 100%;
-        /* background-color: yellow; */
+        width: 90%;
+        height: 40%;
+        /* background-color: blue; */
+    }
+    .section2Left > img{
+        width: 99%;
+        height: 99%;
+        object-fit: contain;
     }
     .section2Right{
         width: 100%;
-        height: 100%;
+        height: 50%;
+        /* background-color: red; */
+        justify-content: space-around;
     }
-    .section2Left > img{
-        object-fit: cover;
+    .section2RightContentFirst{
+        width: 70%;
+        height: 26%;
     }
-    .section3{
-        width: 85%;
-        height: 350px;
-        margin-top: 5px;
-        margin-bottom: 150px;
-        flex-direction: column;
-        gap: 20px;
+    .section2RightContentSecond{
+        width: 70%;
+        height: 28%;
     }
-    .section3Left{
-        width: 100%;
-        height: 100%;
-        /* background-color: yellow; */
+    .section2RightContentThird{
+        width: 70%;
+        height: 28%;
     }
-    .section3Right{
-        width: 100%;
-        height: 100%;
-        /* background-color: #FFA500; */
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .section2RightContentLeftCircleFirst{
+        width: 35%;
+        height: 10%;
     }
-    .section3Text{
-        width: 90%;
-        height: 80%;
-        /* background-color: yellow; */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    .section2RightContentLeftCircleSecond{
+        width: 35%;
+        height: 10%;
     }
-    .section3Text > h1{
-        font-size: 30px;
-        font-family: 'Segoe UI';
+    .section2RightContentLeftCircleThird{
+        width: 35%;
+        height: 10%;
     }
-    .section3Text > p{
-        font-size: 15px;
+    .section2RightContentRight{
+        font-size: 9px;
+    }
+
+    .landingPageH2{
+        font-size: 18px;
+        font-family: 'Roboto';
+        margin-top: 50px;
         text-align: center;
     }
-    .section4{
-        margin-bottom: 10px;
+
+    .section3{
+        height: 650px;
+        justify-content: space-around;
     }
-    .section4Left{
-        width: 30%;
-        height: 100%;
+
+    .section3Top{
+        height: 50%;
+        flex-direction: column;
     }
-    .section4Right{
-        width: 30%;
+    .section3TopLeft{
+        width: 100%;
         height: 100%;
+        /* background-color: blue; */
+    }
+    .section3TopLeftText{
+        width: 100%;
         /* background-color: red; */
     }
-    .section4Center{
-        width: 60%;
-        height: 100%;
+    .section3TopLeftText > p{
+        font-size: 12px;
+
     }
+    .section3TopLeftImg{
+        margin-top: 20px;
+    }
+    .section3TopRight{
+        display: none;
+    }
+    
+    .section3Bottom{
+        height: 35%;
+        /* background-color: yellow; */
+    }
+    .section3BottomLeft{
+        display: none;
+    }
+    .section3BottomRight{
+        width: 100%;
+        height: 100%;
+        /* background-color: red; */
+        align-items: center;
+        gap: 20px;
+    }
+    .section3BottomRight > h1{
+        font-weight: 500;
+        font-size: 25px;
+    }
+    .section3BottomRight > p{
+        font-size: 11px;
+    }
+    .section3BottomRightBtn{
+        width: 35%;
+        height: 40px;
+        font-size: 15px;
+    }
+
+    .section4{
+        height: 300px;
+    }
+    /* .section4Center{
+        background-color: yellow;
+    } */
     .section4Center > h1{
-        font-size: 20px;
+        font-size: 13px;
+        font-weight: 800;
     }
     .section4Button{
         width: 50%;
         height: 40px;
-    }
-    .section4LeftTop{
-        width: 90%;
-        height: 40%;
-        /* background-color: blue; */
-        margin-top: 10px;
-        margin-left: 30px;
-    }
-    .section4Center{
-        width: 40%;
-        /* background-color: blue; */
+        font-size: 15px;
     }
     .packagewriteup{
         width: 100%;
         height: 20px;
         /* background-color: aqua; */
     }
+    .fastsecure{
+        gap: 4px;
+    }
     .fastsecure > p{
-        font-size: 7px;
+        font-size: 9px;
+    }
+    .watchpackage{
+        gap: 4px;
     }
     .watchpackage > p{
-        font-size: 7px;
+        font-size: 9px;
     }
+
     .section5{
-        width: 70%;
-        height: 400px;
         flex-direction: column;
-        gap: 10px;
-        margin-bottom: 50px;
     }
     .section5Left{
         width: 100%;
-        height: 100%;
-        /* background-color: yellow;c */
+        height: 50%;
     }
     .section5Right{
         width: 100%;
-        height: 100%;
+        height: 50%;
     }
-    .section5Text{
-        width: 90%;
-        height: 80%;
-    }
-    .section5Text > h1{
-        font-size: 25px;
-    }
-    .section5Text > p{
-        font-size: 10px;
-    }
-    
-    
+
 }
 
 
-
-@media screen and (max-width: 922px) {
-    
-    .rightHeader{
-        width: 65%!important;
-    }
-    .getStartedButton{
-        width: 25%!important;
-        height: 50%;
-    }
-    .heroSection{
-        width: 85%;
-        height: 400px;
-    }
-    .heroSectionLeft{
-        width: 50%;
-        height: 100%;
-    }
-    .heroSectionRight{
-        width: 50%;
-        height: 100%;
-    }
-    .heroText{
-        width: 100%;
-        height: 50%;
-        /* background-color: yellow; */
-    }
-    .heroText > h1{
-        font-size: 40px;
-    }
-    .heroText > h6{
-        font-size: 15px;
-    }
-    
-    .heroSectionButton{
-        width: 40%;
-        height: 50px;
-        margin-top: -10px;
-    }
-}
