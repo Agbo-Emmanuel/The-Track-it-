@@ -16,6 +16,8 @@ import facebookimg from '../images/facebookimg.png'
 import twitterimg from '../images/twitterimg.png'
 import instagramimg from '../images/instagramimg.png'
 import buggerMenu from '../images/buggerMenu.svg'
+import section3TopLeftImg from '../images/section3TopLeftImg.png'
+import section3BottomLeftImg from '../images/section3BottomLeftImg.png'
 
 
 
@@ -50,10 +52,12 @@ const Landingpage = () => {
                         <div className='heroSectionLeft'>
                             <div className='heroText'>
                                 <h1>Your <span>Product</span> Our Priority</h1>
-                                <h6>Track it protects you from getting scammed.<br></br> 
+                                <p>
+                                    Track it protects you from getting scammed.<br></br> 
                                     Ensuring that you can track your product with your<br></br> 
-                                    mobile device.Track on the go and monitor your<br></br> Product anywhere, anytime
-                                </h6>
+                                    mobile device.Track on the go and monitor your<br></br> 
+                                    Product anywhere, anytime.
+                                </p>
                             </div>
                             <NavLink to='/companysignup' className='heroSectionButton'>Get Started</NavLink>
                         </div>
@@ -97,15 +101,65 @@ const Landingpage = () => {
                     </div>
                     <h1 className='landingPageH2'>Our tracking application offers the <p>following features</p></h1>
                     <div className='section3'>
-                        <div className="section3Left"> 
-                            <img src={landingpageimg3} alt=''/>
+                        <div className="section3Top"> 
+                            <div className='section3TopLeft'>
+                                <div className='section3TopLeftTextPart'>
+                                    <div className='section3TopLeftImg'>
+                                        <img src={section3TopLeftImg} alt=''/>
+                                    </div>
+                                    <div className='section3TopLeftText'>
+                                        <p>
+                                            <span>Real-time tracking:</span> Monitor the location of your <br></br>
+                                            items or people in real-time, with updates every few <br></br>
+                                            seconds.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className='section3TopLeftTextPart'>
+                                    <div className='section3TopLeftImg'>
+                                        <img src={section3TopLeftImg} alt=''/>
+                                    </div>
+                                    <div className='section3TopLeftText'>
+                                        <p>
+                                            <span>Geo fencing:</span> Set up virtual boundaries for your  <br></br>
+                                            tracked items and receive notifications when they<br></br>
+                                            enter or leave designated area.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className='section3TopLeftTextPart'>
+                                    <div className='section3TopLeftImg'>
+                                        <img src={section3TopLeftImg} alt=''/>
+                                    </div>
+                                    <div className='section3TopLeftText'>
+                                        <p>
+                                            <span>Easy-to-use interface:</span> Our app is designed to be <br></br>
+                                            user-friendly and intuitive, making it easy for anyone  <br></br>
+                                            to use.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='section3TopRight'>
+                                <img src={landingpageimg3} alt=''/>
+                            </div>
                         </div>
-                        <div className="section3Right">
-                            <div className="section3Text">
-                                <h1>Connect easily</h1>
-                                <p>The Track it <span>Destination</span> feature makes communication easy. 
-                                    Get updated about the status of your package’s Location.
+                        <div className="section3Bottom">
+                            <div className="section3BottomLeft">
+                                <img src={section3BottomLeftImg} alt=''/>
+                            </div>
+                            <div className="section3BottomRight">
+                                <h1>
+                                    Safe, <span>secure</span> and reliable<br></br>
+                                    tracking at your fingertips
+                                </h1>
+                                <p>
+                                    Try our tracking application today and experience<br></br>
+                                    the peace of mind that comes with knowing where<br></br>
+                                    your important items are at all times. Sign up now<br></br>
+                                    and start tracking with ease!
                                 </p>
+                                <button className='section3BottomRightBtn'>Get Started</button>
                             </div>
                         </div>
                     </div>
@@ -140,11 +194,13 @@ const Landingpage = () => {
                         <div className="section5Right">
                             <div className="section5Text">
                                 <h1>Never get scammed</h1>
-                                <p>It doesn’t matter where your package is being delivered from,<br/>
-                                    all you need to do is to track your package and make sure it’s been delivered to the right destination.
+                                <p>
+                                    It doesn’t matter where your package is being delivered from,<br/>
+                                    all you need to do is to track your package and make sure it’s<br></br>
+                                    been delivered to the right destination.
                                 </p>
                             </div>
-                        </div>s
+                        </div>
                     </div>
                     
             
