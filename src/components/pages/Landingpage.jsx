@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import 'animate.css';
 import '../pagesCss/Landingpage.css'
 import heroSectionImg from '../images/heroSectionImg.png'
@@ -11,11 +11,6 @@ import bottomleftsection4vector from '../images/bottomleftsection4vector.png'
 import toprightsection4vector from '../images/toprightsection4vector.png'
 import bottomrightsection4vector from '../images/bottomrightsection4vector.png'
 import check from '../images/check.png'
-import trackitLogo from '../images/trackitLogo.png'
-import facebookimg from '../images/facebookimg.png'
-import twitterimg from '../images/twitterimg.png'
-import instagramimg from '../images/instagramimg.png'
-import buggerMenu from '../images/buggerMenu.svg'
 import section3TopLeftImg from '../images/section3TopLeftImg.png'
 import section3BottomLeftImg from '../images/section3BottomLeftImg.png'
 
@@ -75,7 +70,7 @@ const Landingpage = () => {
                                 <div className='section2RightContentLeft'><div className='section2RightContentLeftCircleFirst'></div></div>
                                 <div className='section2RightContentRight'>
                                     Do you need to keep track of important<br></br> 
-                                    items or people on the go?Our tracking<br></br>
+                                    items or people on the go? Our tracking<br></br>
                                     application is the perfect solution for you.
                                 </div>
                             </div>
@@ -195,9 +190,9 @@ const Landingpage = () => {
                             <div className="section5Text">
                                 <h1>Never get scammed</h1>
                                 <p>
-                                    It doesn’t matter where your package is being delivered from,<br/>
-                                    all you need to do is to track your package and make sure it’s<br></br>
-                                    been delivered to the right destination.
+                                    It doesn’t matter where your package is being <br/>
+                                    delivered from,all you need to do is to track your package and make sure it’sbeen delivered<br></br> 
+                                    to the right destination.
                                 </p>
                             </div>
                         </div>

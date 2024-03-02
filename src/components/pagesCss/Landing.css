@@ -162,6 +162,10 @@
     border-radius: 6px;
     color: white;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 }
 .getStartedButton:hover{
     background-color: #faa404;
@@ -170,7 +174,7 @@
 
 .landingFooter{
     width: 100%;
-    height: 700px;
+    height: 500px;
     background-color: #1F1F1F;
     display: flex;
     flex-direction: column;
@@ -187,14 +191,14 @@
     gap: 10px;
 }
 .landingFooterTop > h5{
-    font-size: 30px;
-    font-family: 'Arial';
+    font-size: 25px;
+    font-family: 'Roboto';
     color: whitesmoke;
 }
 .landingFooterTop > p{
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 500;
-    font-family: 'Arial';
+    font-family: 'Poppins';
     color: whitesmoke;
 }
 .landingFooterCenter{
@@ -222,13 +226,13 @@
     align-items: center;
     text-decoration: none;
     color: white;
-    font-size: 20px;
+    font-size: 16px;
     font-family: 'Poppins';
     border-radius: 6px;
 }
 .landingFooterCenterLogoimg{
     width: 100%;
-    height: 70%;
+    height: 60%;
     /* background-color: blue; */
 }
 .landingFooterCenterLogoimg > img{
@@ -248,7 +252,7 @@
 .landingFooterLink{
     text-decoration: none;
     color: white;
-    font-size: 25px;
+    font-size: 20px;
     font-family: 'Poppins';
 }
 .landingFooterLink:hover{
@@ -263,7 +267,7 @@
     justify-content: flex-end;
 }
 .landingFooterSocialMedia > h6{
-    font-size: 25px;
+    font-size: 20px;
     font-family: 'Poppins';
     color: whitesmoke;
 }
@@ -312,17 +316,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 10px;
 }
 .landingFooterLine{
     width: 100%;
     height: 1px;
     background-color: white;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 .landingFooterBottom > p{
     color: white;
     font-size: 15px;
-    margin-top: 20px;
+    /* margin-top: 10px; */
 }
 
 

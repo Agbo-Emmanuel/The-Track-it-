@@ -106,87 +106,6 @@
     margin-bottom: 20px;
 }
 
-.landingHeader{
-    width: 100%;
-    height: 80px;
-    background-color: #FFD996;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    z-index: 9999999999;
-    top: 0px;
-}
-.landingHeaderHolder{
-    width: 85%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.leftHeader{
-    width: 10%;
-    height: 100%;
-    /* background-color: red; */
-}
-.leftHeader > img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.rightHeader{
-    width: 50%;
-    height: 100%;
-    /* background-color: green; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.headerNavMenu{
-    width: 70%;
-    height: 100%;
-    /* background-color: blue; */
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-.active{
-    text-decoration: none;
-    color: orange;
-}
-.notactive{
-    text-decoration: none;
-    color: black;
-    font-weight: 500;
-}
-.getStartedButton{
-    width: 20%;
-    height: 50%;
-    background-color: #FFA500;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    text-decoration: none;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.getStartedButton:hover{
-    background-color: #faa404;
-}
-.buggerMenu{
-    width: 9%;
-    height: 40%;
-    /* background-color: red; */
-    display: none;
-}
-.buggerMenu > img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 .heroSection{
     width: 80%;
     height: 500px;
@@ -218,14 +137,14 @@
     /* background-color: yellow; */
 }
 .heroText > h1{
-    font-size: 75px;
-    font-family: Lora
+    font-size: 60px;
+    font-family: 'Roboto'
 }
 .heroText > h1 > span{
     color: #FFA500;
 }
 .heroText > p{
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 500;
     font-family: 'Poppins';
     margin-top: 10px;
@@ -243,7 +162,7 @@
     font-weight: 500;
     font-size: 20px;
     font-family: 'Poppins';
-    margin-top: 60px;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -264,8 +183,8 @@
 }
 
 .section2{
-    width: 80%;
-    height: 500px;
+    width: 70%;
+    height: 400px;
     /* background-color: #C5C1C6; */
     margin-top: 100px;
     margin-bottom: 70px;
@@ -276,7 +195,7 @@
 .section2Left{
     width: 50%;
     height: 100%;
-    /* background-color: yellow;c */
+    /* background-color: yellow; */
 }
 .section2Left > img{
     width: 100%;
@@ -294,7 +213,7 @@
 }
 .section2RightContentFirst{
     width: 100%;
-    height: 25%;
+    height: 24%;
     background-color:  #FFBC42;
     border-radius: 15px;
     display: flex;
@@ -302,7 +221,7 @@
 }
 .section2RightContentSecond{
     width: 100%;
-    height: 30%;
+    height: 28%;
     background-color:  #FFBC42;
     border-radius: 15px;
     display: flex;
@@ -310,7 +229,7 @@
 }
 .section2RightContentThird{
     width: 100%;
-    height: 30%;
+    height: 28%;
     background-color:  #FFBC42;
     border-radius: 15px;
     display: flex;
@@ -331,11 +250,12 @@
     display: flex;
     align-items: center;
     color: white;
-    font-size: 18px;
+    font-size: 14px;
+    font-family: 'Poppins';
 }
 .section2RightContentLeftCircleFirst{
     width: 35%;
-    height: 16%;
+    height: 15%;
     background-color: #575757;
     border-radius: 100%;
 }
@@ -352,14 +272,14 @@
     border-radius: 100%;
 }
 .landingPageH2{
-    font-size: 40px;
+    font-size: 35px;
     margin-top: 50px;
     text-align: center;
 }
 
 .section3{
     width: 100%;
-    height: 1100px;
+    height: 1000px;
     background-color: #F2F0F0;
     margin-top: 50px;
     margin-bottom: 70px;
@@ -391,7 +311,7 @@
     height: 25%;
     /* background-color: aqua; */
     border-radius: 100%;
-    margin-top: 27px;
+    margin-top: 33px;
 }
 .section3TopLeftImg > img{
     width: 100%;
@@ -406,7 +326,8 @@
     align-items: center;
 }
 .section3TopLeftText > p{
-    font-size: 23px;
+    font-size: 17px;
+    font-family: 'Poppins';
 }
 .section3TopLeftText > p > span{
     font-weight: 500;
@@ -423,7 +344,7 @@
 }
 .section3Bottom{
     width: 80%;
-    height: 45%;
+    height: 36%;
     /* background-color: yellow; */
     display: flex;
     justify-content: center;
@@ -450,22 +371,24 @@
 }
 .section3BottomRight > h1{
     font-weight: 500;
-    font-size: 50px;
+    font-size: 35px;
+    font-family: 'Roboto';
 }
 .section3BottomRight > h1 > span{
     color: orange;
 }
 .section3BottomRight > p{
-    font-size: 26px;
+    font-size: 18px;
+    font-family: 'Poppins';
 }
 .section3BottomRightBtn{
     width: 30%;
-    height: 60px;
+    height: 50px;
     background-color: #FFA500;
     border: none;
     color: white;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 500;font-family: 'Poppins';
     border-radius: 6px;
     cursor: pointer;
 }
@@ -626,7 +549,7 @@
 .section5Left{
     width: 40%;
     height: 100%;
-    background-color: yellow;
+    /* background-color: yellow; */
 }
 .section5Left > img{
     width: 100%;
@@ -638,7 +561,7 @@
     height: 100%;
     /* background-color: #FFA500; */
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
 .section5Text{
@@ -648,19 +571,17 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 .section5Text > h1{
-    font-size: 60px;
-    font-family: 'Segoe UI';
+    font-size: 40px;
+    font-family: 'Roboto';
 }
 .section5Text > p{
-    font-size: 23px;
-    font-family: 'Segoe UI';
+    font-size: 18px;
+    font-family: 'Poppins';
     font-weight: 450;
     margin-bottom: 40px;
     margin-top: 20px;
-    text-align: center;
 }
 .section5Text > p > span{
     color: orange;
