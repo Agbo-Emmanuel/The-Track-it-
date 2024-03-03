@@ -8,7 +8,7 @@ import trackitLogo from '../images/trackitLogo.png'
 import { LuEye } from "react-icons/lu";
 import { LuEyeOff } from "react-icons/lu";
 
-const Companysignup = () => {
+const CustomerSignup = () => {
 
     
     const navigate = useNavigate();
@@ -40,12 +40,12 @@ const Companysignup = () => {
 //   }
 
   const [userData, setUserData] = useState({
-    companyName: "",
-    companyAddress: "",
-    companyPhoneNumber: "",
-    companyEmail: "",
-    companyPassword: "",
-    confirmCompanyPassword: "",
+    userFirstName: "",
+    userLastName: "",
+    userPhoneNumber: "",
+    userEmail: "",
+    userPassword: "",
+    confirmUserPassword: "",
   })
 
   const handleInputChange = (e)=>{
@@ -58,7 +58,7 @@ const Companysignup = () => {
 // }
 
 
-  const theData = {companyName:userData.companyName, companyAddress: userData.companyAddress, companyPhoneNumber: userData.companyPhoneNumber, companyEmail: userData.companyEmail, companyPassword: userData.companyPassword, confirmCompanyPassword: userData.confirmCompanyPassword}
+  const theData = {userFirstName:userData.userFirstName, userLastName: userData.userLastName, userPhoneNumber: userData.userPhoneNumber, userEmail: userData.userEmail, userPassword: userData.userPassword, confirmUserPassword: userData.confirmUserPassword}
   const url = "https://track-it-eight-theta.vercel.app/api/v1/company/signUp"
 
 
@@ -98,31 +98,31 @@ const Companysignup = () => {
     const corremail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
     // const correname = /^[a-z ,.'-]+$/i
     // console.log(values.confirmPassword)
-    if ( !values.CompanyName ) {
-      errors.CompanyName = "company name is required!"
+    if ( !values.userFirstName ) {
+      errors.userFirstName = "first name is required!"
     }
-    if ( !values.CompanyAddress ) {
-      errors.CompanyAddress = "company address is required!"
+    if ( !values.userLastName ) {
+      errors.userLastName = "last name is required!"
     }
-    if ( !values.Email ) {
-      errors.Email = "email is required!"
-    } else if (!corremail.test(values.Email)) {
-      errors.Email = "This is not a valid email format!"
+    if ( !values.userEmail ) {
+      errors.userEmail = "email is required!"
+    } else if (!corremail.test(values.userEmail)) {
+      errors.userEmail = "This is not a valid email format!"
     }
-    if ( !values.Telephone ) {
-      errors.Telephone = "phone number is required!"
+    if ( !values.userPhoneNumber ) {
+      errors.userPhoneNumber = "phone number is required!"
     }
-    if ( !values.Password ) {
-      errors.Password = "password is required!"
-    } else if ( values.Password.length < 7) {
-        errors.Password = "password should not be less than 7 characters!"
+    if ( !values.userPassword ) {
+      errors.userPassword = "password is required!"
+    } else if ( values.userPassword.length < 7) {
+        errors.userPassword = "password should not be less than 7 characters!"
       }
-    if ( !values.confirmPassword ) {
-      errors.confirmPassword = "must confirm password"
-    } else if(values.confirmPassword === values.password) {
-        errors.confirmPassword = ""
+    if ( !values.confirmUserPassword ) {
+      errors.confirmUserPassword = "must confirm password"
+    } else if(values.confirmUserPassword === values.userPassword) {
+        errors.confirmUserPassword = ""
     }else{ 
-        errors.confirmPassword = "the password must  match "
+        errors.confirmUserPassword = "the password must  match "
     }
 
     return errors;
@@ -142,50 +142,50 @@ const Companysignup = () => {
             </div> */}
             <div className='signupContainer'>
                 <h1>Sign Up</h1>
-                <p>Partner with us </p>
+                <p>Create your account now</p>
                 <div className='formPart'>
                     <div className='nameinputPart'>
-                        <label>Company's name</label>
+                        <label>First Name</label>
                         <input
-                            placeholder="company's name"
-                            name='companyName'
-                            value={userData.companyName}
+                            placeholder="first name"
+                            name='userFirstName'
+                            value={userData.userFirstName}
                             onChange={handleInputChange}
                         />
-                        {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.CompanyName}</p> : null } */}
+                        {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.userFirstName}</p> : null } */}
                     </div>
                         <div className='inputPart'>
-                            <label>Company's Address</label>
+                            <label>Last Name</label>
                             <input
                                 type='text'
-                                placeholder="company address"
-                                name='companyAddress'
-                                value={userData.companyAddress}
+                                placeholder="last name"
+                                name='userLastName'
+                                value={userData.userLastName}
                                 onChange={handleInputChange}
                             />
-                        {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.CompanyAddress}</p> : null } */}
+                        {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.userLastName}</p> : null } */}
                         </div>
                         <div className='inputPart'>
                             <label>Phone number</label>
                             <input
                                 type='text'
                                 placeholder="phone number"
-                                name='companyPhoneNumber'
-                                value={userData.companyPhoneNumber}
+                                name='userPhoneNumber'
+                                value={userData.userPhoneNumber}
                                 onChange={handleInputChange}
                             />
-                        {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.Telephone}</p> : null } */}
+                        {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.userPhoneNumber}</p> : null } */}
                         </div>
                         <div className='inputPart'>
                             <label>Email</label>
                             <input
                                 type='text'
                                 placeholder="email"
-                                name='companyEmail'
-                                value={userData.companyEmail}
+                                name='userEmail'
+                                value={userData.userEmail}
                                 onChange={handleInputChange}
                             />
-                        {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.Email}</p> : null } */}
+                        {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.userEmail}</p> : null } */}
                         </div>
                     
                         <div className='inputPart'>
@@ -194,8 +194,8 @@ const Companysignup = () => {
                               <input
                                   type='password'
                                   placeholder="password"
-                                  name='companyPassword'
-                                  value={userData.companyPassword}
+                                  name='userPassword'
+                                  value={userData.userPassword}
                                   onChange={handleInputChange}
                                   ref={loginInput}
                               />
@@ -206,7 +206,7 @@ const Companysignup = () => {
                                 }
                               </div>
                             </div>
-                        {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.Password}</p> : null } */}
+                        {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.userPassword}</p> : null } */}
                         </div>
                         <div className='inputPart'>
                             <label>Confirm Password</label>
@@ -214,8 +214,8 @@ const Companysignup = () => {
                               <input
                                   type='password'
                                   placeholder="confirm password"
-                                  name='confirmCompanyPassword'
-                                  value={userData.confirmCompanyPassword}
+                                  name='confirmUserPassword'
+                                  value={userData.confirmUserPassword}
                                   onChange={handleInputChange}
                                   ref={loginInput}
                               />
@@ -226,7 +226,7 @@ const Companysignup = () => {
                                 }
                               </div>
                             </div>
-                        {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.confirmPassword}</p> : null } */}
+                        {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.confirmUserPassword}</p> : null } */}
                         </div>
     
                     
@@ -240,4 +240,4 @@ const Companysignup = () => {
   )
 }
 
-export default Companysignup
+export default CustomerSignup

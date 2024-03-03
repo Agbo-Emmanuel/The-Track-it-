@@ -15,6 +15,7 @@ import Package from './components/dashBoardPart/companyDashBoard/Package'
 import RiderDashboardPart from './components/dashBoardPart/riderDashboard/RiderDashboardPart'
 import RiderDashboard from './components/dashBoardPart/riderDashboard/RiderDashboard'
 import RiderPackages from './components/dashBoardPart/riderDashboard/RiderPackages'
+import CustomerSignup from './components/pages/CustomerSignup'
 // import RiderLocation from './components/dashBoardPart/riderDashboard/RiderLocation'
 
 
@@ -48,6 +49,7 @@ const App = () => {
         <Routes>
 
           <Route path='/companysignup' element= { <Companysignup/> }/>
+          <Route path='/customersignup' element= { <CustomerSignup/> }/>
           <Route path='/login' element= { <Login/> }/>
           <Route path='/verifyemail' element= { <VerifyEmail/> }/>
           
