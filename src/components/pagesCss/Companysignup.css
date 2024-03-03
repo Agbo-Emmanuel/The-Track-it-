@@ -105,12 +105,38 @@
     border-radius: 6px;
     border: 1px solid rgb(231, 231, 231);
 }
+.companySignupPasswordInput{
+    width: 100%;
+    height: 60%;
+    outline: none;
+    padding-left: 10px;
+    border-radius: 6px;
+    border: 1px solid rgb(231, 231, 231);
+    display: flex;
+}
+.companySignupPasswordInput > input{
+    width: 90%;
+    height: 100%;
+    border: none;
+    outline: none;
+}
+.passwordInputIcon{
+    width: 10%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .inputPart > input:hover{
     border: 1px solid rgb(209, 209, 209);
 }
-.inputPart > input:focus{
-    border: 1px solid orange;
+.companySignupPasswordInput:hover{
+    border: 1px solid rgb(209, 209, 209);
 }
+/* .inputPart > input:focus{
+    border: 1px solid orange;
+} */
 .CompanysignupButton{
     width: 90%;
     height: 55px;
