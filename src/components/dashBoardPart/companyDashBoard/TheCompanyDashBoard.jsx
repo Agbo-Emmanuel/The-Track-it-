@@ -41,7 +41,7 @@ const TheCompanyDashBoard = () => {
                 <h5>10</h5>
               </div>
               <div className='companyDashboardCreatePackage' onClick={()=>setShowCreatePackage(true)}>
-                <h5>Create Package</h5>
+                <h5>Assign Package</h5>
               </div>
             </div>
           </div>

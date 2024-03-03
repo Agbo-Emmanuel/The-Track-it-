@@ -1,0 +1,10 @@
+.RiderPackages{
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+    border-radius: 6px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

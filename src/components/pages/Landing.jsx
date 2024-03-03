@@ -61,7 +61,7 @@ const Landing = () => {
                             </div>
                             <div className='landingFooterCenter'>
                                 <div className='landingFooterCenterLogo'>
-                                    <NavLink to='/companysignup' className='landingPageFooterButton'>Get Started</NavLink>
+                                    <NavLink to='/customersignup' className='landingPageFooterButton'>Get Started</NavLink>
                                     <div className='landingFooterCenterLogoimg'><img src={trackitLogo} alt=''/></div>
                                 </div>
                                 <div className='landingFooterCompany'>
