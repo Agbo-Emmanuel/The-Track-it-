@@ -9,7 +9,7 @@ import notificationimage from '../../images/notificationimage.png'
 import packageimage from '../../images/packageimage.png'
 import CreateRider from './CreateRider'
 import { Thecontext } from '../../../App'
-import CreatePackage from './CreatePackage'
+import AssignPackage from './AssignPackage'
 import CompanyLogout from './CompanyLogout'
 
 
@@ -21,7 +21,8 @@ const CompanyDashboard = () => {
           showCreateRider,
           showCompanyLogout,setShowCompanyLogout,
           profileShow, setProfileShow,
-          companyName,companyFirstLetter
+          companyName,companyFirstLetter,
+          showAssignPackage
         } = useContext(Thecontext)
 
 
@@ -34,6 +35,10 @@ const CompanyDashboard = () => {
       }
       {
         showCreateRider ? <CreateRider/> : null
+      }
+
+      {
+        showAssignPackage ? <AssignPackage/> : null
       }
       
     

@@ -24,7 +24,7 @@ const RiderDashboard = () => {
                 <div className='ridertotalPackages'>
                     <div className='ridertotalPackagesLeft' onClick={handleToPackage}>
                         <h3>Total Packages</h3>
-                        <h5>10</h5>
+                        <h5>0</h5>
                     </div>
                 </div>
                 <div className='riderLocation'>

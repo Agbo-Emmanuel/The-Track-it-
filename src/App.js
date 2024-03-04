@@ -32,6 +32,7 @@ const App = () => {
   
   const [showCreateRider, setShowCreateRider] = useState(false)
   const [showCreatePackage, setShowCreatePackage] = useState(false)
+  const [showAssignPackage, setShowAssignPackage] = useState(false)
   const [showCompanyLogout, setShowCompanyLogout] = useState(false)
   const [profileShow, setProfileShow] = useState(false)
   const [showRiderLogout, setShowRiderLogout] = useState(false)
@@ -57,7 +58,8 @@ const App = () => {
       companyFirstLetter, setCompanyFirstLeter,
       companyToken, setCompanyToken,
       customerName, setCustomerName,
-      customerFirstLetter, setCustomerFirstLeter
+      customerFirstLetter, setCustomerFirstLeter,
+      showAssignPackage, setShowAssignPackage
     }}>
       <BrowserRouter>
         <Routes>

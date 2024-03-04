@@ -13,7 +13,7 @@ const Package = () => {
   const url = 'https://track-it-eight-theta.vercel.app/api/v1/company/allpendingpackages'
 
     const [packages, setPackages] = useState([])
-    const {companyToken} = useContext(Thecontext)
+    const {companyToken,setShowAssignPackage} = useContext(Thecontext)
 
 
     useEffect(()=>{
@@ -65,6 +65,7 @@ const Package = () => {
                     <div className='thePackagesItems'>
                       <p>{packages.packageName}</p>
                       <p>{packages.packageId}</p>
+                      <button className='assignButton' onClick={()=>setShowAssignPackage(true)}>Assign</button>
                     </div>
                   )
                 })

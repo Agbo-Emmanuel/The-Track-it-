@@ -76,10 +76,11 @@
     /* background-color: red; */
     display: flex;
     align-items: center;
-    justify-content: space-around;
     font-size: 17px;
     font-family: 'Roboto';
     font-weight: 500;
+    padding-left: 20px;
+    gap: 200px;
 }
 .thePackages{
     width: 100%;
@@ -92,13 +93,31 @@
     height: 15%;
     background-color: rgb(255, 222, 160);
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     align-items: center;
     font-size: 16px;
     font-weight: 500;
     font-family: 'Poppins';
     border-radius: 6px;
     margin-top: 10px;
+    /* cursor: pointer; */
+    padding-left: 20px;
+    gap: 120px;
+    position: relative;
+}
+.assignButton{
+    width: 18%;
+    height: 90%;
+    background-color: orange;
+    border-radius: 6px;
+    /* margin-right: 20px; */
+    position: absolute;
+    right: 10px;
+    border: none;
+    color: white;
+    font-family: 'Poppins';
+    font-size: 17px;
+    font-weight: 500;
     cursor: pointer;
 }
 
