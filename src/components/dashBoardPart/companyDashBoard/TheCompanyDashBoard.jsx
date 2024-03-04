@@ -62,7 +62,7 @@ const TheCompanyDashBoard = () => {
                 <h3>Total Packages</h3>
                 <h5>0</h5>
               </div>
-              <div className='companyDashboardCreatePackage' onClick={()=>setShowCreatePackage(true)}>
+              <div className='companyDashboardCreatePackage'>
                 <h5>Assign Package</h5>
               </div>
             </div>
@@ -70,6 +70,11 @@ const TheCompanyDashBoard = () => {
           <div className='theCompanyDashboardBottom'>
             <h2>Package history</h2>
             <div className='theCompanyDashboardBottomDivider'></div>
+            <div className='theCompanyDashboardBottomProperties'>
+              <nav>name</nav>
+              <nav>status</nav>
+              <nav>date</nav>
+            </div>
             <div className='theCompanyDashboardBottomDown'>
 
             </div>

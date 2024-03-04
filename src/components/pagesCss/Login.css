@@ -120,6 +120,9 @@
     cursor: pointer;
     margin-top: -10px;
 }
+.loginButton:active{
+    background-color: #f4ae2d;
+}
 
 .linkToLoginPage{
     font-size: 15px;
