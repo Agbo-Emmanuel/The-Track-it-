@@ -62,7 +62,7 @@ const TheCompanyDashBoard = () => {
                 <h3>Total Packages</h3>
                 <h5>0</h5>
               </div>
-              <div className='companyDashboardCreatePackage'>
+              <div className='companyDashboardCreatePackage' onClick={handleToPackage}>
                 <h5>Assign Package</h5>
               </div>
             </div>
