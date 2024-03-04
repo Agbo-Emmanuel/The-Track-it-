@@ -68,12 +68,12 @@ const CompanyLogin = () => {
               }) 
       }
       catch(err){
-        // Swal.fire({
-        //   title: "error!",
-        //   text: err.response.message,
-        //   icon: "error",
-        //   confirmButtonText: "ok",
-        //   }) 
+        Swal.fire({
+          title: "error!",
+          text: err.response.message,
+          icon: "error",
+          confirmButtonText: "ok",
+          }) 
           console.log(err)
       }
   }

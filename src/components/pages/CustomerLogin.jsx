@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import '../pagesCss/Login.css'
 import { Link } from 'react-router-dom'
 import axios from "axios"
-// import Swal from 'sweetalert2'
+import Swal from 'sweetalert2'
 import trackitLogo from '../images/trackitLogo.png'
 import { LuEye } from "react-icons/lu";
 import { LuEyeOff } from "react-icons/lu";
@@ -61,12 +61,12 @@ const CustomerLogin = () => {
           //     }) 
       }
       catch(err){
-        // Swal.fire({
-        //   title: "error!",
-        //   text: err.response.message,
-        //   icon: "error",
-        //   confirmButtonText: "ok",
-        //   }) 
+        Swal.fire({
+          title: "error!",
+          text: err.response.message,
+          icon: "error",
+          confirmButtonText: "ok",
+          }) 
           console.log(err)
       }
   }

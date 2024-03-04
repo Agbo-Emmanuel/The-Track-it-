@@ -262,8 +262,8 @@
 
 
     .loginContainer{
-        width: 30%;
-        height: 70%;
+        width: 90vw;
+        height: auto;
         /* background-color: yellow; */
         display: flex;
         flex-direction: column;
@@ -271,7 +271,7 @@
         gap: 20px;
     }
     .loginformPart{
-        width: 100%;
+        width: 90%;
         height: 40%;
         /* background-color: aqua; */
         display: flex;
@@ -300,7 +300,7 @@
     }
     
     .loginButton{
-        width: 100%;
+        width: 90%;
         height: 55px;
         background-color: #FFA500;
         color: whitesmoke;

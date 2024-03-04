@@ -10,16 +10,22 @@ import { Link } from 'react-router-dom'
 const Package = () => {
 
 
-  const url = 'https://fakestoreapi.com/products'
+  const url = 'https://track-it-eight-theta.vercel.app/api/v1/company/allpendingpackages'
 
     const [packages, setPackages] = useState([])
-    // const {dispatch, setAmount} = useContext(Thecontext)
+    const {companyToken} = useContext(Thecontext)
 
 
     useEffect(()=>{
-        axios.get(url)
+        axios.get(url,
+          {
+            headers: {
+              "Authorization" : `Bearer ${companyToken}`
+           }
+          })
             .then((res) => {
-              setPackages(res.data)
+              console.log(res.data)
+              setPackages(res.data.pendingPackages)
             })
             .catch((err) => {
                 console.log(err)
@@ -54,11 +60,11 @@ const Package = () => {
             <div className='packagePageLeftLine'></div>
             <div className='thePackages'>
               {
-                packages.map(()=>{
+                packages.map((packages)=>{
                   return(
                     <div className='thePackagesItems'>
-                      <p>Shoe</p>
-                      <p>23495</p>
+                      <p>{packages.packageName}</p>
+                      <p>{packages.packageId}</p>
                     </div>
                   )
                 })

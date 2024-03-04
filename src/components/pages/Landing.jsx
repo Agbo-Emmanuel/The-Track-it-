@@ -65,8 +65,8 @@ const Landing = () => {
                                     <div className='landingFooterCenterLogoimg'><img src={trackitLogo} alt=''/></div>
                                 </div>
                                 <div className='landingFooterCompany'>
-                                    <Link className='landingFooterLink'>About us</Link>
-                                    <Link className='landingFooterLink'>Contact us</Link>
+                                    <Link to='/about' className='landingFooterLink'>About us</Link>
+                                    {/* <Link className='landingFooterLink'>Contact us</Link> */}
                                     <Link className='landingFooterLink'>Tracking</Link>
                                 </div>
                                 <div className='landingFooterSocialMedia'>

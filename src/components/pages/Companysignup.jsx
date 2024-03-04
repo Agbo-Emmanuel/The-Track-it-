@@ -144,17 +144,18 @@ const Companysignup = () => {
                 <h1>Sign Up</h1>
                 <p>Partner with us </p>
                 <div className='formPart'>
-                    <div className='nameinputPart'>
-                        <label>Company's name</label>
-                        <input
-                            placeholder="company's name"
-                            name='companyName'
-                            value={userData.companyName}
-                            onChange={handleInputChange}
-                        />
-                        {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.CompanyName}</p> : null } */}
-                    </div>
-                        <div className='inputPart'>
+                    <div className='signupInputReal'>
+                      <div className='nameinputPart'>
+                          <label>Company's name</label>
+                          <input
+                              placeholder="company's name"
+                              name='companyName'
+                              value={userData.companyName}
+                              onChange={handleInputChange}
+                          />
+                          {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.CompanyName}</p> : null } */}
+                      </div>
+                      <div className='inputPart'>
                             <label>Company's Address</label>
                             <input
                                 type='text'
@@ -165,69 +166,75 @@ const Companysignup = () => {
                             />
                         {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.CompanyAddress}</p> : null } */}
                         </div>
-                        <div className='inputPart'>
-                            <label>Phone number</label>
-                            <input
-                                type='text'
-                                placeholder="phone number"
-                                name='companyPhoneNumber'
-                                value={userData.companyPhoneNumber}
-                                onChange={handleInputChange}
-                            />
-                        {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.Telephone}</p> : null } */}
-                        </div>
-                        <div className='inputPart'>
-                            <label>Email</label>
-                            <input
-                                type='text'
-                                placeholder="email"
-                                name='companyEmail'
-                                value={userData.companyEmail}
-                                onChange={handleInputChange}
-                            />
-                        {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.Email}</p> : null } */}
-                        </div>
+                    </div>
+                        
+                    <div className='signupInputReal'>
+                      <div className='inputPart'>
+                              <label>Phone number</label>
+                              <input
+                                  type='text'
+                                  placeholder="phone number"
+                                  name='companyPhoneNumber'
+                                  value={userData.companyPhoneNumber}
+                                  onChange={handleInputChange}
+                              />
+                          {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.Telephone}</p> : null } */}
+                          </div>
+                          <div className='inputPart'>
+                              <label>Email</label>
+                              <input
+                                  type='text'
+                                  placeholder="email"
+                                  name='companyEmail'
+                                  value={userData.companyEmail}
+                                  onChange={handleInputChange}
+                              />
+                          {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.Email}</p> : null } */}
+                          </div>
+                    </div>
                     
-                        <div className='inputPart'>
-                            <label>Password</label>
-                            <div className='companySignupPasswordInput'>
-                              <input
-                                  type='password'
-                                  placeholder="password"
-                                  name='companyPassword'
-                                  value={userData.companyPassword}
-                                  onChange={handleInputChange}
-                                  ref={loginInput}
-                              />
-                              <div className='passwordInputIcon'>
-                                {                
-                                  seePassword ? <LuEyeOff style={{cursor: "pointer"}} onClick={handleNotSeePassword}/> :
-                                                <LuEye style={{cursor: "pointer"}} onClick={handleSeePassword}/>
-                                }
+                    <div className='signupInputReal'>
+                      <div className='inputPart'>
+                              <label>Password</label>
+                              <div className='companySignupPasswordInput'>
+                                <input
+                                    type='password'
+                                    placeholder="password"
+                                    name='companyPassword'
+                                    value={userData.companyPassword}
+                                    onChange={handleInputChange}
+                                    ref={loginInput}
+                                />
+                                <div className='passwordInputIcon'>
+                                  {                
+                                    seePassword ? <LuEyeOff style={{cursor: "pointer"}} onClick={handleNotSeePassword}/> :
+                                                  <LuEye style={{cursor: "pointer"}} onClick={handleSeePassword}/>
+                                  }
+                                </div>
                               </div>
-                            </div>
-                        {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.Password}</p> : null } */}
-                        </div>
-                        <div className='inputPart'>
-                            <label>Confirm Password</label>
-                            <div className='companySignupPasswordInput'>
-                              <input
-                                  type='password'
-                                  placeholder="confirm password"
-                                  name='confirmCompanyPassword'
-                                  value={userData.confirmCompanyPassword}
-                                  onChange={handleInputChange}
-                                  ref={loginInput}
-                              />
-                              <div className='passwordInputIcon'>
-                                {                
-                                  seePassword ? <LuEyeOff style={{cursor: "pointer"}} onClick={handleNotSeePassword}/> :
-                                                <LuEye style={{cursor: "pointer"}} onClick={handleSeePassword}/>
-                                }
+                          {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.Password}</p> : null } */}
+                          </div>
+                          <div className='inputPart'>
+                              <label>Confirm Password</label>
+                              <div className='companySignupPasswordInput'>
+                                <input
+                                    type='password'
+                                    placeholder="confirm password"
+                                    name='confirmCompanyPassword'
+                                    value={userData.confirmCompanyPassword}
+                                    onChange={handleInputChange}
+                                    ref={loginInput}
+                                />
+                                <div className='passwordInputIcon'>
+                                  {                
+                                    seePassword ? <LuEyeOff style={{cursor: "pointer"}} onClick={handleNotSeePassword}/> :
+                                                  <LuEye style={{cursor: "pointer"}} onClick={handleSeePassword}/>
+                                  }
+                                </div>
                               </div>
-                            </div>
-                        {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.confirmPassword}</p> : null } */}
-                        </div>
+                          {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.confirmPassword}</p> : null } */}
+                          </div>
+                    </div>
     
                     
                 </div>
