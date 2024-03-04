@@ -3,7 +3,6 @@
     height: 100%;
     background-color: whitesmoke;
     border-radius: 6px;
-    overflow-y: scroll;
     display: flex;
     /* justify-content: flex-end; */
     align-items: center;
@@ -67,14 +66,66 @@
 .listOfPackages{
     width: 85%;
     height: 73%;
-    background-color: yellow;
+    /* background-color: yellow; */
     margin-top: 20px;
     margin-left: 20px;
+}
+.packageListProperties{
+    width: 100%;
+    height: 15%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 17px;
+    font-family: 'Roboto';
+    font-weight: 500;
+}
+.thePackages{
+    width: 100%;
+    height: 83%;
+    /* background-color: blue; */
+    overflow-y: scroll;
+}
+.thePackagesItems{
+    width: 100%;
+    height: 15%;
+    background-color: rgb(255, 222, 160);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Poppins';
+    border-radius: 6px;
+    margin-top: 10px;
+    cursor: pointer;
 }
 
 
 .packagePageRight{
     width: 50%;
-    height: 100%;
-    background-color: yellow;
+    height: 95%;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 6px;
+    /* margin-left: 20px; */
+}
+.packagePageRightTop{
+    width: 100%;
+    height: 10%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+.packagePageRightTop > nav{
+    font-size: 18px;
+    font-family: 'Roboto';
+    font-weight: 500;
+}
+.packagePageRightLine{
+    width: 100%;
+    height: 1px;
+    background-color: lightgrey;
 }
