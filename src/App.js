@@ -65,9 +65,9 @@ const App = () => {
         <Routes>
 
           <Route path='/companysignup' element= { <Companysignup/> }/>
-          <Route path='/customersignup' element= { <CustomerSignup/> }/>
+          {/* <Route path='/customersignup' element= { <CustomerSignup/> }/> */}
           <Route path='/companylogin' element= { <CompanyLogin/> }/>
-          <Route path='/customerlogin' element= { <CustomerLogin/> }/>
+          {/* <Route path='/customerlogin' element= { <CustomerLogin/> }/> */}
           <Route path='/verifyemail' element= { <VerifyEmail/> }/>
           
           <Route element= { <Landing/> }>
@@ -89,10 +89,10 @@ const App = () => {
             <Route path='/riderpackages' element= { <RiderPackages/> }/>
           </Route>
 
-          <Route element= { <CustomerDashboardPart/> }>
+          {/* <Route element= { <CustomerDashboardPart/> }>
             <Route path='/customerdashboard' element= { <CustomerDashboard/> }/>
             <Route path='/customerpackages' element= { <CustomerPackages/> }/>
-          </Route>
+          </Route> */}
 
         </Routes>
       </BrowserRouter>

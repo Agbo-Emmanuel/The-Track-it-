@@ -44,9 +44,9 @@ const Landing = () => {
                                         <div className='headerNavMenu'>
                                             <NavLink to='/' className={({ isActive }) => isActive ? 'active' : 'notactive'}>Home</NavLink>
                                             <NavLink to='/about'className={({ isActive }) => isActive ? 'active' : 'notactive'}>About</NavLink>
-                                            <NavLink to='/companylogin'className={({ isActive }) => isActive ? 'active' : 'notactive'}>Become a Partner</NavLink>
+                                            {/* <NavLink to='/companylogin'className={({ isActive }) => isActive ? 'active' : 'notactive'}>Become a Partner</NavLink> */}
                                         </div>
-                                        <NavLink to='/customerlogin' className='getStartedButton'>Get Started</NavLink>
+                                        <NavLink to='/companylogin' className='getStartedButton'>Get Started</NavLink>
                                     </div>
                                     <div className='buggerMenu' onClick={handleLandingMenu}><img src={buggerMenu} alt=''/></div>
                                 </div>
@@ -61,7 +61,7 @@ const Landing = () => {
                             </div>
                             <div className='landingFooterCenter'>
                                 <div className='landingFooterCenterLogo'>
-                                    <NavLink to='/customerlogin' className='landingPageFooterButton'>Get Started</NavLink>
+                                    <NavLink to='/companylogin' className='landingPageFooterButton'>Get Started</NavLink>
                                     <div className='landingFooterCenterLogoimg'><img src={trackitLogo} alt=''/></div>
                                 </div>
                                 <div className='landingFooterCompany'>

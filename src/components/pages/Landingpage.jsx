@@ -54,7 +54,7 @@ const Landingpage = () => {
                                     Product anywhere, anytime.
                                 </p>
                             </div>
-                            <NavLink to='/customerlogin' className='heroSectionButton'>Get Started</NavLink>
+                            <NavLink to='/companylogin' className='heroSectionButton'>Get Started</NavLink>
                         </div>
                         <div className='heroSectionRight'>
                             <img src= {heroSectionImg} alt=''/>
@@ -165,7 +165,7 @@ const Landingpage = () => {
                         </div>
                         <div className='section4Center'>
                             <h1>Your package is delivered fast when you<br/> use Track it</h1>
-                            <NavLink to='/customerlogin' className='section4Button'>Get Started</NavLink>
+                            <NavLink to='/companylogin' className='section4Button'>Get Started</NavLink>
                             <div className='packagewriteup'>
                                 <div className='fastsecure'>
                                     <div className='check'><img src={check} alt=''/></div>
