@@ -28,8 +28,8 @@ const CustomerLogin = () => {
   }
 
   const [userData, setUserData] = useState({
-    companyEmail: "",
-    companyPassword: "",
+    userEmail: "",
+    userPassword: "",
   })
 
   const handleInputChange = (e)=>{
@@ -38,8 +38,8 @@ const CustomerLogin = () => {
     // console.log(userData)
 }
 
-  const theData = {companyEmail: userData.companyEmail, companyPassword: userData.companyPassword}
-  const url = "https://track-it-eight-theta.vercel.app/api/v1/company/signUp"
+  const theData = {identifier: userData.userEmail, Password: userData.userPassword}
+  const url = "https://track-it-eight-theta.vercel.app/api/v1/user/SignIn"
 
 
   const handleLoginAccount = async(e)=>{
@@ -51,14 +51,14 @@ const CustomerLogin = () => {
           console.log(response)
           // localStorage.setItem("companyFirstLetter", response.data.CompanyName.charAt(0))
           
-          // Swal.fire({
-          //   title: "Success!",
-          //   text: response.data.message,
-          //   icon: "success",
-          //   confirmButtonText: "ok",
-          // }).then(function() {
-          //        window.location.href = "/companydashboard";
-          //     }) 
+          Swal.fire({
+            title: "Success!",
+            text: response.data.message,
+            icon: "success",
+            confirmButtonText: "ok",
+          }).then(function() {
+                 window.location.href = "/customerdashboard";
+              }) 
       }
       catch(err){
         Swal.fire({
@@ -84,11 +84,11 @@ const CustomerLogin = () => {
           <p>Welcome back</p>
           <div className='loginformPart'>
             <div className='logininputPart'>
-              <label>Email</label>
+              <label>Email or Phone number</label>
               <input
                 placeholder="email"
-                name='companyEmail'
-                value={userData.companyEmail}
+                name='userEmail'
+                value={userData.userEmail}
                 onChange={handleInputChange}
               />
             </div>
@@ -98,8 +98,8 @@ const CustomerLogin = () => {
                 <input
                   type='password'
                   placeholder="password"
-                  name='companyPassword'
-                  value={userData.companyPassword}
+                  name='userPassword'
+                  value={userData.userPassword}
                   onChange={handleInputChange}
                   ref={loginInput}
                 />
@@ -113,7 +113,7 @@ const CustomerLogin = () => {
             </div>
           </div>
           <button className='loginButton' onClick={handleLoginAccount}>Login</button>
-          <p className='linkToLoginPage'>Don't have an Account? <Link to='/companysignup' className='loginLink'>Signup</Link></p>
+          <p className='linkToLoginPage'>Don't have an Account? <Link to='/customersignup' className='loginLink'>Signup</Link></p>
         </div>
       </div>
     

@@ -3,7 +3,7 @@ import '../pagesCss/Companysignup.css'
 // import Signupimg from '../images/Signupimg.svg'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from "axios"
-// import Swal from 'sweetalert2'
+import Swal from 'sweetalert2'
 import trackitLogo from '../images/trackitLogo.png'
 import { LuEye } from "react-icons/lu";
 import { LuEyeOff } from "react-icons/lu";
@@ -62,7 +62,7 @@ const CustomerSignup = () => {
 
 
   const theData = {userFirstName:userData.userFirstName, userLastName: userData.userLastName, userPhoneNumber: userData.userPhoneNumber, userEmail: userData.userEmail, userPassword: userData.userPassword, confirmUserPassword: userData.confirmUserPassword}
-  const url = "https://track-it-eight-theta.vercel.app/api/v1/company/signUp"
+  const url = "https://track-it-eight-theta.vercel.app/api/v1/user/SignUp"
 
 
   const handleCreateAccount = async(e)=>{
@@ -74,16 +74,15 @@ const CustomerSignup = () => {
       try{
           const response = await axios.post(url, theData)
           console.log(response)
-          // localStorage.setItem("companyFirstLetter", response.data.CompanyName.charAt(0))
+          localStorage.setItem("customername", response.data.user.userFirstName)
+          localStorage.setItem("customerFirstName", response.data.user.userFirstName.charAt(0))
           
-          // Swal.fire({
-          //   title: "Success!",
-          //   text: response.data.message,
-          //   icon: "success",
-          //   confirmButtonText: "ok",
-          // }).then(function() {
-          //        window.location.href = "/companydashboard";
-          //     }) 
+          Swal.fire({
+            title: "Success!",
+            text: response.data.message,
+            icon: "success",
+            confirmButtonText: "ok",
+          })
       }
       catch(err){
         // Swal.fire({
@@ -147,89 +146,95 @@ const CustomerSignup = () => {
                 <h1>Sign Up</h1>
                 <p>Create your account now</p>
                 <div className='formPart'>
-                    <div className='nameinputPart'>
-                        <label>First Name</label>
-                        <input
-                            placeholder="first name"
-                            name='userFirstName'
-                            value={userData.userFirstName}
-                            onChange={handleInputChange}
-                        />
-                        {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.userFirstName}</p> : null } */}
-                    </div>
+                    <div className='signupInputReal'>
+                      <div className='nameinputPart'>
+                          <label>First Name</label>
+                          <input
+                              placeholder="first name"
+                              name='userFirstName'
+                              value={userData.userFirstName}
+                              onChange={handleInputChange}
+                          />
+                          {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.userFirstName}</p> : null } */}
+                      </div>
                         <div className='inputPart'>
                             <label>Last Name</label>
                             <input
-                                type='text'
-                                placeholder="last name"
-                                name='userLastName'
-                                value={userData.userLastName}
-                                onChange={handleInputChange}
-                            />
-                        {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.userLastName}</p> : null } */}
+                              type='text'
+                              placeholder="last name"
+                              name='userLastName'
+                              value={userData.userLastName}
+                              onChange={handleInputChange}
+                              />
+                          {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.userLastName}</p> : null } */}
                         </div>
-                        <div className='inputPart'>
-                            <label>Phone number</label>
-                            <input
-                                type='text'
-                                placeholder="phone number"
-                                name='userPhoneNumber'
-                                value={userData.userPhoneNumber}
-                                onChange={handleInputChange}
-                            />
-                        {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.userPhoneNumber}</p> : null } */}
-                        </div>
-                        <div className='inputPart'>
-                            <label>Email</label>
-                            <input
-                                type='text'
-                                placeholder="email"
-                                name='userEmail'
-                                value={userData.userEmail}
-                                onChange={handleInputChange}
-                            />
-                        {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.userEmail}</p> : null } */}
+                    </div>
+                        <div className='signupInputReal'>
+                          <div className='inputPart'>
+                              <label>Phone number</label>
+                              <input
+                                  type='text'
+                                  placeholder="phone number"
+                                  name='userPhoneNumber'
+                                  value={userData.userPhoneNumber}
+                                  onChange={handleInputChange}
+                              />
+                          {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.userPhoneNumber}</p> : null } */}
+                          </div>
+                          <div className='inputPart'>
+                              <label>Email</label>
+                              <input
+                                  type='text'
+                                  placeholder="email"
+                                  name='userEmail'
+                                  value={userData.userEmail}
+                                  onChange={handleInputChange}
+                              />
+                          {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.userEmail}</p> : null } */}
+                          </div>
                         </div>
                     
-                        <div className='inputPart'>
-                            <label>Password</label>
-                            <div className='companySignupPasswordInput'>
-                              <input
-                                  type='password'
-                                  placeholder="password"
-                                  name='userPassword'
-                                  value={userData.userPassword}
-                                  onChange={handleInputChange}
-                                  ref={loginInput}
-                              />
-                              <div className='passwordInputIcon'>
-                                {                
-                                  seePassword ? <LuEyeOff style={{cursor: "pointer"}} onClick={handleNotSeePassword}/> :
-                                                <LuEye style={{cursor: "pointer"}} onClick={handleSeePassword}/>
-                                }
+                        <div className='signupInputReal'>
+                          <div className='inputPart'>
+                              <label>Password</label>
+                              <div className='companySignupPasswordInput'>
+                                <input
+                                    type='password'
+                                    placeholder="password"
+                                    name='userPassword'
+                                    value={userData.userPassword}
+                                    onChange={handleInputChange}
+                                    ref={loginInput}
+                                />
+                                <div className='passwordInputIcon'>
+                                  {                
+                                    seePassword ? <LuEyeOff style={{cursor: "pointer"}} onClick={handleNotSeePassword}/> :
+                                                  <LuEye style={{cursor: "pointer"}} onClick={handleSeePassword}/>
+                                  }
+                                </div>
                               </div>
-                            </div>
-                        {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.userPassword}</p> : null } */}
-                        </div>
-                        <div className='inputPart'>
-                            <label>Confirm Password</label>
-                            <div className='companySignupPasswordInput'>
-                              <input
-                                  type='password'
-                                  placeholder="confirm password"
-                                  name='confirmUserPassword'
-                                  value={userData.confirmUserPassword}
-                                  onChange={handleInputChange}
-                                  ref={loginInput}
-                              />
-                              <div className='passwordInputIcon'>
-                                {                
-                                  seePassword ? <LuEyeOff style={{cursor: "pointer"}} onClick={handleNotSeePassword}/> :
-                                                <LuEye style={{cursor: "pointer"}} onClick={handleSeePassword}/>
-                                }
+                          {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.userPassword}</p> : null } */}
+                          </div>
+                          <div className='inputPart'>
+                              <label>Confirm Password</label>
+                              <div className='companySignupPasswordInput'>
+                                <input
+                                    type='password'
+                                    placeholder="confirm password"
+                                    name='confirmUserPassword'
+                                    value={userData.confirmUserPassword}
+                                    onChange={handleInputChange}
+                                    ref={loginInput}
+                                />
+                                <div className='passwordInputIcon'>
+                                  {                
+                                    seePassword ? <LuEyeOff style={{cursor: "pointer"}} onClick={handleNotSeePassword}/> :
+                                                  <LuEye style={{cursor: "pointer"}} onClick={handleSeePassword}/>
+                                  }
+                                </div>
                               </div>
-                            </div>
-                        {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.confirmUserPassword}</p> : null } */}
+                          {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.confirmUserPassword}</p> : null } */}
+                          </div>
                         </div>
     
                     

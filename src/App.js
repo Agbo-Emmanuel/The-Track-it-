@@ -39,6 +39,8 @@ const App = () => {
   const [companyName, setCompanyName] = useState(localStorage.getItem('companyname'))
   const [companyFirstLetter, setCompanyFirstLeter] = useState(localStorage.getItem('companyfirstletter'))
   const [companyToken, setCompanyToken] = useState(localStorage.getItem('companytoken'))
+  const [customerName, setCustomerName] = useState(localStorage.getItem('customername'))
+  const [customerFirstLetter, setCustomerFirstLeter] = useState(localStorage.getItem('customerfirstletter'))
 
 
 
@@ -53,7 +55,9 @@ const App = () => {
       riderProfileShow, setRiderProfileShow,
       companyName, setCompanyName,
       companyFirstLetter, setCompanyFirstLeter,
-      companyToken, setCompanyToken
+      companyToken, setCompanyToken,
+      customerName, setCustomerName,
+      customerFirstLetter, setCustomerFirstLeter
     }}>
       <BrowserRouter>
         <Routes>

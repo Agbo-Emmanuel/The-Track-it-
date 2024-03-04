@@ -20,7 +20,8 @@ const CustomerDashboardPart = () => {
 
     const {
         showRiderLogout, setShowRiderLogout,
-        riderProfileShow, setRiderProfileShow
+        riderProfileShow, setRiderProfileShow,
+        customerName,customerFirstLetter
       } = useContext(Thecontext)
 
 
@@ -64,14 +65,14 @@ const CustomerDashboardPart = () => {
             <div className='riderBody'>
                 <div className='riderBodyTop'>
                     <div className='riderBodyTopLeft'>
-                        <p>Welcome, Lonie</p>
+                        <p>Welcome, {customerName}</p>
                     </div>
                     <div className='riderBodyTopRight'>
                         <div className='riderBodyTopNotification'>
                             <img src={notificationimage} alt=''/>
                             <div className='notifyDot'></div>
                         </div>
-                        <div className='riderTopRightProfile' onClick={()=>setRiderProfileShow(!riderProfileShow)}>L</div>
+                        <div className='riderTopRightProfile' onClick={()=>setRiderProfileShow(!riderProfileShow)}>{customerFirstLetter}</div>
                     </div>
                 </div>
                 <div className="riderBodyDown">
