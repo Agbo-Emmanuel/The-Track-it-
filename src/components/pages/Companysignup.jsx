@@ -232,7 +232,7 @@ const Companysignup = () => {
                     
                 </div>
                 <button className='CompanysignupButton' onClick={handleCreateAccount}>Create Account</button>
-                <p className='linkToLoginPage'>Already have an Account? <Link to='/login' className='loginLink'>Login</Link></p>
+                <p className='linkToLoginPage'>Already have an Account? <Link to='/companylogin' className='loginLink'>Login</Link></p>
             </div>
         </div>
     

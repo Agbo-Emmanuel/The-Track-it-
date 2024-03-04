@@ -6,7 +6,8 @@ import About from './components/pages/About'
 import Landing from './components/pages/Landing'
 import UserMapPage from './components/pages/UserMapPage'
 import Companysignup from './components/pages/Companysignup'
-import Login from './components/pages/Login'
+import CompanyLogin from './components/pages/CompanyLogin'
+import CustomerLogin from './components/pages/CustomerLogin'
 import VerifyEmail from './components/pages/VerifyEmail'
 import CompanyDashboard from './components/dashBoardPart/companyDashBoard/CompanyDashboard'
 import Riders from './components/dashBoardPart/companyDashBoard/Riders'
@@ -35,6 +36,9 @@ const App = () => {
   const [profileShow, setProfileShow] = useState(false)
   const [showRiderLogout, setShowRiderLogout] = useState(false)
   const [riderProfileShow, setRiderProfileShow] = useState(false)
+  const [companyName, setCompanyName] = useState(localStorage.getItem('companyname'))
+  const [companyFirstLetter, setCompanyFirstLeter] = useState(localStorage.getItem('companyfirstletter'))
+  const [companyToken, setCompanyToken] = useState(localStorage.getItem('companytoken'))
 
 
 
@@ -46,14 +50,18 @@ const App = () => {
       showCompanyLogout, setShowCompanyLogout,
       profileShow, setProfileShow,
       showRiderLogout, setShowRiderLogout,
-      riderProfileShow, setRiderProfileShow
+      riderProfileShow, setRiderProfileShow,
+      companyName, setCompanyName,
+      companyFirstLetter, setCompanyFirstLeter,
+      companyToken, setCompanyToken
     }}>
       <BrowserRouter>
         <Routes>
 
           <Route path='/companysignup' element= { <Companysignup/> }/>
           <Route path='/customersignup' element= { <CustomerSignup/> }/>
-          <Route path='/login' element= { <Login/> }/>
+          <Route path='/companylogin' element= { <CompanyLogin/> }/>
+          <Route path='/customerlogin' element= { <CustomerLogin/> }/>
           <Route path='/verifyemail' element= { <VerifyEmail/> }/>
           
           <Route element= { <Landing/> }>

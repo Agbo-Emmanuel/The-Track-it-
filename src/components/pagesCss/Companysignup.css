@@ -162,6 +162,9 @@
 .CompanysignupButton:hover{
     background-color: #f2a008;
 }
+.CompanysignupButton:active{
+    background-color: #f4ae2d;
+}
 
 .linkToLoginPage{
     font-size: 18px!important;

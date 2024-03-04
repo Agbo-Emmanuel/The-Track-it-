@@ -20,7 +20,8 @@ const CompanyDashboard = () => {
   const {
           showCreateRider, showCreatePackage,
           showCompanyLogout,setShowCompanyLogout,
-          profileShow, setProfileShow
+          profileShow, setProfileShow,
+          companyName,companyFirstLetter
         } = useContext(Thecontext)
 
 
@@ -73,14 +74,14 @@ const CompanyDashboard = () => {
         <div className='companyBody'>
           <div className='companyBodyTop'>
             <div className='companyBodyTopLeft'>
-              <p>Welcome, Dangote</p>
+              <p>Welcome, {companyName}</p>
             </div>
             <div className='companyBodyTopRight'>
               <div className='companyBodyTopNotification'>
                 <img src={notificationimage} alt=''/>
                 <div className='notifyDot'></div>
               </div>
-              <div className='companyBodyTopRightProfile' onClick={()=>setProfileShow(!profileShow)}>D</div>
+              <div className='companyBodyTopRightProfile' onClick={()=>setProfileShow(!profileShow)}>{companyFirstLetter}</div>
             </div>
           </div>
           <div className="companyBodyDown">

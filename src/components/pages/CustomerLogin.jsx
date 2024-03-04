@@ -7,7 +7,7 @@ import trackitLogo from '../images/trackitLogo.png'
 import { LuEye } from "react-icons/lu";
 import { LuEyeOff } from "react-icons/lu";
 
-const Login = () => {
+const CustomerLogin = () => {
 
   const loginInput = useRef()
 
@@ -121,4 +121,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default CustomerLogin
