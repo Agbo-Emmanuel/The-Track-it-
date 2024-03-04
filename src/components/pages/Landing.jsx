@@ -43,6 +43,7 @@ const Landing = () => {
                                     <div className='rightHeader'>
                                         <div className='headerNavMenu'>
                                             <NavLink to='/' className={({ isActive }) => isActive ? 'active' : 'notactive'}>Home</NavLink>
+                                            <NavLink to='/track'className={({ isActive }) => isActive ? 'active' : 'notactive'}>Track</NavLink>
                                             <NavLink to='/about'className={({ isActive }) => isActive ? 'active' : 'notactive'}>About</NavLink>
                                             {/* <NavLink to='/companylogin'className={({ isActive }) => isActive ? 'active' : 'notactive'}>Become a Partner</NavLink> */}
                                         </div>
