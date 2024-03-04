@@ -73,7 +73,7 @@ const Package = () => {
             </div>
           </div>
         </div>
-        <div className='packagePageRight'>
+        {/* <div className='packagePageRight'>
           <div className='packagePageRightTop'>
             <nav>List of Assigned Packages</nav>
           </div>
@@ -94,17 +94,17 @@ const Package = () => {
             </div>
             <div className='packagePageLeftLine'></div>
             <div className='thePackages'>
-              {/* <div className='thePackagesItems'>
+              <div className='thePackagesItems'>
                 <p>Shoe</p>
                 <p>23495</p>
               </div>
               <div className='thePackagesItems'>
                 <p>Shoe</p>
                 <p>23495</p>
-              </div> */}
+              </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
 
 

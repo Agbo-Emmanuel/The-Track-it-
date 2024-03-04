@@ -151,7 +151,7 @@ const Companysignup = () => {
                               value={userData.companyName}
                               onChange={handleInputChange}
                           />
-                          {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.CompanyName}</p> : null }
+                          {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.CompanyName}</p> : null } */}
                       </div>
                       <div className='inputPart'>
                             <label>Company's Address</label>
@@ -162,7 +162,7 @@ const Companysignup = () => {
                                 value={userData.companyAddress}
                                 onChange={handleInputChange}
                             />
-                        {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.CompanyAddress}</p> : null }
+                        {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.CompanyAddress}</p> : null } */}
                         </div>
                     </div>
                         
@@ -176,7 +176,7 @@ const Companysignup = () => {
                                   value={userData.companyPhoneNumber}
                                   onChange={handleInputChange}
                               />
-                          {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.companyPhoneNumber}</p> : null }
+                          {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.companyPhoneNumber}</p> : null } */}
                           </div>
                           <div className='inputPart'>
                               <label>Email</label>
@@ -187,7 +187,7 @@ const Companysignup = () => {
                                   value={userData.companyEmail}
                                   onChange={handleInputChange}
                               />
-                          {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.companyEmail}</p> : null }
+                          {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.companyEmail}</p> : null } */}
                           </div>
                     </div>
                     
@@ -210,7 +210,7 @@ const Companysignup = () => {
                                   }
                                 </div>
                               </div>
-                          {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.Password}</p> : null }
+                          {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.Password}</p> : null } */}
                           </div>
                           <div className='inputPart'>
                               <label>Confirm Password</label>
@@ -230,7 +230,7 @@ const Companysignup = () => {
                                   }
                                 </div>
                               </div>
-                          {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.confirmPassword}</p> : null }
+                          {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.confirmPassword}</p> : null } */}
                           </div>
                     </div>
     
