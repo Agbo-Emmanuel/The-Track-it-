@@ -9,6 +9,7 @@ import notificationimage from '../../images/notificationimage.png'
 import packageimage from '../../images/packageimage.png'
 import { Thecontext } from '../../../App'
 import CustomerLogout from './CustomerLogout'
+import CreatePackage from '../companyDashBoard/CreatePackage'
 
 
 
@@ -21,7 +22,7 @@ const CustomerDashboardPart = () => {
     const {
         showRiderLogout, setShowRiderLogout,
         riderProfileShow, setRiderProfileShow,
-        customerName,customerFirstLetter
+        customerName,customerFirstLetter,showCreatePackage
       } = useContext(Thecontext)
 
 
@@ -29,6 +30,9 @@ const CustomerDashboardPart = () => {
     <>
         {
             showRiderLogout ? <CustomerLogout/> : null
+        }
+        {
+            showCreatePackage ? <CreatePackage/> : null
         }
 
         {
@@ -68,10 +72,10 @@ const CustomerDashboardPart = () => {
                         <p>Welcome, {customerName}</p>
                     </div>
                     <div className='riderBodyTopRight'>
-                        <div className='riderBodyTopNotification'>
+                        {/* <div className='riderBodyTopNotification'>
                             <img src={notificationimage} alt=''/>
                             <div className='notifyDot'></div>
-                        </div>
+                        </div> */}
                         <div className='riderTopRightProfile' onClick={()=>setRiderProfileShow(!riderProfileShow)}>{customerFirstLetter}</div>
                     </div>
                 </div>

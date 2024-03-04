@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './customerDashboardCss/customerDashboard.css'
 import { useNavigate } from 'react-router-dom';
+import { Thecontext } from '../../../App';
 
 
 const CustomerDashboard = () => {
 
+
+    const {setShowCreatePackage} = useContext(Thecontext)
 
     const navigate = useNavigate();
 
@@ -13,7 +16,7 @@ const CustomerDashboard = () => {
     // }
 
     const handleToPackage = ()=>{
-        navigate('/riderpackages');
+        navigate('/customerpackages');
     }
 
   return (
@@ -24,11 +27,11 @@ const CustomerDashboard = () => {
                 <div className='customertotalPackages'>
                     <div className='customertotalPackagesLeft' onClick={handleToPackage}>
                         <h3>Total Packages</h3>
-                        <h5>10</h5>
+                        <h5>0</h5>
                     </div>
                 </div>
                 <div className='customerCreatePackage'>
-                    <div className='customerCreatePackagetheButton'>
+                    <div className='customerCreatePackagetheButton' onClick={()=>setShowCreatePackage(true)}>
                         <h5>Create Package</h5>
                     </div>
                 </div>

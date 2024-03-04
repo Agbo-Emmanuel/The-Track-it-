@@ -27,37 +27,30 @@ const CreatePackage = () => {
                         <label>Package Name</label>
                         <input 
                             type="text"
-                            placeholder='first name' 
+                            placeholder='package name' 
                         />
                     </div>
                     <div className='creatingPackageInputPartInput'>
-                        <label>Last Name</label>
+                        <label>Depature</label>
                         <input 
                             type="text"
-                            placeholder='last name' 
-                        />
-                    </div>
-                    {/* <div className='creatingPackageInputPartInput'>
-                        <label>Phone Number</label>
-                        <input 
-                            type="text"
-                            placeholder='phone number' 
+                            placeholder='depature' 
                         />
                     </div>
                     <div className='creatingPackageInputPartInput'>
-                        <label>Email</label>
+                        <label>Destination</label>
                         <input 
                             type="text"
-                            placeholder='email address'  
+                            placeholder='destination' 
                         />
                     </div>
                     <div className='creatingPackageInputPartInput'>
-                        <label>Password</label>
+                        <label>Weight</label>
                         <input 
                             type="text"
-                            placeholder='first name' 
+                            placeholder='weight'  
                         />
-                    </div> */}
+                    </div>
                 </div>
                 <button className='creatingPackageBtn'>Create Package</button>
             </div>

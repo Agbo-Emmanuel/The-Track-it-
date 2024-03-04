@@ -38,7 +38,7 @@ const CustomerLogin = () => {
     // console.log(userData)
 }
 
-  const theData = {identifier: userData.userEmail, Password: userData.userPassword}
+  const theData = {identifier: userData.userEmail, password: userData.userPassword}
   const url = "https://track-it-eight-theta.vercel.app/api/v1/user/SignIn"
 
 
@@ -49,6 +49,8 @@ const CustomerLogin = () => {
       try{
           const response = await axios.post(url, theData)
           console.log(response)
+          localStorage.setItem("customername", response.data.data.firstName)
+          localStorage.setItem("customerFirstName", response.data.data.firstName.charAt(0))
           // localStorage.setItem("companyFirstLetter", response.data.CompanyName.charAt(0))
           
           Swal.fire({

@@ -79,7 +79,7 @@ const CustomerSignup = () => {
           
           Swal.fire({
             title: "Success!",
-            text: response.data.message,
+            text: "you have been sent an email please verify",
             icon: "success",
             confirmButtonText: "ok",
           })

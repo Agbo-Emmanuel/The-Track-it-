@@ -40,7 +40,7 @@ const App = () => {
   const [companyFirstLetter, setCompanyFirstLeter] = useState(localStorage.getItem('companyfirstletter'))
   const [companyToken, setCompanyToken] = useState(localStorage.getItem('companytoken'))
   const [customerName, setCustomerName] = useState(localStorage.getItem('customername'))
-  const [customerFirstLetter, setCustomerFirstLeter] = useState(localStorage.getItem('customerfirstletter'))
+  const [customerFirstLetter, setCustomerFirstLeter] = useState(localStorage.getItem('customerFirstName'))
 
 
 

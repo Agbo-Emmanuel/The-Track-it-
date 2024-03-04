@@ -18,7 +18,7 @@ import CompanyLogout from './CompanyLogout'
 const CompanyDashboard = () => {
 
   const {
-          showCreateRider, showCreatePackage,
+          showCreateRider,
           showCompanyLogout,setShowCompanyLogout,
           profileShow, setProfileShow,
           companyName,companyFirstLetter
@@ -35,9 +35,7 @@ const CompanyDashboard = () => {
       {
         showCreateRider ? <CreateRider/> : null
       }
-      {
-        showCreatePackage ? <CreatePackage/> : null
-      }
+      
     
       {
         profileShow ? <div className='profileShow'>
@@ -77,10 +75,10 @@ const CompanyDashboard = () => {
               <p>Welcome, {companyName}</p>
             </div>
             <div className='companyBodyTopRight'>
-              <div className='companyBodyTopNotification'>
+              {/* <div className='companyBodyTopNotification'>
                 <img src={notificationimage} alt=''/>
                 <div className='notifyDot'></div>
-              </div>
+              </div> */}
               <div className='companyBodyTopRightProfile' onClick={()=>setProfileShow(!profileShow)}>{companyFirstLetter}</div>
             </div>
           </div>
