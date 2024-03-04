@@ -36,7 +36,7 @@ const Landingpage = () => {
                                 <div className='landingPagecloseMenuBar' onClick={handleCloseMenu}>x</div>
                                 <NavLink to='/' className={({ isActive }) => isActive ? 'menuactive' : 'menunotactive'}>Home</NavLink>
                                 <NavLink to='/track'className={({ isActive }) => isActive ? 'menuactive' : 'menunotactive'}>Track</NavLink>
-                                <NavLink to='about'className={({ isActive }) => isActive ? 'menuactive' : 'menunotactive'}>About</NavLink>
+                                <NavLink to='/about'className={({ isActive }) => isActive ? 'menuactive' : 'menunotactive'}>About</NavLink>
                                 <div className='landingPagemenuSignup'>Sign in</div>
                             </div>
                         </div> 
@@ -54,7 +54,7 @@ const Landingpage = () => {
                                     Product anywhere, anytime.
                                 </p>
                             </div>
-                            <NavLink to='/companysignup' className='heroSectionButton'>Get Started</NavLink>
+                            <NavLink to='/customerlogin' className='heroSectionButton'>Get Started</NavLink>
                         </div>
                         <div className='heroSectionRight'>
                             <img src= {heroSectionImg} alt=''/>
@@ -165,7 +165,7 @@ const Landingpage = () => {
                         </div>
                         <div className='section4Center'>
                             <h1>Your package is delivered fast when you<br/> use Track it</h1>
-                            <NavLink to='/companysignup' className='section4Button'>Get Started</NavLink>
+                            <NavLink to='/customerlogin' className='section4Button'>Get Started</NavLink>
                             <div className='packagewriteup'>
                                 <div className='fastsecure'>
                                     <div className='check'><img src={check} alt=''/></div>

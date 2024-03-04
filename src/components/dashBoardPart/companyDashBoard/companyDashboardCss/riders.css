@@ -90,7 +90,7 @@
 .listOfRiders{
     width: 85%;
     height: 60%;
-    background-color: yellow;
+    /* background-color: yellow; */
     margin-top: 20px;
     margin-left: 20px;
 }
