@@ -241,3 +241,97 @@
     border-radius: 6px;
     cursor: pointer;
 }
+
+
+
+
+
+@media screen  and (max-width: 900px){
+    
+}
+
+
+
+
+@media screen  and (max-width: 476px){
+
+    .CompanyDashboard{
+        width: 100vw;
+        height: 100vh;
+        background-color: yellow;
+        flex-direction: column-reverse;
+    }
+    .companyMenuBarTop{
+        display: none;
+    }
+    .companyMenuBar{
+        width: 100%;
+        height: 10%;
+        background-color: #fde2b4;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .companyMenuBarBottom{
+        display: none;
+    }
+    .companyMenuBarBody{
+        width: 100%;
+        height: 100%;
+        /* background-color: blue; */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: 10px;
+    }
+    .companyBody{
+        width: 100%;
+        height: 90%;
+        /* background-color: red; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .isactive{
+        width: 20%;
+        height: 100%;
+        background-color: orange;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-left: 0px;
+        gap: 1px;
+        color: white;
+        font-size: 13px;
+    }
+    .isnotactive{
+        width: 20%;
+        height: 100%;
+        /* background-color: red; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-left: 0px;
+        gap: 1px;
+        color: black;
+        font-size: 13px;
+        font-weight: 500;
+    }
+    .comapanyMenuBarnavLogo{
+        width: 20%;
+        height: 40%;
+        /* background-color: blue; */
+    }
+    
+}
+
+
+
+
+@media screen  and (max-width: 414px){
+
+}
