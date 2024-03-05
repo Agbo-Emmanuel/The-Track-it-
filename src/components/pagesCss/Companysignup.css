@@ -266,11 +266,10 @@
 @media screen  and (max-width: 414px){
 
     .companySignupLogo{
-        width: 20%;
-        height: 100px;
-        /* background-color: red; */
-        position: absolute;
-        top: 20px;
-        left: 150px;
+        width: 30%;
+        left: 100px;
+    }
+    .CompanysignupButton{
+        margin-top: 5px;
     }
 }
