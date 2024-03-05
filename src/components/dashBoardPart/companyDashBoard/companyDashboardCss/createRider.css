@@ -38,6 +38,7 @@
 .creatingRiderTopText > h1{
     font-size: 20px;
     font-weight: 500;
+    font-family: 'Roboto';
 }
 .creatingRiderTopBtn{
     width: 10%;
@@ -162,4 +163,57 @@
 }
 .creatingRiderBtn:active{
     background-color: rgb(255, 191, 72);
+}
+
+
+
+@media screen  and (max-width: 900px){
+    
+}
+
+
+
+@media screen  and (max-width: 476px){
+
+    .creatingRiderPart{
+        width: 90vw;
+    }
+    .creatingRiderPartTop{
+        width: 100%;
+        height: 10%;
+        /* background-color: aqua; */
+    }
+    .creatingRiderTopText{
+        width: 50%;
+        height: 100%;
+        /* background-color: red; */
+        margin-left: 50px;
+    }
+    .creatingRiderTopText > h1{
+        font-size: 17px;
+    }
+    .creatingRiderPartInputPart{
+        width: 90%;
+        height: 60%;
+        /* background-color: yellow; */
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+
+@media screen  and (max-width: 414px){
+
+    .creatingRiderTopText > h1{
+        font-size: 15px;
+    }
+    .creatingRiderInputPartInput > label{
+        font-size: 13px;
+    }
+    .creatingRiderBtn{
+        font-size: 15px;
+    }
 }
