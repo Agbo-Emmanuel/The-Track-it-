@@ -142,7 +142,7 @@
 
     .Login{
         width: 100vw;
-        height: auto;
+        height: 100vh;
     }
     .loginContainer{
         width: 70vw;
@@ -159,7 +159,7 @@
 
     .Login{
         width: 100vw;
-        height: auto;
+        height: 100vh;
     }
     .loginContainer{
         width: 85vw;
@@ -180,7 +180,7 @@
 
     .Login{
         width: 100vw;
-        height: auto;
+        height: 100vh;
     }
     .loginContainer{
         width: 90vw;
