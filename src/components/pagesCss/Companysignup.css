@@ -256,7 +256,7 @@
         margin-bottom: 10px;
     }
     .inputPart{
-        width: 100%;
+        width: 100%!important;
         margin-bottom: 25px;
     }
 }
