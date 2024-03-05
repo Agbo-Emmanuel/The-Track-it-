@@ -5,10 +5,11 @@ import { NavLink, Outlet } from 'react-router-dom'
 import dashboardimg from '../../images/dashboardimg.png'
 import accountimg from '../../images/accountimg.png'
 import logoutimg from '../../images/logoutimg.png'
-import notificationimage from '../../images/notificationimage.png'
+// import notificationimage from '../../images/notificationimage.png'
 import packageimage from '../../images/packageimage.png'
 import CreateRider from './CreateRider'
 import { Thecontext } from '../../../App'
+import CreatePackage from './CreatePackage'
 import AssignPackage from './AssignPackage'
 import CompanyLogout from './CompanyLogout'
 
@@ -18,11 +19,11 @@ import CompanyLogout from './CompanyLogout'
 const CompanyDashboard = () => {
 
   const {
-          showCreateRider,
+          showCreateRider,showCreatePackage,
           showCompanyLogout,setShowCompanyLogout,
           profileShow, setProfileShow,
           companyName,companyFirstLetter,
-          showAssignPackage
+          showAssignPackage,
         } = useContext(Thecontext)
 
 
@@ -37,6 +38,9 @@ const CompanyDashboard = () => {
         showCreateRider ? <CreateRider/> : null
       }
 
+      {
+        showCreatePackage ? <CreatePackage/> : null
+      }
       {
         showAssignPackage ? <AssignPackage/> : null
       }

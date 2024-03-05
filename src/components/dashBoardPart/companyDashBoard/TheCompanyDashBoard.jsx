@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import '../companyDashBoard/companyDashboardCss/theCompanyDashboard.css'
 import { useNavigate } from 'react-router-dom';
 import { Thecontext } from '../../../App'
@@ -8,6 +8,9 @@ import axios from 'axios'
 
 
 const TheCompanyDashBoard = () => {
+
+
+  const [numberOfRiders, setNumberOfRiders] = useState(localStorage.getItem("numberRiders"))
 
   const {setShowCreateRider, setShowCreatePackage,companyToken} = useContext(Thecontext)
 
@@ -32,8 +35,7 @@ const TheCompanyDashBoard = () => {
                }
               })
               console.log(response)
-            
-
+              localStorage.setItem("numberRiders", response.data.riders.length)
           }
           catch(err){
             console.log(err)
@@ -51,7 +53,7 @@ const TheCompanyDashBoard = () => {
             <div className='totalRiders'>
               <div className='totalRidersLeft' onClick={handleToRider}>
                 <h3>Total Riders</h3>
-                <h5>0</h5>
+                <h5>{numberOfRiders}</h5>
               </div>
               <div className='companyDashboardCreateRider' onClick={()=>setShowCreateRider(true)}>
                 <h5>Create Rider</h5>
@@ -62,8 +64,8 @@ const TheCompanyDashBoard = () => {
                 <h3>Total Packages</h3>
                 <h5>0</h5>
               </div>
-              <div className='companyDashboardCreatePackage' onClick={handleToPackage}>
-                <h5>Assign Package</h5>
+              <div className='companyDashboardCreatePackage' onClick={()=>setShowCreatePackage(true)}>
+                <h5>Create Package</h5>
               </div>
             </div>
           </div>

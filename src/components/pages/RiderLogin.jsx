@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useContext } from 'react'
 import '../pagesCss/Login.css'
 import { Link } from 'react-router-dom'
 import axios from "axios"
@@ -6,8 +6,12 @@ import Swal from 'sweetalert2'
 import trackitLogo from '../images/trackitLogo.png'
 import { LuEye } from "react-icons/lu";
 import { LuEyeOff } from "react-icons/lu";
+import { Thecontext } from '../../App'
 
-const CustomerLogin = () => {
+const CompanyLogin = () => {
+
+
+  const {setCompanyName, setCompanyFirstLeter} = useContext(Thecontext)
 
   const loginInput = useRef()
 
@@ -28,8 +32,8 @@ const CustomerLogin = () => {
   }
 
   const [userData, setUserData] = useState({
-    userEmail: "",
-    userPassword: "",
+    riderEmail: "",
+    riderPassword: "",
   })
 
   const handleInputChange = (e)=>{
@@ -38,8 +42,8 @@ const CustomerLogin = () => {
     // console.log(userData)
 }
 
-  const theData = {identifier: userData.userEmail, password: userData.userPassword}
-  const url = "https://track-it-eight-theta.vercel.app/api/v1/user/SignIn"
+  const theData = {identifier : userData.riderEmail, riderPassword: userData.riderPassword}
+  const url = "https://track-it-eight-theta.vercel.app/api/v1/company/signIn"
 
 
   const handleLoginAccount = async(e)=>{
@@ -49,8 +53,9 @@ const CustomerLogin = () => {
       try{
           const response = await axios.post(url, theData)
           console.log(response)
-          localStorage.setItem("customername", response.data.data.firstName)
-          localStorage.setItem("customerFirstName", response.data.data.firstName.charAt(0))
+          localStorage.setItem('companytoken', response.data.companyToken)
+          localStorage.setItem('companyname', response.data.company.companyName)
+          localStorage.setItem('companyfirstletter', response.data.company.companyName.charAt(0))
           // localStorage.setItem("companyFirstLetter", response.data.CompanyName.charAt(0))
           
           Swal.fire({
@@ -59,7 +64,7 @@ const CustomerLogin = () => {
             icon: "success",
             confirmButtonText: "ok",
           }).then(function() {
-                 window.location.href = "/customerdashboard";
+                 window.location.href = "/riderdashboard";
               }) 
       }
       catch(err){
@@ -86,11 +91,11 @@ const CustomerLogin = () => {
           <p>Welcome back</p>
           <div className='loginformPart'>
             <div className='logininputPart'>
-              <label>Email or Phone number</label>
+              <label>Email</label>
               <input
                 placeholder="email"
-                name='userEmail'
-                value={userData.userEmail}
+                name='companyEmail'
+                value={userData.riderEmail}
                 onChange={handleInputChange}
               />
             </div>
@@ -100,8 +105,8 @@ const CustomerLogin = () => {
                 <input
                   type='password'
                   placeholder="password"
-                  name='userPassword'
-                  value={userData.userPassword}
+                  name='companyPassword'
+                  value={userData.riderPassword}
                   onChange={handleInputChange}
                   ref={loginInput}
                 />
@@ -115,7 +120,6 @@ const CustomerLogin = () => {
             </div>
           </div>
           <button className='loginButton' onClick={handleLoginAccount}>Login</button>
-          <p className='linkToLoginPage'>Don't have an Account? <Link to='/customersignup' className='loginLink'>Signup</Link></p>
         </div>
       </div>
     
@@ -123,4 +127,4 @@ const CustomerLogin = () => {
   )
 }
 
-export default CustomerLogin
+export default CompanyLogin

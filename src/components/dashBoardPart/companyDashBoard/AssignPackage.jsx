@@ -23,7 +23,8 @@ const CreatePackage = () => {
                 </div>
                 <div className='creatingPackagePartLine'></div>
                 <div className='assignPackagePartInputPart'>
-                    <div className='creatingPackageInputPartInput'>
+                    <div className='assignPackageInputPartInput'>
+                        <p>Select Rider</p>
                         <select className='selectInput'>
                             <option>-select-</option>
                             <option>Emmanuel</option>

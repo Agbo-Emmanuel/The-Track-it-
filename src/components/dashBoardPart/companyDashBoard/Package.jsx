@@ -73,7 +73,7 @@ const Package = () => {
             </div>
           </div>
         </div>
-        {/* <div className='packagePageRight'>
+        <div className='packagePageRight'>
           <div className='packagePageRightTop'>
             <nav>List of Assigned Packages</nav>
           </div>
@@ -94,37 +94,15 @@ const Package = () => {
             </div>
             <div className='packagePageLeftLine'></div>
             <div className='thePackages'>
-              <div className='thePackagesItems'>
+              <div className='theAssignedPackagesItems'>
                 <p>Shoe</p>
                 <p>23495</p>
-              </div>
-              <div className='thePackagesItems'>
-                <p>Shoe</p>
-                <p>23495</p>
+                <button className='assignButton'>Track</button>
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
       </div>
-
-
-
-      {/* {
-    packages.map((product)=>{
-
-        return (
-
-            <div className='Product'>
-                <Link  to={`/detailpage/${product.id}`}  className='product'>
-                    <img src={product.image} alt=''/>
-                    <h2>{product.title}</h2>
-                    <p>price: ${product.price}</p>
-                </Link>
-            </div>
-        )
-
-    })
-} */}
 
     </>
   )

@@ -1,5 +1,6 @@
 import React, { createContext, useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import ScrollToTop from './ScrollTop'
 import Landingpage from './components/pages/Landingpage'
 import Track from './components/pages/Track'
 import About from './components/pages/About'
@@ -7,7 +8,7 @@ import Landing from './components/pages/Landing'
 import UserMapPage from './components/pages/UserMapPage'
 import Companysignup from './components/pages/Companysignup'
 import CompanyLogin from './components/pages/CompanyLogin'
-import CustomerLogin from './components/pages/CustomerLogin'
+import RiderLogin from './components/pages/RiderLogin'
 import VerifyEmail from './components/pages/VerifyEmail'
 import CompanyDashboard from './components/dashBoardPart/companyDashBoard/CompanyDashboard'
 import Riders from './components/dashBoardPart/companyDashBoard/Riders'
@@ -16,11 +17,6 @@ import Package from './components/dashBoardPart/companyDashBoard/Package'
 import RiderDashboardPart from './components/dashBoardPart/riderDashboard/RiderDashboardPart'
 import RiderDashboard from './components/dashBoardPart/riderDashboard/RiderDashboard'
 import RiderPackages from './components/dashBoardPart/riderDashboard/RiderPackages'
-import CustomerDashboardPart from './components/dashBoardPart/customerDashboard/CustomerDashboardPart'
-import CustomerDashboard from './components/dashBoardPart/customerDashboard/CustomerDashboard'
-import CustomerPackages from './components/dashBoardPart/customerDashboard/CustomerPackages'
-import CustomerSignup from './components/pages/CustomerSignup'
-// import RiderLocation from './components/dashBoardPart/riderDashboard/RiderLocation'
 
 
 
@@ -62,12 +58,12 @@ const App = () => {
       showAssignPackage, setShowAssignPackage
     }}>
       <BrowserRouter>
+        <ScrollToTop/>
         <Routes>
 
           <Route path='/companysignup' element= { <Companysignup/> }/>
-          {/* <Route path='/customersignup' element= { <CustomerSignup/> }/> */}
           <Route path='/companylogin' element= { <CompanyLogin/> }/>
-          {/* <Route path='/customerlogin' element= { <CustomerLogin/> }/> */}
+          <Route path='/riderlogin' element= { <RiderLogin/> }/>
           <Route path='/verifyemail' element= { <VerifyEmail/> }/>
           
           <Route element= { <Landing/> }>
@@ -88,11 +84,6 @@ const App = () => {
             {/* <Route path='/riderlocation' element= { <RiderLocation/> }/> */}
             <Route path='/riderpackages' element= { <RiderPackages/> }/>
           </Route>
-
-          {/* <Route element= { <CustomerDashboardPart/> }>
-            <Route path='/customerdashboard' element= { <CustomerDashboard/> }/>
-            <Route path='/customerpackages' element= { <CustomerPackages/> }/>
-          </Route> */}
 
         </Routes>
       </BrowserRouter>
