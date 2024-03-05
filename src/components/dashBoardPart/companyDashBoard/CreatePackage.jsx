@@ -38,13 +38,6 @@ const CreatePackage = () => {
                         />
                     </div>
                     <div className='creatingPackageInputPartInput'>
-                        <label>Destination</label>
-                        <input 
-                            type="text"
-                            placeholder='destination' 
-                        />
-                    </div>
-                    <div className='creatingPackageInputPartInput'>
                         <label>Weight</label>
                         <input 
                             type="text"
