@@ -7,6 +7,8 @@ import trackitLogo from '../images/trackitLogo.png'
 import { LuEye } from "react-icons/lu";
 import { LuEyeOff } from "react-icons/lu";
 import { Thecontext } from '../../App'
+// import { FaSpinner } from 'react-icons/fa';
+
 
 const CompanyLogin = () => {
 
@@ -123,7 +125,7 @@ const CompanyLogin = () => {
           <p className='linkToLoginPage'>Don't have an Account? <Link to='/companysignup' className='loginLink'>Signup</Link></p>
         </div>
       </div>
-    
+      {/* <FaSpinner /> */}
     </>
   )
 }
