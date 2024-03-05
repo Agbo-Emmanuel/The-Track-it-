@@ -3,7 +3,7 @@ import '../pagesCss/Companysignup.css'
 // import Signupimg from '../images/Signupimg.svg'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from "axios"
-// import Swal from 'sweetalert2'
+import Swal from 'sweetalert2'
 import trackitLogo from '../images/trackitLogo.png'
 import { LuEye } from "react-icons/lu";
 import { LuEyeOff } from "react-icons/lu";
@@ -73,22 +73,22 @@ const Companysignup = () => {
           console.log(response)
           // localStorage.setItem("companyFirstLetter", response.data.CompanyName.charAt(0))
           
-          // Swal.fire({
-          //   title: "Success!",
-          //   text: response.data.message,
-          //   icon: "success",
-          //   confirmButtonText: "ok",
-          // }).then(function() {
-          //        window.location.href = "/companydashboard";
-          //     }) 
+          Swal.fire({
+            title: "Success!",
+            text: response.data.message,
+            icon: "success",
+            confirmButtonText: "ok",
+          }).then(function() {
+                 window.location.href = "/companysignup";
+              }) 
       }
       catch(err){
-        // Swal.fire({
-        //   title: "error!",
-        //   text: err.response.message,
-        //   icon: "error",
-        //   confirmButtonText: "ok",
-        //   }) 
+        Swal.fire({
+          title: "error!",
+          text: err.response.data.error,
+          icon: "error",
+          confirmButtonText: "ok",
+          }) 
           console.log(err)
       }
   }
@@ -98,11 +98,11 @@ const Companysignup = () => {
     const corremail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
     // const correname = /^[a-z ,.'-]+$/i
     // console.log(values.confirmPassword)
-    if ( !values.CompanyName ) {
-      errors.CompanyName = "company name is required!"
+    if ( !values.companyName ) {
+      errors.companyName = "company name is required!"
     }
-    if ( !values.CompanyAddress ) {
-      errors.CompanyAddress = "company address is required!"
+    if ( !values.companyAddress ) {
+      errors.companyAddress = "company address is required!"
     }
     if ( !values.companyEmail ) {
       errors.companyEmail = "email is required!"
@@ -111,6 +111,12 @@ const Companysignup = () => {
     }
     if ( !values.companyPhoneNumber ) {
       errors.companyPhoneNumber = "phone number is required!"
+    }
+    if ( values.companyPhoneNumber.length <  11 ) {
+      errors.companyPhoneNumber = "should not be less than 11 characters"
+    }
+    if ( values.companyPhoneNumber.length >  11 ) {
+      errors.companyPhoneNumber = "should not be more than 11 characters"
     }
     if ( !values.Password ) {
       errors.Password = "password is required!"
@@ -151,7 +157,7 @@ const Companysignup = () => {
                               value={userData.companyName}
                               onChange={handleInputChange}
                           />
-                          {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.CompanyName}</p> : null } */}
+                          {formErrors ? <p style={{color: "red", fontSize: "12px", position: "absolute", bottom: "-20px"}}>{formErrors.companyName}</p> : null }
                       </div>
                       <div className='inputPart'>
                             <label>Company's Address</label>
@@ -162,7 +168,7 @@ const Companysignup = () => {
                                 value={userData.companyAddress}
                                 onChange={handleInputChange}
                             />
-                        {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.CompanyAddress}</p> : null } */}
+                        {formErrors ? <p style={{color: "red", fontSize: "12px", position: "absolute", bottom: "-20px"}}>{formErrors.companyAddress}</p> : null }
                         </div>
                     </div>
                         
@@ -176,7 +182,7 @@ const Companysignup = () => {
                                   value={userData.companyPhoneNumber}
                                   onChange={handleInputChange}
                               />
-                          {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.companyPhoneNumber}</p> : null } */}
+                          {formErrors ? <p style={{color: "red", fontSize: "12px", position: "absolute", bottom: "-20px"}}>{formErrors.companyPhoneNumber}</p> : null }
                           </div>
                           <div className='inputPart'>
                               <label>Email</label>
@@ -187,7 +193,7 @@ const Companysignup = () => {
                                   value={userData.companyEmail}
                                   onChange={handleInputChange}
                               />
-                          {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.companyEmail}</p> : null } */}
+                          {formErrors ? <p style={{color: "red", fontSize: "12px", position: "absolute", bottom: "-20px"}}>{formErrors.companyEmail}</p> : null }
                           </div>
                     </div>
                     
@@ -210,7 +216,7 @@ const Companysignup = () => {
                                   }
                                 </div>
                               </div>
-                          {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.Password}</p> : null } */}
+                            {formErrors ? <p style={{color: "red", fontSize: "12px", position: "absolute", bottom: "-20px"}}>{formErrors.Password}</p> : <p style={{fontSize: "10px", position: "absolute", bottom: "-28px"}}>should contain at least 9 alphabets, 2 special character and 2 numbers</p> }
                           </div>
                           <div className='inputPart'>
                               <label>Confirm Password</label>
@@ -230,7 +236,7 @@ const Companysignup = () => {
                                   }
                                 </div>
                               </div>
-                          {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.confirmPassword}</p> : null } */}
+                          {formErrors ? <p style={{color: "red", fontSize: "12px", position: "absolute", bottom: "-20px"}}>{formErrors.confirmPassword}</p> : null }
                           </div>
                     </div>
     
