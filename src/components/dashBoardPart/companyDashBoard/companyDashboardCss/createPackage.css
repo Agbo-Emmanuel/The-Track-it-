@@ -173,3 +173,56 @@
     font-weight: 700;
     cursor: pointer;
 }
+
+
+
+@media screen  and (max-width: 900px){
+    
+}
+
+
+
+@media screen  and (max-width: 476px){
+
+    .creatingPackagePart{
+        width: 90vw;
+    }
+    .creatingPackagePartTop{
+        width: 100%;
+        height: 10%;
+        /* background-color: aqua; */
+    }
+    .creatingPackageTopText{
+        width: 50%;
+        height: 100%;
+        /* background-color: red; */
+        margin-left: 50px;
+    }
+    .creatingPackageTopText > h1{
+        font-size: 17px;
+    }
+    .creatingPackagePartInputPart{
+        width: 90%;
+        height: 60%;
+        /* background-color: yellow; */
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+
+@media screen  and (max-width: 414px){
+
+    .creatingPackageTopText > h1{
+        font-size: 15px;
+    }
+    .creatingPackageInputPartInput > label{
+        font-size: 13px;
+    }
+    .creatingPackageBtn{
+        font-size: 15px;
+    }
+}
