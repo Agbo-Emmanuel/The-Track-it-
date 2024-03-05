@@ -71,6 +71,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
 }
 .nameinputPart > label{
     font-size: 16px;
@@ -183,175 +184,85 @@
     text-decoration: none;
     color: orange;
 }
-
-
-
-
-@media screen and (max-width: 821px){
-
-    /* .Companysignup{
-        width: 100vw;
-        height: 100vh;
-        background-color: #FAF5EC;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-    } */
-
-    .signupContainer{
-        width: 45vw;
-        height: 90vh;
-        /* background-color: yellow; */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
+.inputPart{
+    width: 100%;
+    height: 80px;
+    /* background-color: bisque; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
 }
 
 
 
 
-@media screen and (max-width: 500px){
+@media screen  and (max-width: 900px){
 
-    /* .Companysignup{
-        width: 100vw;
-        height: auto;
-        background-color: #FAF5EC;
-        display: flex;
-        justify-content: center!important;
-        align-items: center;
-        justify-content: center;
-        gap: 40px;
-    } */
-
-    .Companysignupimg{
-        display: none;
+    .companySignupLogo{
+        width: 10%;
+        height: 100px;
     }
-
     .signupContainer{
-        width: 80vw!important;
-        height: auto;
-        /* background-color: yellow; */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+        width: 80%;
     }
+}
 
-    .formPart{
+
+
+
+@media screen  and (max-width: 476px){
+
+    .Companysignup{
         width: 100%;
         height: auto;
-        /* background-color: aqua; */
-        margin-bottom: 10px;
+        /* flex-direction: column; */
+        justify-content: center;
+        align-items: flex-end;
+        /* gap: 30px; */
+        position: relative;
     }
-
-    .twoInputJoin{
-        width: 100%;
+    .signupContainer{
+        width: 90%;
         height: auto;
+        background-color: white;
+        gap: 10px;
+        margin-left: 0px;
+        margin-bottom: 50px;
+        margin-top: 150px;
+    }
+    .companySignupLogo{
+        width: 20%;
+        height: 100px;
         /* background-color: red; */
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
+        position: absolute;
+        top: 20px;
+        left: 200px;
     }
-    .inputPart{
+    .signupInputReal{
         width: 100%;
-        height: 70px;
-        /* background-color: bisque; */
+        height: auto;
+        /* background-color: blue; */
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        /* gap: 20px; */
     }
-    .inputPart > label{
-        font-size: 18px;
-        font-weight: 500;
-    }
-
-    .CompanysignupButton{
+    .nameinputPart{
         width: 100%;
-        height: 55px;
+        margin-bottom: 25px;
     }
-
-    .linkToLoginPage{
-        margin-bottom: 50px;
+    .nameinputPart > input{
+        margin-bottom: 10px;
     }
-    
-
+    .inputPart{
+        width: 100%;
+        margin-bottom: 25px;
+    }
 }
 
 
 
-
-
-@media screen and (max-width: 416px){
-
-
-    .signupContainer{
-        width: 90vw;
-        height: 90%;
-        /* background-color: yellow; */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-}
-
-
-
-
-@media screen and (max-width: 367px){
-
-
-    .signupContainer{
-        width: 90vw;
-        height: 90%;
-        /* background-color: yellow; */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .nameinputPart > label{
-        font-size: 15px;
-        font-weight: 500;
-    }
-
-    .inputPart > label{
-        font-size: 17px;
-        font-weight: 500;
-    }
-
-}
-
-
-
-@media screen and (max-width: 323px){
-
-
-    .signupContainer{
-        width: 90vw;
-        height: 90%;
-        /* background-color: yellow; */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .nameinputPart > label{
-        font-size: 15px;
-        font-weight: 500;
-    }
-
-    .inputPart > label{
-        font-size: 15px;
-        font-weight: 500;
-    }
+@media screen  and (max-width: 414px){
 
 }
