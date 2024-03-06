@@ -10,7 +10,21 @@ const RiderPackages = () => {
     <>
     
         <div className='RiderPackages'>
-          <div></div>
+          <div className='riderPackageLeft'>
+            <h3>List of Packages</h3>
+            <div className='riderPackageLeftLine'></div>
+            <div className='riderPackageLeftProperties'>
+              <nav>Package Name</nav>
+              <nav>Package ID</nav>
+            </div>
+            <div className='riderPackageLeftItemsPart'>
+              <div className='riderPackageLeftItems'>
+
+              </div>
+            </div>
+          </div>
+
+          <div className='riderPackageRight'></div>
         </div>
     
     </>

@@ -3,8 +3,63 @@
     height: 100%;
     background-color: whitesmoke;
     border-radius: 6px;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+}
+.riderPackageLeft{
+    width: 45%;
+    height: 97%;
+    background-color: white;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 6px;
+}
+.riderPackageLeft > h3{
+    font-family: 'Roboto';
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+.riderPackageLeftLine{
+    width: 100%;
+    height: 1px;
+    background-color: lightgrey;
+    margin-top: 30px;
+}
+.riderPackageLeftProperties{
+    width: 100%;
+    height: 50px;
+    /* background-color: blue; */
+    display: flex;
     align-items: center;
+    gap: 150px;
+    border-bottom: 1px solid lightgrey;
+}
+.riderPackageLeftProperties > nav{
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 15px;
+    margin-left: 20px;
+}
+.riderPackageLeftItemsPart{
+    width: 100%;
+    height: 74%;
+    background-color: red;
+    overflow-y: scroll;
+}
+.riderPackageLeftItems{
+    width: 100%;
+    height: 20%;
+    background-color: aqua;
+}
+
+.riderPackageRight{
+    width: 50%;
+    height: 97%;
+    background-color: yellow;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 6px;
 }
