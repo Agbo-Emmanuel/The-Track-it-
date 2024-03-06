@@ -165,7 +165,7 @@
 .theCompanyDashboardBottomProperties{
     width: 80%;
     height: 15%;
-    background-color: blue;
+    /* background-color: blue; */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
