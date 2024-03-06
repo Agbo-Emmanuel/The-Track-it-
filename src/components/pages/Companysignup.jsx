@@ -7,6 +7,7 @@ import Swal from 'sweetalert2'
 import trackitLogo from '../images/trackitLogo.png'
 import { LuEye } from "react-icons/lu";
 import { LuEyeOff } from "react-icons/lu";
+import { PulseLoader } from "react-spinners"
 
 const Companysignup = () => {
 
@@ -118,15 +119,15 @@ const Companysignup = () => {
     if ( values.companyPhoneNumber.length >  11 ) {
       errors.companyPhoneNumber = "should not be more than 11 characters"
     }
-    if ( !values.Password ) {
-      errors.Password = "password is required!"
+    if ( !values.companyPassword ) {
+      errors.companyPassword = "password is required!"
     }
-    if ( !values.confirmPassword ) {
-      errors.confirmPassword = "must confirm password"
-    } else if(values.confirmPassword === values.password) {
-        errors.confirmPassword = ""
+    if ( !values.confirmCompanyPassword ) {
+      errors.confirmCompanyPassword = "must confirm password"
+    } else if(values.confirmCompanyPassword === values.companyPassword) {
+        errors.confirmCompanyPassword = ""
     }else{ 
-        errors.confirmPassword = "the password must  match "
+        errors.confirmCompanyPassword = "the password must  match "
     }
 
     return errors;
@@ -147,6 +148,7 @@ const Companysignup = () => {
             <div className='signupContainer'>
                 <h1>Sign Up</h1>
                 <p>Partner with us </p>
+                {/* <PulseLoader color="hsla(168, 67%, 53%, 1)" size={0}/> */}
                 <div className='formPart'>
                     <div className='signupInputReal'>
                       <div className='nameinputPart'>
@@ -207,7 +209,7 @@ const Companysignup = () => {
                                     name='companyPassword'
                                     value={userData.companyPassword}
                                     onChange={handleInputChange}
-                                    ref={loginInput}
+                                    // ref={loginInput}
                                 />
                                 <div className='passwordInputIcon'>
                                   {                
@@ -216,7 +218,7 @@ const Companysignup = () => {
                                   }
                                 </div>
                               </div>
-                            {formErrors ? <p style={{color: "red", fontSize: "12px", position: "absolute", bottom: "-20px"}}>{formErrors.Password}</p> : <p style={{fontSize: "10px", position: "absolute", bottom: "-28px"}}>should contain at least 9 alphabets, 2 special character and 2 numbers</p> }
+                            {formErrors ? <p style={{color: "red", fontSize: "12px", position: "absolute", bottom: "-20px"}}>{formErrors.companyPassword}</p> : <p style={{fontSize: "10px", position: "absolute", bottom: "-28px"}}>should contain at least 9 alphabets, 2 special character and 2 numbers</p> }
                           </div>
                           <div className='inputPart'>
                               <label>Confirm Password</label>
@@ -227,7 +229,7 @@ const Companysignup = () => {
                                     name='confirmCompanyPassword'
                                     value={userData.confirmCompanyPassword}
                                     onChange={handleInputChange}
-                                    ref={loginInput}
+                                    // ref={loginInput}
                                 />
                                 <div className='passwordInputIcon'>
                                   {                
@@ -236,7 +238,7 @@ const Companysignup = () => {
                                   }
                                 </div>
                               </div>
-                          {formErrors ? <p style={{color: "red", fontSize: "12px", position: "absolute", bottom: "-20px"}}>{formErrors.confirmPassword}</p> : null }
+                          {formErrors ? <p style={{color: "red", fontSize: "12px", position: "absolute", bottom: "-20px"}}>{formErrors.confirmCompanyPassword}</p> : null }
                           </div>
                     </div>
     
@@ -245,6 +247,7 @@ const Companysignup = () => {
                 <button className='CompanysignupButton' onClick={handleCreateAccount}>Create Account</button>
                 <p className='linkToLoginPage'>Already have an Account? <Link to='/companylogin' className='loginLink'>Login</Link></p>
             </div>
+            {/* <PulseLoader color="hsla(168, 67%, 53%, 1)" size={0}/> */}
         </div>
     
     </>
