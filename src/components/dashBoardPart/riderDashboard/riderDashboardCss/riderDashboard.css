@@ -1,7 +1,7 @@
 .RiderDashboard{
     width: 100%;
     height: 100%;
-    background-color: whitesmoke;
+    background-color: #fdfffc;
     border-radius: 6px;
     overflow-y: scroll;
     display: flex;
@@ -12,15 +12,15 @@
 .riderDashboardTop{
     width: 100%;
     height: 200px;
-    background-color: #fde2b4;
+    /* background-color: #fde2b4; */
     display: flex;
     align-items: center;
     /* margin-top: 20px; */
 }
 .riderLocation{
-    width:60%;
+    width: 30%;
     height: 80%;
-    background-color: orange;
+    background-color: #219ebc;
     margin-left: 90px;
     border-radius: 10px;
     display: flex;
@@ -28,7 +28,7 @@
     justify-content: space-around;
 }
 .riderLocationLeft{
-    width:60%;
+    width: 100%;
     height: 100%;
     /* background-color: green; */
     display: flex;
@@ -39,28 +39,31 @@
     /* cursor: pointer; */
 }
 .riderLocationLeft > h3{
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-family: 'Poppins';
+    color: white;
 }
 .riderLocationLeft > h5{
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    /* color: white; */
+    font-family: 'Roboto';
+    color: white;
 }
 .riderDashboardUpdateLocation{
-    width: 30%;
-    height: 50%;
-    background: #ffb536;
+    width: 18%;
+    height: 45%;
+    background: orange;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     border-radius: 6px;
+    margin-left: 100px;
     transition: all 350ms ease-in-out;
 }
 .riderDashboardUpdateLocation:hover{
     transform: scale(1);
-    background-color: #ffd489;
+    background: #ffb536;
+    color: white;
 }
 .riderDashboardUpdateLocation > h5{
     font-size: 18px;
@@ -71,7 +74,7 @@
 .ridertotalPackages{
     width:20%;
     height: 80%;
-    background-color: orange;
+    background-color: #2a9d8f;
     margin-left: 50px;
     border-radius: 10px;
     display: flex;
@@ -90,13 +93,15 @@
     cursor: pointer;
 }
 .ridertotalPackagesLeft > h3{
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-family: 'Poppins';
+    /* font-weight: 800; */
+    color: white;
 }
 .ridertotalPackagesLeft > h5{
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    /* color: white; */
+    font-size: 25px;
+    font-family: 'Roboto';
+    color: white;
 }
 .riderDashboardCreatePackage{
     width: 40%;
@@ -115,5 +120,5 @@
 }
 .riderDashboardCreatePackage > h5{
     font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins';
 }

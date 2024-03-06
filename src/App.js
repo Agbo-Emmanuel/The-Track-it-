@@ -38,6 +38,7 @@ const App = () => {
   const [companyToken, setCompanyToken] = useState(localStorage.getItem('companytoken'))
   const [customerName, setCustomerName] = useState(localStorage.getItem('customername'))
   const [customerFirstLetter, setCustomerFirstLeter] = useState(localStorage.getItem('customerFirstName'))
+  const [showPackageDetails, setShowPackageDetails] = useState(false)
 
 
 
@@ -55,7 +56,8 @@ const App = () => {
       companyToken, setCompanyToken,
       customerName, setCustomerName,
       customerFirstLetter, setCustomerFirstLeter,
-      showAssignPackage, setShowAssignPackage
+      showAssignPackage, setShowAssignPackage,
+      showPackageDetails, setShowPackageDetails
     }}>
       <BrowserRouter>
         <ScrollToTop/>

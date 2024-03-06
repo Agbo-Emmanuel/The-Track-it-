@@ -1,11 +1,11 @@
 import React, { useContext } from 'react'
 import './riderDashboardCss/riderDashboardPart.css'
 import trackitLogo from '../../images/trackitLogo.png'
-import { Link, NavLink, Outlet } from 'react-router-dom'
+import { Link, NavLink, Outlet, useNavigate } from 'react-router-dom'
 import dashboardimg from '../../images/dashboardimg.png'
 // import accountimg from '../../images/accountimg.png'
 import logoutimg from '../../images/logoutimg.png'
-import notificationimage from '../../images/notificationimage.png'
+// import notificationimage from '../../images/notificationimage.png'
 import packageimage from '../../images/packageimage.png'
 import { Thecontext } from '../../../App'
 import RiderLogout from './RiderLogout'
@@ -17,6 +17,8 @@ import RiderLogout from './RiderLogout'
 
 const RiderDashboardPart = () => {
 
+
+    const navigate = useNavigate();
 
     const {
         showRiderLogout, setShowRiderLogout,
@@ -39,7 +41,9 @@ const RiderDashboardPart = () => {
         <div className='RiderDashboardPart'>
             <div className='riderDashboardPartMenuBar'>
                 <div className='riderDashboardPartMenuBarTop'>
-                    <div className='riderDashboardPartMenuBarTopLogo'><img src={trackitLogo} alt=''/></div>
+                    <div className='riderDashboardPartMenuBarTopLogo' onClick={()=>navigate('/')}>
+                        <img src={trackitLogo} alt=''/>
+                    </div>
                 </div>
                 <div className="riderMenuBarBody">
                     <NavLink to='/riderdashboard' className={({ isActive }) => isActive ? 'riderisactive' : 'riderisnotactive'}>
@@ -67,10 +71,10 @@ const RiderDashboardPart = () => {
                         <p>Welcome, Ebenezer</p>
                     </div>
                     <div className='riderBodyTopRight'>
-                        <div className='riderBodyTopNotification'>
+                        {/* <div className='riderBodyTopNotification'>
                             <img src={notificationimage} alt=''/>
                             <div className='notifyDot'></div>
-                        </div>
+                        </div> */}
                         <div className='riderTopRightProfile' onClick={()=>setRiderProfileShow(!riderProfileShow)}>E</div>
                     </div>
                 </div>

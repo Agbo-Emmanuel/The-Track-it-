@@ -46,20 +46,128 @@
 .riderPackageLeftItemsPart{
     width: 100%;
     height: 74%;
-    background-color: red;
+    /* background-color: red; */
     overflow-y: scroll;
 }
 .riderPackageLeftItems{
     width: 100%;
-    height: 20%;
-    background-color: aqua;
+    height: 15%;
+    background-color: rgb(254, 203, 108);
+    border-radius: 6px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 186px;
+    cursor: pointer;
+}
+.riderPackageLeftItems:active{
+    background-color: rgb(255, 193, 78);
+}
+.riderPackageLeftItems > nav{
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 15px;
+    margin-left: 20px;
 }
 
 .riderPackageRight{
     width: 50%;
     height: 97%;
-    background-color: yellow;
+    /* background-color: yellow; */
     margin-top: 10px;
     margin-right: 10px;
     border-radius: 6px;
+}
+.riderPackageRightPart{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+.riderPackageRightPartTop{
+    width: 100%;
+    height: 10%;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.riderPackageRightPartTop > h3{
+    font-family: 'Roboto';
+    font-size: 17px;
+    font-weight: 500;
+    margin-left: 20px;
+}
+.closeRiderPackageDetailBtn{
+    width: 8%;
+    height: 100%;
+    background-color: rgb(253, 210, 130);
+    border-radius: 6px;
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: all 350ms ease-in-out;
+}
+.closeRiderPackageDetailBtn:hover{
+    transform: scale(1);
+    background-color: orange;
+}
+.riderPackageRightLine{
+    width: 100%;
+    height: 1px;
+    background-color: lightgrey;
+    margin-top: 10px;
+}
+.riderPackageDetail{
+    width: 90%;
+    height: 90%;
+    /* background-color: yellow; */
+    margin-top: 10px;
+    display: flex;
+}
+.riderPackageDetailProp{
+    width: 20%;
+    height: 100%;
+    /* background-color: blue; */
+}
+.riderPackageDetailProp > nav{
+    font-size: 16px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    margin-top: 40px;
+}
+.riderPackageTheDetails{
+    width: 80%;
+    height: 100%;
+    /* background-color: green; */
+}
+.riderPackageTheDetails > nav{
+    font-size: 16px;
+    font-family: 'Roboto';
+    /* font-weight: 500; */
+    margin-top: 40px;
+}
+
+.riderPackageTheDetailsDeliverBtn{
+    width: 30%;
+    height: 50px;
+    background-color: rgb(253, 176, 32);
+    border-radius: 6px;
+    border: none;
+    color: white;
+    font-family: 'Roboto';
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 70px;
+    cursor: pointer;
+}
+.riderPackageTheDetailsDeliverBtn:active{
+    background-color: rgb(210, 141, 11);
 }

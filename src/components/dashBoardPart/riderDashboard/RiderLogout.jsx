@@ -13,7 +13,7 @@ const CompanyLogout = () => {
     const navigate = useNavigate();
 
     const handleLogout = ()=>{
-        navigate('/login');
+        navigate('/riderlogin');
     }
     const handleLogoutNo = ()=>{
         setShowRiderLogout(false)

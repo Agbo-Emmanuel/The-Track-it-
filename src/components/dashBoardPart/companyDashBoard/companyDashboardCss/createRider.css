@@ -12,7 +12,7 @@
 .creatingRiderPart{
     width: 50%;
     height: 90%;
-    background-color: whitesmoke;
+    background-color: #fdfffc;
     border-radius: 6px;
     display: flex;
     flex-direction: column;
@@ -43,11 +43,11 @@
 .creatingRiderTopBtn{
     width: 10%;
     height: 80%;
-    background-color: rgb(250, 204, 119);
+    background-color: transparent;
     color: black;
     border: none;
     border-radius: 6px;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 700;
     cursor: pointer;
     margin-right: 10px;
@@ -55,7 +55,8 @@
 }
 .creatingRiderTopBtn:hover{
     transform: scale(1);
-    background-color: orange;
+    color: white;
+    background-color: rgb(255, 234, 196);
 }
 
 .creatingRiderPartLine{

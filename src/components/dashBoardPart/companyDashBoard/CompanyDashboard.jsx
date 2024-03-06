@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import '../companyDashBoard/companyDashboardCss/companyDashboard.css'
 import trackitLogo from '../../images/trackitLogo.png'
-import { NavLink, Outlet } from 'react-router-dom'
+import { NavLink, Outlet, useNavigate } from 'react-router-dom'
 import dashboardimg from '../../images/dashboardimg.png'
 import accountimg from '../../images/accountimg.png'
 import logoutimg from '../../images/logoutimg.png'
@@ -18,12 +18,15 @@ import CompanyLogout from './CompanyLogout'
 
 const CompanyDashboard = () => {
 
+
+  const navigate = useNavigate()
+
   const {
           showCreateRider,showCreatePackage,
           showCompanyLogout,setShowCompanyLogout,
           profileShow, setProfileShow,
           companyName,companyFirstLetter,
-          showAssignPackage,
+          showAssignPackage
         } = useContext(Thecontext)
 
 
@@ -56,7 +59,9 @@ const CompanyDashboard = () => {
 
         <div className='companyMenuBar'>
           <div className='companyMenuBarTop'>
-            <div className='companyMenuTopLogo'><img src={trackitLogo} alt=''/></div>
+            <div className='companyMenuTopLogo' onClick={()=>navigate('/')}>
+              <img src={trackitLogo} alt=''/>
+            </div>
           </div>
           <div className="companyMenuBarBody">
             <NavLink to='/companydashboard' className={({ isActive }) => isActive ? 'isactive' : 'isnotactive'}>

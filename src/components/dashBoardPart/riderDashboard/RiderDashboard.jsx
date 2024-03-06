@@ -29,13 +29,16 @@ const RiderDashboard = () => {
                 </div>
                 <div className='riderLocation'>
                     <div className='riderLocationLeft'>
-                        <h3>Location</h3>
+                        <h3>Current Location</h3>
                         <h5>muyibi 167</h5>
                     </div>
-                    <div className='riderDashboardUpdateLocation'>
-                        <h5>UpdateLocation</h5>
-                    </div>
+                    {/* <div className='riderDashboardUpdateLocation'>
+                        <h5>Update Location</h5>
+                    </div> */}
                 </div>
+                    <div className='riderDashboardUpdateLocation'>
+                        <h5>Update Location</h5>
+                    </div>
             </div>
         </div>
     

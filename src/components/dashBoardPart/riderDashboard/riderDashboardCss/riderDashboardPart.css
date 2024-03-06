@@ -25,6 +25,7 @@
     width: 50%;
     height: 90%;
     /* background-color: white; */
+    cursor: pointer;
 }
 .riderDashboardPartMenuBarTopLogo >img{
     width: 100%;

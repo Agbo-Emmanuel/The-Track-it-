@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './riderDashboardCss/riderPackage.css'
+import RiderPackageRight from './RiderPackageRight'
+import { Thecontext } from '../../../App'
 
 
 
 const RiderPackages = () => {
 
+  const {showPackageDetails, setShowPackageDetails} = useContext(Thecontext)
 
   return (
     <>
@@ -18,13 +21,18 @@ const RiderPackages = () => {
               <nav>Package ID</nav>
             </div>
             <div className='riderPackageLeftItemsPart'>
-              <div className='riderPackageLeftItems'>
-
+              <div className='riderPackageLeftItems' onClick={()=>setShowPackageDetails(true)}>
+                <nav>Iphone 15</nav>
+                <nav>O12367</nav>
               </div>
             </div>
           </div>
 
-          <div className='riderPackageRight'></div>
+          <div className='riderPackageRight'>
+             {
+              showPackageDetails ? <RiderPackageRight/> : null
+             }
+          </div>
         </div>
     
     </>

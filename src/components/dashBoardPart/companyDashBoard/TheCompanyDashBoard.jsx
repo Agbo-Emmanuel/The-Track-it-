@@ -55,30 +55,36 @@ const TheCompanyDashBoard = () => {
                 <h3>Total Riders</h3>
                 <h5>{numberOfRiders}</h5>
               </div>
-              <div className='companyDashboardCreateRider' onClick={()=>setShowCreateRider(true)}>
+              {/* <div className='companyDashboardCreateRider' onClick={()=>setShowCreateRider(true)}>
                 <h5>Create Rider</h5>
-              </div>
+              </div> */}
             </div>
             <div className='totalPackages'>
               <div className='totalPackagesLeft' onClick={handleToPackage}>
                 <h3>Total Packages</h3>
                 <h5>0</h5>
               </div>
-              <div className='companyDashboardCreatePackage' onClick={()=>setShowCreatePackage(true)}>
+              {/* <div className='companyDashboardCreatePackage' onClick={()=>setShowCreatePackage(true)}>
                 <h5>Create Package</h5>
+              </div> */}
+            </div>
+            <div className='companyDashboardCreate'>
+              <div className='companyDashboardCreateRider' onClick={()=>setShowCreateRider(true)}>
+                <h5>Create Rider +</h5>
               </div>
+              <div className='companyDashboardCreatePackage' onClick={()=>setShowCreatePackage(true)}>
+                <h5>Create Package +</h5>
+              </div>
+              
             </div>
           </div>
           <div className='theCompanyDashboardBottom'>
             <h2>Package history</h2>
-            <div className='theCompanyDashboardBottomDivider'></div>
+            {/* <div className='theCompanyDashboardBottomDivider'></div> */}
             <div className='theCompanyDashboardBottomProperties'>
-              <nav>name</nav>
+              {/* <nav>name</nav>
               <nav>status</nav>
-              <nav>date</nav>
-            </div>
-            <div className='theCompanyDashboardBottomDown'>
-
+              <nav>date</nav> */}
             </div>
           </div>
         </div>
