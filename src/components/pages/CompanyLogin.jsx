@@ -7,7 +7,7 @@ import trackitLogo from '../images/trackitLogo.png'
 import { LuEye } from "react-icons/lu";
 import { LuEyeOff } from "react-icons/lu";
 import { Thecontext } from '../../App'
-// import { FaSpinner } from 'react-icons/fa';
+import { FaSpinner } from 'react-icons/fa';
 
 
 const CompanyLogin = () => {
@@ -18,6 +18,7 @@ const CompanyLogin = () => {
   const loginInput = useRef()
 
   const [seePassword, setSeePassword] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
 
   const handleSeePassword = ()=>{
     setSeePassword(true)
@@ -53,6 +54,7 @@ const CompanyLogin = () => {
     e.preventDefault();
 
       try{
+        setIsLoading(true)
           const response = await axios.post(url, theData)
           console.log(response)
           localStorage.setItem('companytoken', response.data.companyToken)
@@ -78,6 +80,7 @@ const CompanyLogin = () => {
           }) 
           console.log(err)
       }
+      setIsLoading(false)
   }
 
 
@@ -121,7 +124,7 @@ const CompanyLogin = () => {
               </div>
             </div>
           </div>
-          <button className='loginButton' onClick={handleLoginAccount}>Login</button>
+          <button className='loginButton' disabled= {isLoading} onClick={handleLoginAccount}>{isLoading ? <FaSpinner color="white"/> : "Login" }</button>
           <p className='linkToLoginPage'>Don't have an Account? <Link to='/companysignup' className='loginLink'>Signup</Link></p>
           <p><Link>login</Link>as rider</p>
         </div>
