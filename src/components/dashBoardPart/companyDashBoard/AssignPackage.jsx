@@ -102,6 +102,8 @@ const assignPackage =  `https://track-it-eight-theta.vercel.app/api/v1/company/a
 
     const handleAssignPackage = async()=>{
 
+      setShowAssignPackage(false)
+
         try{
             const response = await axios.put(assignPackage, {
               headers: {

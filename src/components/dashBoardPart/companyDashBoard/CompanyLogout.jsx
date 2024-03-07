@@ -14,12 +14,12 @@ const CompanyLogout = () => {
 
     const handleLogout = ()=>{
         navigate('/companylogin');
+        localStorage.removeItem("companytoken")
     }
     const handleLogoutNo = ()=>{
         setShowCompanyLogout(false)
         setProfileShow(false)
-        localStorage.removeItem("companytoken")
-        localStorage.removeItem("userToken")
+        
     }
 
 
