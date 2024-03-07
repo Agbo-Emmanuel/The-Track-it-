@@ -3,6 +3,7 @@ import './companyDashboardCss/createPackage.css'
 import { Thecontext } from '../../../App'
 import Swal from 'sweetalert2'
 import axios from 'axios'
+import { PulseLoader } from "react-spinners"
 
 
 
@@ -10,6 +11,9 @@ import axios from 'axios'
 const CreatePackage = () => {
 
     const {setShowCreatePackage,companyToken} = useContext(Thecontext)
+
+    const [isLoading, setIsLoading] = useState(false)
+
 
 
 
@@ -35,6 +39,7 @@ const CreatePackage = () => {
     e.preventDefault();
 
       try{
+        setIsLoading(true)
           const response = await axios.post(url, theData, {
             headers: {
               "Authorization" : `Bearer ${companyToken}`
@@ -58,6 +63,7 @@ const CreatePackage = () => {
           }) 
           console.log(err)
       }
+      setIsLoading(false)
   }
 
 
@@ -107,7 +113,7 @@ const CreatePackage = () => {
                         />
                     </div>
                 </div>
-                <button className='creatingPackageBtn' onClick={handleCreatePackage}>Create Package</button>
+                <button className='creatingPackageBtn' disabled= {isLoading} onClick={handleCreatePackage}>{isLoading ? <PulseLoader color="white"/> : "Create Package" }</button>
             </div>
         </div>
     
