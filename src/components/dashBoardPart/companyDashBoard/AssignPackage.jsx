@@ -3,6 +3,7 @@ import './companyDashboardCss/createPackage.css'
 import { Thecontext } from '../../../App'
 import axios from 'axios'
 import Swal from 'sweetalert2'
+import { PulseLoader } from "react-spinners"
 
 
 
@@ -10,6 +11,8 @@ import Swal from 'sweetalert2'
 const CreatePackage = () => {
 
     const {setShowAssignPackage,companyToken,companyPackageId,} = useContext(Thecontext)
+
+    const [isLoading, setIsLoading] = useState(false)
 
 
     const [userData, setUserData] = useState({
@@ -80,6 +83,7 @@ const CreatePackage = () => {
           .catch((err) => {
               console.log(err)
           })
+
   }
 
 //   useEffect(()=>{
@@ -154,7 +158,7 @@ const assignPackage =  `https://track-it-eight-theta.vercel.app/api/v1/company/a
                         </div>
                         
                     </div>
-                    <button className='assignPackageBtn' onClick={chooseRider}>Choose Rider</button>
+                    <button className='assignPackageBtn' disabled= {isLoading} onClick={chooseRider}>{isLoading ? <PulseLoader color="white"/> : "Choose Rider" }</button>
                     <div className='allRidersHere'>
                             {
                                 riders.map((riders)=>{
