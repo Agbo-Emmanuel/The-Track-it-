@@ -34,7 +34,6 @@ const RiderDashboardPart = () => {
 
         {
             riderProfileShow ?   <div className='profileShow'>
-                                <div className='profileShowProfile'>My Profile</div>
                                 <button className='profileShowLogoutBtn' onClick={()=>setShowRiderLogout(true)}>Logout</button>
                             </div> : null
         } 

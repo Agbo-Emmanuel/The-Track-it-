@@ -86,7 +86,7 @@ const Companysignup = () => {
       catch(err){
         Swal.fire({
           title: "error!",
-          text: err.response.data.error,
+          text: err.response,
           icon: "error",
           confirmButtonText: "ok",
           }) 

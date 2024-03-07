@@ -16,7 +16,7 @@ const CreatePackage = () => {
     const [userData, setUserData] = useState({
         packageName: "",
         depature: "",
-        weight: "",
+        packageWeight: "",
       })
     
       const handleInputChange = (e)=>{
@@ -26,8 +26,8 @@ const CreatePackage = () => {
     }
 
 
-    const theData = {packageName:userData.packageName,depature: userData.depature, weight: userData.weight}
-  const url = "https://track-it-eight-theta.vercel.app/api/v1/company/rider/SignUp"
+    const theData = {packageName:userData.packageName,depature: userData.depature, packageWeight: userData.packageWeight}
+  const url = "https://track-it-eight-theta.vercel.app/api/v1/company/createpackage"
 
 
   const handleCreatePackage = async(e)=>{
@@ -40,6 +40,7 @@ const CreatePackage = () => {
               "Authorization" : `Bearer ${companyToken}`
            }})
           console.log(response)
+          setShowCreatePackage(false)
           
           Swal.fire({
             title: "Success!",
@@ -100,8 +101,8 @@ const CreatePackage = () => {
                         <input 
                             type="text"
                             placeholder='weight'
-                            name='weight'
-                            value={userData.weight}
+                            name='packageWeight'
+                            value={userData.packageWeight}
                             onChange={handleInputChange}  
                         />
                     </div>

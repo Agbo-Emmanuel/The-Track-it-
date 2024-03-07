@@ -72,7 +72,7 @@ const CompanyLogin = () => {
       catch(err){
         Swal.fire({
           title: "error!",
-          text: err.response.message,
+          text: err.response.data.message,
           icon: "error",
           confirmButtonText: "ok",
           }) 
