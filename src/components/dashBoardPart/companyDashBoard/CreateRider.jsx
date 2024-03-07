@@ -186,7 +186,7 @@ const CreateRider = () => {
                         <div className='creatingRiderInputPartInput'>
                             <label>Password</label>
                             <input 
-                                type="text"
+                                type="password"
                                 placeholder='password'
                                 name='riderPassword'
                                 value={userData.riderPassword}
@@ -198,7 +198,7 @@ const CreateRider = () => {
                         <div className='creatingRiderInputPartInput'>
                             <label>Confirm Password</label>
                             <input 
-                                type="text"
+                                type="password"
                                 placeholder='confirm password' 
                                 name='confirmRiderPassword'
                                 value={userData.confirmRiderPassword}

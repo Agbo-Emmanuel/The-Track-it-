@@ -70,7 +70,7 @@ const Package = () => {
             List of Unassigned Packages
           </div>
           <div className='packagePageLeftLine'></div>
-          <div className='packageSearchPart'>
+          {/* <div className='packageSearchPart'>
             <input 
               type='text'
               placeholder='search ID'
@@ -78,8 +78,8 @@ const Package = () => {
               ref={unAssignPackageRef}
             />
             <button className='searchBtn' onClick={handleUnAssignedPackageSearch}>Search</button>
-          </div>
-          <div className='packagePageLeftLine'></div>
+          </div> */}
+          {/* <div className='packagePageLeftLine'></div> */}
           <div className='listOfPackages'>
             <div className='packageListProperties'>
               <nav>name</nav>
@@ -106,15 +106,15 @@ const Package = () => {
             <nav>List of Assigned Packages</nav>
           </div>
           <div className='packagePageRightLine'></div>
-          <div className='packageSearchPart'>
+          {/* <div className='packageSearchPart'>
             <input 
               type='text'
               placeholder='search ID'
               className='searchInput'
             />
             <button className='searchBtn'>Search</button>
-          </div>
-          <div className='packagePageRightLine'></div>
+          </div> */}
+          {/* <div className='packagePageRightLine'></div> */}
           <div className='listOfPackages'>
             <div className='packageListProperties'>
               <nav>name</nav>

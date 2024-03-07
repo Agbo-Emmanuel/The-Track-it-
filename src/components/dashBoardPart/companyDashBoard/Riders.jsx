@@ -71,7 +71,7 @@ const Riders = () => {
             <button className='riderPageCreateRiderBtn' onClick={()=>setShowCreateRider(true)}>Create Rider</button>
           </div>
           <div className='riderPageLeftLine'></div>
-          <div className='riderSearchPart'>
+          {/* <div className='riderSearchPart'>
             <input 
               type='text'
               placeholder='search ID'
@@ -81,8 +81,8 @@ const Riders = () => {
               // ref={riderRef}
             />
             <button className='searchBtn' style={riderSearchGlow ? {backgroundColor: "orange"}: null} onClick={handleRiderSearch}>Search</button>
-          </div>
-          <div className='riderPageLeftLine'></div>
+          </div> */}
+          {/* <div className='riderPageLeftLine'></div> */}
           <div className='listOfRiders'>
             <div className='riderListProperties'>
               <nav>name</nav>
