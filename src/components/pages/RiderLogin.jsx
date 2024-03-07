@@ -94,7 +94,7 @@ const CompanyLogin = () => {
               <label>Email</label>
               <input
                 placeholder="email"
-                name='companyEmail'
+                name='riderEmail'
                 value={userData.riderEmail}
                 onChange={handleInputChange}
               />
@@ -105,7 +105,7 @@ const CompanyLogin = () => {
                 <input
                   type='password'
                   placeholder="password"
-                  name='companyPassword'
+                  name='riderPassword'
                   value={userData.riderPassword}
                   onChange={handleInputChange}
                   ref={loginInput}
