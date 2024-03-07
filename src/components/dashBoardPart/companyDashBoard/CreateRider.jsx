@@ -187,6 +187,7 @@ const CreateRider = () => {
                                 onChange={handleInputChange} 
                             />
                             {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.CompanyName}</p> : null } */}
+                            <p>password must be 6 number</p>
                         </div>
                         <div className='creatingRiderInputPartInput'>
                             <label>Confirm Password</label>

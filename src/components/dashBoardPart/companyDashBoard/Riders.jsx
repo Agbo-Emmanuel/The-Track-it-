@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import '../companyDashBoard/companyDashboardCss/riders.css'
 import { Thecontext } from '../../../App'
 import axios from 'axios'
@@ -12,8 +12,34 @@ const Riders = () => {
   const getAllRiders = 'https://track-it-eight-theta.vercel.app/api/v1/company/allriders'
 
     const [riders, setRiders] = useState([])
+    const [riderSearchGlow, setRiderSearchGlow] = useState(false)
+    const [riderSearchInput, setRiderSearchInput] = useState()
     const {companyToken,setShowAssignPackage} = useContext(Thecontext)
 
+
+
+
+    // const riderRef = useRef()
+    const riderInputChange = (e)=>{
+      const riderInputLength = e.target.value.length
+      setRiderSearchInput(e.target.value)
+      if (riderInputLength === 6) {
+        setRiderSearchGlow(true)
+      }else{
+        setRiderSearchGlow(false)
+      }
+    }
+
+    const handleRiderSearch = ()=>{
+      // console.log(riderSearchInput)
+      //   const result = riders.filter(checkRiders);
+      //   setRiders(result)
+        
+      }
+
+    //   function checkRiders(theRiders) {
+    //     return theRiders === !riderSearchInput;
+    // }
 
     useEffect(()=>{
         axios.get(getAllRiders,
@@ -49,9 +75,12 @@ const Riders = () => {
             <input 
               type='text'
               placeholder='search ID'
+              maxLength={6}
               className='searchInput'
+              onChange={riderInputChange}
+              // ref={riderRef}
             />
-            <button className='searchBtn'>Search</button>
+            <button className='searchBtn' style={riderSearchGlow ? {backgroundColor: "orange"}: null} onClick={handleRiderSearch}>Search</button>
           </div>
           <div className='riderPageLeftLine'></div>
           <div className='listOfRiders'>
