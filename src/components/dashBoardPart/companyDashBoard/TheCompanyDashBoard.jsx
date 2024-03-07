@@ -87,7 +87,7 @@ const TheCompanyDashBoard = () => {
             </div>
           </div>
           <div className='theCompanyDashboardBottom'>
-            <h2>Package history</h2>
+            {/* <h2>Package history</h2> */}
             {/* <div className='theCompanyDashboardBottomDivider'></div> */}
             <div className='theCompanyDashboardBottomProperties'>
               {/* <nav>name</nav>

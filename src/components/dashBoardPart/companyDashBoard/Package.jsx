@@ -122,11 +122,11 @@ const Package = () => {
             </div>
             <div className='packagePageLeftLine'></div>
             <div className='thePackages'>
-              <div className='theAssignedPackagesItems'>
+              {/* <div className='theAssignedPackagesItems'>
                 <p>Shoe</p>
                 <p>23495</p>
                 <button className='assignButton'>Track</button>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
