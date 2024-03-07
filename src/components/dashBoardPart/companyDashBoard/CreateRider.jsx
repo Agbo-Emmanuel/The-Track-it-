@@ -3,6 +3,7 @@ import './companyDashboardCss/createRider.css'
 import { Thecontext } from '../../../App'
 import axios from 'axios'
 import Swal from 'sweetalert2'
+import { PulseLoader } from "react-spinners"
 
 
 
@@ -10,6 +11,8 @@ import Swal from 'sweetalert2'
 const CreateRider = () => {
 
     const {setShowCreateRider,companyToken} = useContext(Thecontext)
+
+    const [isLoading, setIsLoading] = useState(false)
 
 
     // const handleImageChange = (e)=>{
@@ -48,6 +51,7 @@ const CreateRider = () => {
     setShowCreateRider(false)
 
       try{
+        setIsLoading(true)
           const response = await axios.post(url, theData, {
             headers: {
               "Authorization" : `Bearer ${companyToken}`
@@ -70,6 +74,8 @@ const CreateRider = () => {
           }) 
           console.log(err)
       }
+      setIsLoading(false)
+      setShowCreateRider(false)
   }
 
   const validate = (values)=>{
@@ -187,7 +193,7 @@ const CreateRider = () => {
                                 onChange={handleInputChange} 
                             />
                             {/* {formErrors ? <p style={{color: "red", fontSize: "12px"}}>{formErrors.CompanyName}</p> : null } */}
-                            <p>password must be 6 number</p>
+                            <p style={{fontSize: "12px"}}>password must be 6 number</p>
                         </div>
                         <div className='creatingRiderInputPartInput'>
                             <label>Confirm Password</label>
@@ -215,7 +221,7 @@ const CreateRider = () => {
                         </div>
                     </div>
                 </div>
-                <button className='creatingRiderBtn' onClick={handleCreateRider}>Create Rider</button>
+                <button className='creatingRiderBtn' disabled= {isLoading} onClick={handleCreateRider}>{isLoading ? <PulseLoader color="white"/> : "Create Rider" }</button>
             </div>
         </div>
     
