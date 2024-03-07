@@ -11,11 +11,10 @@ const CreateRider = () => {
 
     const {setShowCreateRider,companyToken} = useContext(Thecontext)
 
-    const [riderProfileImage, setRiderProfileImage] = useState([])
 
-    const handleImageChange = (e)=>{
-        setRiderProfileImage(URL.createObjectURL(e.target.files[0]))
-     }
+    // const handleImageChange = (e)=>{
+    //     setRiderProfileImage(URL.createObjectURL(e.target.files[0]))
+    //  }
 
 
      const [formErrors, setFormErrors]  = useState()
@@ -54,7 +53,6 @@ const CreateRider = () => {
               "Authorization" : `Bearer ${companyToken}`
            }})
           console.log(response)
-          // localStorage.setItem("companyFirstLetter", response.data.CompanyName.charAt(0))
           
           Swal.fire({
             title: "Success!",
@@ -66,7 +64,7 @@ const CreateRider = () => {
       catch(err){
         Swal.fire({
           title: "error!",
-          text: err.response.message,
+          text: err.response.error,
           icon: "error",
           confirmButtonText: "ok",
           }) 

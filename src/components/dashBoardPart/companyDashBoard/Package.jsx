@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import axios from 'axios'
 import '../companyDashBoard/companyDashboardCss/package.css'
 import { Thecontext } from '../../../App'
@@ -16,21 +16,45 @@ const Package = () => {
     const {companyToken,setShowAssignPackage} = useContext(Thecontext)
 
 
+    // useEffect(()=>{
+    //     axios.get(url,
+    //       {
+    //         headers: {
+    //           "Authorization" : `Bearer ${companyToken}`
+    //        }
+    //       })
+    //         .then((res) => {
+    //           console.log(res.data)
+    //           setPackages(res.data.pendingPackages)
+    //         })
+    //         .catch((err) => {
+    //             console.log(err)
+    //         })
+    // }, [])
+
+    const unAssignPackageRef = useRef()
+
+    const handleUnAssignedPackageSearch = ()=>{
+      console.log(unAssignPackageRef.current.value)
+    }
+
     useEffect(()=>{
-        axios.get(url,
-          {
-            headers: {
-              "Authorization" : `Bearer ${companyToken}`
-           }
-          })
-            .then((res) => {
-              console.log(res.data)
-              setPackages(res.data.pendingPackages)
-            })
-            .catch((err) => {
-                console.log(err)
-            })
-    }, [])
+      async function fetchAllRiders(){
+        try {
+              const response = await axios.get(url, {
+                headers: {
+                  "Authorization" : `Bearer ${companyToken}`
+               }
+              })
+              console.log(response)
+              setPackages(response.data.pendingPackages)
+          }
+          catch(err){
+            console.log(err)
+          }      
+    }
+    fetchAllRiders()
+    },[])
 
 
   return (
@@ -48,8 +72,9 @@ const Package = () => {
               type='text'
               placeholder='search ID'
               className='searchInput'
+              ref={unAssignPackageRef}
             />
-            <button className='searchBtn'>Search</button>
+            <button className='searchBtn' onClick={handleUnAssignedPackageSearch}>Search</button>
           </div>
           <div className='packagePageLeftLine'></div>
           <div className='listOfPackages'>
@@ -60,7 +85,7 @@ const Package = () => {
             <div className='packagePageLeftLine'></div>
             <div className='thePackages'>
               {
-                packages.map((packages)=>{
+                packages ? packages.map((packages)=>{
                   return(
                     <div className='thePackagesItems'>
                       <p>{packages.packageName}</p>
@@ -68,7 +93,7 @@ const Package = () => {
                       <button className='assignButton' onClick={()=>setShowAssignPackage(true)}>Assign</button>
                     </div>
                   )
-                })
+                }) : null
               }
             </div>
           </div>

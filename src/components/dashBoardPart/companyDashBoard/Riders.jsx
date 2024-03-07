@@ -74,7 +74,7 @@ const Riders = () => {
             </div>
           </div>
         </div>
-        <div className='riderPageRight'></div>
+        {/* <div className='riderPageRight'></div> */}
       </div>
     
     </>
