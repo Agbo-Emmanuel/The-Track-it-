@@ -11,8 +11,13 @@ const TheCompanyDashBoard = () => {
 
 
   const [numberOfRiders, setNumberOfRiders] = useState(localStorage.getItem("numberRiders"))
+  const [totalPackages, setTotalPackages] = useState()
+  const [totalRiders, setTotalRiders] = useState()
 
-  const {setShowCreateRider, setShowCreatePackage,companyToken} = useContext(Thecontext)
+  const {setShowCreateRider, setShowCreatePackage,companyToken,
+    companyName, setCompanyName,
+    companyFirstLetter, setCompanyFirstLetter,
+  } = useContext(Thecontext)
 
   const navigate = useNavigate();
 
@@ -24,24 +29,27 @@ const TheCompanyDashBoard = () => {
         navigate('/companypackages');
     }
 
-    const getAllRiders = 'https://track-it-eight-theta.vercel.app/api/v1/company/allriders'
+    const getCompanyDetail = 'https://track-it-eight-theta.vercel.app/api/v1/company'
 
     useEffect(()=>{
-      async function fetchAllRiders(){
+      async function getCompanyDetails(){
         try {
-              const response = await axios.get(getAllRiders, {
+              const response = await axios.get(getCompanyDetail, {
                 headers: {
                   "Authorization" : `Bearer ${companyToken}`
                }
               })
               console.log(response)
-              localStorage.setItem("numberRiders", response.data.riders.length)
+              setCompanyName(response.data.company.companyName)
+              setCompanyFirstLetter(response.data.company.companyName.charAt(0))
+              setTotalPackages(response.data.company.companyPackages.length)
+              setTotalRiders(response.data.company.companyRiders.length)
           }
           catch(err){
             console.log(err)
           }      
     }
-    fetchAllRiders()
+    getCompanyDetails()
     },[])
 
   return (
@@ -53,7 +61,7 @@ const TheCompanyDashBoard = () => {
             <div className='totalRiders'>
               <div className='totalRidersLeft' onClick={handleToRider}>
                 <h3>Total Riders</h3>
-                <h5>{numberOfRiders}</h5>
+                <h5>{totalRiders}</h5>
               </div>
               {/* <div className='companyDashboardCreateRider' onClick={()=>setShowCreateRider(true)}>
                 <h5>Create Rider</h5>
@@ -61,8 +69,8 @@ const TheCompanyDashBoard = () => {
             </div>
             <div className='totalPackages'>
               <div className='totalPackagesLeft' onClick={handleToPackage}>
-                <h3>Total Packages</h3>
-                <h5>0</h5>
+                <h3>Assigned Packages</h3>
+                <h5>{totalPackages}</h5>
               </div>
               {/* <div className='companyDashboardCreatePackage' onClick={()=>setShowCreatePackage(true)}>
                 <h5>Create Package</h5>

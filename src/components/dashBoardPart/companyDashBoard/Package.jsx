@@ -13,7 +13,7 @@ const Package = () => {
   const url = 'https://track-it-eight-theta.vercel.app/api/v1/company/allpendingpackages'
 
     const [packages, setPackages] = useState([])
-    const {companyToken,setShowAssignPackage} = useContext(Thecontext)
+    const {companyToken,setShowAssignPackage, setCompanyPackageId} = useContext(Thecontext)
 
 
     // useEffect(()=>{
@@ -48,6 +48,8 @@ const Package = () => {
               })
               console.log(response)
               setPackages(response.data.pendingPackages)
+              // setCompanyPackageId(response.data.pendingPackages.packageId)
+              localStorage.setItem("companyPackageId", response.data.pendingPackages[0]._id)
           }
           catch(err){
             console.log(err)

@@ -108,7 +108,7 @@
 
 .assignPackagePart{
     width: 35%;
-    height: 50%;
+    height: 90%;
     background-color: whitesmoke;
     border-radius: 6px;
     display: flex;
@@ -117,16 +117,44 @@
 }
 .assignPackagePartTop{
     width: 100%;
-    height: 17%;
+    height: 10%;
     /* background-color: aqua; */
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+.assignPackageTopText{
+    font-size: 8px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    margin-left: 150px;
+}
+.assignPackageTopBtn{
+    width: 10%;
+    height: 80%;
+    background-color: rgb(250, 204, 119);
+    color: black;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: all 350ms ease-in-out;
+}
+.assignPackageTopBtn:hover{
+    transform: scale(1);
+    background-color: orange;
+}
+.assignPackagePartLine{
+    width: 100%;
+    height: 1px;
+    background-color: lightgrey;margin-top: 10px;
+}
 
 .assignPackagePartInputPart{
     width: 80%;
-    height: 30%;
+    height: 60%;
     /* background-color: yellow; */
     margin-top: 10px;
     display: flex;
@@ -141,11 +169,62 @@
     flex-direction: column;
     justify-content: space-between;
 }
+.destinationInput{
+    width: 100%;
+    height: 17%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.destinationInput > input{
+    width: 70%;
+    height: 100%;
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid lightgrey;
+    padding-left: 10px;
+}
+.sendDestinationBtn{
+    width: 20%;
+    height: 90%;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
 .assignPackageInputPartInput > p{
-    font-size: 18px;
+    font-size: 15px;
     font-family: 'Roboto';
     font-weight: 500;
+    margin-top: 20px;
 }
+.allRidersHere{
+    width: 100%;
+    height: 70%;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+}
+.theRidersList{
+    width: 100%;
+    height: 50px;
+    background-color: orange;
+    color: white;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
 
 .selectInput{
     width: 100%;
@@ -163,7 +242,7 @@
 
 .assignPackageBtn{
     width: 80%;
-    height: 20%;
+    height: 13%;
     background-color: orange;
     border: none;
     border-radius: 6px;

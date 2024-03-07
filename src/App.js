@@ -33,12 +33,11 @@ const App = () => {
   const [profileShow, setProfileShow] = useState(false)
   const [showRiderLogout, setShowRiderLogout] = useState(false)
   const [riderProfileShow, setRiderProfileShow] = useState(false)
-  const [companyName, setCompanyName] = useState(localStorage.getItem('companyname'))
-  const [companyFirstLetter, setCompanyFirstLeter] = useState(localStorage.getItem('companyfirstletter'))
   const [companyToken, setCompanyToken] = useState(localStorage.getItem('companytoken'))
-  const [customerName, setCustomerName] = useState(localStorage.getItem('customername'))
-  const [customerFirstLetter, setCustomerFirstLeter] = useState(localStorage.getItem('customerFirstName'))
   const [showPackageDetails, setShowPackageDetails] = useState(false)
+  const [companyName, setCompanyName] = useState()
+  const [companyFirstLetter, setCompanyFirstLetter] = useState()
+  const [companyPackageId, setCompanyPackageId] = useState(localStorage.getItem("companyPackageId"))
 
 
 
@@ -52,12 +51,11 @@ const App = () => {
       showRiderLogout, setShowRiderLogout,
       riderProfileShow, setRiderProfileShow,
       companyName, setCompanyName,
-      companyFirstLetter, setCompanyFirstLeter,
+      companyFirstLetter, setCompanyFirstLetter,
       companyToken, setCompanyToken,
-      customerName, setCustomerName,
-      customerFirstLetter, setCustomerFirstLeter,
       showAssignPackage, setShowAssignPackage,
-      showPackageDetails, setShowPackageDetails
+      showPackageDetails, setShowPackageDetails,
+      companyPackageId, setCompanyPackageId
     }}>
       <BrowserRouter>
         <ScrollToTop/>
