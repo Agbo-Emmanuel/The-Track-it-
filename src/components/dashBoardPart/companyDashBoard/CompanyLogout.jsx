@@ -18,6 +18,8 @@ const CompanyLogout = () => {
     const handleLogoutNo = ()=>{
         setShowCompanyLogout(false)
         setProfileShow(false)
+        localStorage.removeItem("companytoken")
+        localStorage.removeItem("userToken")
     }
 
 

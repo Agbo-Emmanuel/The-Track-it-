@@ -17,6 +17,8 @@ import Package from './components/dashBoardPart/companyDashBoard/Package'
 import RiderDashboardPart from './components/dashBoardPart/riderDashboard/RiderDashboardPart'
 import RiderDashboard from './components/dashBoardPart/riderDashboard/RiderDashboard'
 import RiderPackages from './components/dashBoardPart/riderDashboard/RiderPackages'
+import CompanyPrivate from './components/CompanyPrivate'
+import RiderPrivate from './components/RiderPrivate'
 
 
 
@@ -74,16 +76,24 @@ const App = () => {
             <Route path='/usermap' element= { <UserMapPage/> }/>
           </Route>
 
-          <Route element= { <CompanyDashboard/> }>
-            <Route path='/companydashboard' element= { <TheCompanyDashBoard/> }/>
-            <Route path='/companyriders' element= { <Riders/> }/>
-            <Route path='/companypackages' element= { <Package/> }/>
+          <Route element= { <CompanyPrivate/>} >
+
+            <Route element= { <CompanyDashboard/> }>
+              <Route path='/companydashboard' element= { <TheCompanyDashBoard/> }/>
+              <Route path='/companyriders' element= { <Riders/> }/>
+              <Route path='/companypackages' element= { <Package/> }/>
+            </Route>
+
           </Route>
 
-          <Route element= { <RiderDashboardPart/> }>
-            <Route path='/riderdashboard' element= { <RiderDashboard/> }/>
-            {/* <Route path='/riderlocation' element= { <RiderLocation/> }/> */}
-            <Route path='/riderpackages' element= { <RiderPackages/> }/>
+          <Route element={ <RiderPrivate/> }>
+
+            <Route element= { <RiderDashboardPart/> }>
+              <Route path='/riderdashboard' element= { <RiderDashboard/> }/>
+              {/* <Route path='/riderlocation' element= { <RiderLocation/> }/> */}
+              <Route path='/riderpackages' element= { <RiderPackages/> }/>
+            </Route>
+
           </Route>
 
         </Routes>

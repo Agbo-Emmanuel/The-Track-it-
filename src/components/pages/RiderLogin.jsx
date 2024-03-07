@@ -53,10 +53,10 @@ const CompanyLogin = () => {
       try{
           const response = await axios.post(url, theData)
           console.log(response)
-          localStorage.setItem('companytoken', response.data.companyToken)
+          localStorage.setItem('ridertoken', response.data.ridertoken)
           localStorage.setItem('companyname', response.data.company.companyName)
           localStorage.setItem('companyfirstletter', response.data.company.companyName.charAt(0))
-          // localStorage.setItem("companyFirstLetter", response.data.CompanyName.charAt(0))
+          localStorage.setItem("companyFirstLetter", response.data.CompanyName.charAt(0))
           
           Swal.fire({
             title: "Success!",

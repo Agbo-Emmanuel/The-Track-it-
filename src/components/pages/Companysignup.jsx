@@ -18,6 +18,8 @@ const Companysignup = () => {
 
   const [seePassword, setSeePassword] = useState(false)
 
+  const [isLoading, setIsLoading] = useState(false)
+
   const handleSeePassword = ()=>{
     setSeePassword(true)
     if (loginInput.current.type === 'password'){
@@ -70,6 +72,7 @@ const Companysignup = () => {
     // console.log(formErrors)
 
       try{
+        setIsLoading(true)
           const response = await axios.post(url, theData)
           console.log(response)
           // localStorage.setItem("companyFirstLetter", response.data.CompanyName.charAt(0))
@@ -92,6 +95,7 @@ const Companysignup = () => {
           }) 
           console.log(err)
       }
+      setIsLoading(false)
   }
 
   const validate = (values)=>{
@@ -244,7 +248,7 @@ const Companysignup = () => {
     
                     
                 </div>
-                <button className='CompanysignupButton' onClick={handleCreateAccount}>Create Account</button>
+                <button className='CompanysignupButton' disabled= {isLoading} onClick={handleCreateAccount}>{isLoading ? <PulseLoader color="white"/> : "Create account" }</button>
                 <p className='linkToLoginPage'>Already have an Account? <Link to='/companylogin' className='loginLink'>Login</Link></p>
             </div>
             {/* <PulseLoader color="hsla(168, 67%, 53%, 1)" size={0}/> */}

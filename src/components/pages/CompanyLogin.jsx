@@ -7,7 +7,7 @@ import trackitLogo from '../images/trackitLogo.png'
 import { LuEye } from "react-icons/lu";
 import { LuEyeOff } from "react-icons/lu";
 import { Thecontext } from '../../App'
-import { FaSpinner } from 'react-icons/fa';
+import { PulseLoader } from "react-spinners"
 
 
 const CompanyLogin = () => {
@@ -58,8 +58,6 @@ const CompanyLogin = () => {
           const response = await axios.post(url, theData)
           console.log(response)
           localStorage.setItem('companytoken', response.data.companyToken)
-          localStorage.setItem('companyname', response.data.company.companyName)
-          localStorage.setItem('companyfirstletter', response.data.company.companyName.charAt(0))
           // localStorage.setItem("companyFirstLetter", response.data.CompanyName.charAt(0))
           
           Swal.fire({
@@ -124,9 +122,9 @@ const CompanyLogin = () => {
               </div>
             </div>
           </div>
-          <button className='loginButton' disabled= {isLoading} onClick={handleLoginAccount}>{isLoading ? <FaSpinner color="white"/> : "Login" }</button>
+          <button className='loginButton' disabled= {isLoading} onClick={handleLoginAccount}>{isLoading ? <PulseLoader color="white"/> : "Login" }</button>
           <p className='linkToLoginPage'>Don't have an Account? <Link to='/companysignup' className='loginLink'>Signup</Link></p>
-          <p><Link>login</Link>as rider</p>
+          <p><Link  className="logintoRiderLink" to='/riderlogin'>login</Link> as rider</p>
         </div>
       </div>
       {/* <FaSpinner /> */}

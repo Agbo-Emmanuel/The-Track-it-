@@ -27,8 +27,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
     border-radius: 6px;
+    position: relative;
 }
 .loginContainer > h1{
     margin-top: 20px;
@@ -125,7 +126,15 @@
 }
 
 .linkToLoginPage{
-    font-size: 15px;
+    font-size: 15px!important;
+    margin-bottom: -10px!important;
+}
+.logintoRiderLink{
+    text-decoration: none;
+    font-family: 'Roboto';
+    font-weight: 20px;
+    color: orange;
+    margin-top: 10px!important;
 }
 
 

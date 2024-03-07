@@ -266,25 +266,13 @@
         display: none;
     }
     .companyMenuBar{
-        width: 100%;
-        height: 10%;
-        background-color: #fde2b4;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        display: none;
     }
     .companyMenuBarBottom{
         display: none;
     }
     .companyMenuBarBody{
-        width: 100%;
-        height: 100%;
-        /* background-color: blue; */
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        gap: 10px;
+        display: none;
     }
     
     .isactive{
@@ -323,6 +311,7 @@
         width: 100%;
         height: 90%;
         /* background-color: red; */
+        /* margin-top: -50px; */
     }
     .companyBodyTop{
         width: 99%;
