@@ -48,7 +48,7 @@ const CreateRider = () => {
     e.preventDefault();
     setFormErrors(validate(userData));
     // console.log(formErrors)
-    setShowCreateRider(false)
+
 
       try{
         setIsLoading(true)
