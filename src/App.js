@@ -37,7 +37,8 @@ const App = () => {
   const [showPackageDetails, setShowPackageDetails] = useState(false)
   const [companyName, setCompanyName] = useState()
   const [companyFirstLetter, setCompanyFirstLetter] = useState()
-  const [companyPackageId, setCompanyPackageId] = useState(localStorage.getItem("companyPackageId"))
+  // const [companyPackageId, setCompanyPackageId] = useState(localStorage.getItem("companyPackageId"))
+  const [companyPackageId, setCompanyPackageId] = useState()
 
 
 

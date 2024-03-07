@@ -21,7 +21,7 @@ const CreatePackage = () => {
         setUserData({...userData, [name]: value})
         // console.log(userData)
     }
-    
+
 
 
     const theData = {newDestination:userData.destination}
@@ -58,27 +58,74 @@ const CreatePackage = () => {
   }
 
   const [riders, setRiders] = useState([])
+  const [riderId, setRiderId] = useState()
 
   const getAllRiders = 'https://track-it-eight-theta.vercel.app/api/v1/company/allriders'
 
-  useEffect(()=>{
+
+  const chooseRider = ()=>{
+
     axios.get(getAllRiders,
-      {
-        headers: {
-          "Authorization" : `Bearer ${companyToken}`
-       }
-      })
-        .then((res) => {
-          console.log(res.data)
-          setRiders(res.data.riders)
+        {
+          headers: {
+            "Authorization" : `Bearer ${companyToken}`
+         }
         })
-        .catch((err) => {
+          .then((res) => {
+            console.log(res.data)
+            setRiders(res.data.riders)
+            setRiderId(res.data.riders[0].riderId)
+            // console.log(res.data.riders[0].riderId)
+          })
+          .catch((err) => {
+              console.log(err)
+          })
+  }
+
+//   useEffect(()=>{
+//     axios.get(getAllRiders,
+//       {
+//         headers: {
+//           "Authorization" : `Bearer ${companyToken}`
+//        }
+//       })
+//         .then((res) => {
+//           console.log(res.data)
+//           setRiders(res.data.riders)
+//         })
+//         .catch((err) => {
+//             console.log(err)
+//         })
+// }, [])
+
+const assignPackage =  `https://track-it-eight-theta.vercel.app/api/v1/company/assigntorider/${riderId}/${companyPackageId}`
+
+    const handleAssignPackage = async()=>{
+
+        try{
+            const response = await axios.put(assignPackage, {
+              headers: {
+                "Authorization" : `Bearer ${companyToken}`
+             }})
+            console.log(response)
+            
+            Swal.fire({
+              title: "Success!",
+              text: response.data.message,
+              icon: "success",
+              confirmButtonText: "ok",
+              }) 
+        }
+        catch(err){
+          Swal.fire({
+            title: "error!",
+            text: err.response.error,
+            icon: "error",
+            confirmButtonText: "ok",
+            }) 
             console.log(err)
-        })
-}, [])
-
-
-
+        }
+    }
 
   return (
 
@@ -103,19 +150,24 @@ const CreatePackage = () => {
                             />
                             <button className='sendDestinationBtn' onClick={handleSendDestination}>Send</button>
                         </div>
-                        <p>Select Rider</p>
-                        <div className='allRidersHere'>
+                        
+                    </div>
+                    <button className='assignPackageBtn' onClick={chooseRider}>Choose Rider</button>
+                    <div className='allRidersHere'>
                             {
                                 riders.map((riders)=>{
                                     return(
-                                        <div className='theRidersList'>{riders.riderFirstName}</div>
+                                        <div className='theRidersList'>
+                                            <nav>{riders.riderFirstName}</nav>
+                                            <nav>{riders.riderId}</nav>
+                                            <button className='assignBtn' onClick={handleAssignPackage}>Assign</button>
+                                        </div>
                                     )
                                 })
                             }
                         </div>
-                    </div>
                 </div>
-                <button className='assignPackageBtn'>Assign Package</button>
+                
             </div>
         </div>
     

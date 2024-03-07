@@ -163,7 +163,7 @@
 }
 .assignPackageInputPartInput{
     width: 100%;
-    height: 100%;
+    height: 17%;
     /* background-color: red; */
     display: flex;
     flex-direction: column;
@@ -171,7 +171,7 @@
 }
 .destinationInput{
     width: 100%;
-    height: 17%;
+    height: 100%;
     /* background-color: red; */
     display: flex;
     justify-content: space-between;
@@ -202,7 +202,7 @@
 }
 .allRidersHere{
     width: 100%;
-    height: 70%;
+    height: 80%;
     /* background-color: blue; */
     display: flex;
     flex-direction: column;
@@ -211,18 +211,36 @@
 }
 .theRidersList{
     width: 100%;
-    height: 50px;
-    background-color: orange;
+    height: 60px;
+    background-color: rgb(255, 206, 115);
     color: white;
     border-radius: 6px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 17px;
-    font-weight: 500;
+    justify-content: space-between;
     margin-top: 10px;
     margin-bottom: 5px;
+    padding-left: 10px;
+    /* cursor: pointer; */
+}
+.theRidersList > nav{
+    font-size: 17px;
+    font-weight: 500;
+}
+.assignBtn{
+    width: 20%;
+    height: 90%;
+    background-color: orange;
+    border: none;
+    border-radius: 6px;
     cursor: pointer;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Roboto';
+}
+.assignBtn:active{
+    background-color: rgb(220, 143, 0);
 }
 
 
@@ -242,7 +260,7 @@
 
 .assignPackageBtn{
     width: 80%;
-    height: 13%;
+    height: 20%;
     background-color: orange;
     border: none;
     border-radius: 6px;

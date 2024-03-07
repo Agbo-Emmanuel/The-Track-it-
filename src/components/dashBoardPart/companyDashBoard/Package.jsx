@@ -49,7 +49,8 @@ const Package = () => {
               console.log(response)
               setPackages(response.data.pendingPackages)
               // setCompanyPackageId(response.data.pendingPackages.packageId)
-              localStorage.setItem("companyPackageId", response.data.pendingPackages[0]._id)
+              // localStorage.setItem("companyPackageId", response.data.pendingPackages[0]._id)
+              setCompanyPackageId(response.data.pendingPackages[0]._id)
           }
           catch(err){
             console.log(err)
