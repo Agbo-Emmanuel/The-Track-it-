@@ -43,7 +43,7 @@ const CompanyLogin = () => {
 }
 
   const theData = {identifier : userData.riderEmail, riderPassword: userData.riderPassword}
-  const url = "https://track-it-eight-theta.vercel.app/api/v1/company/signIn"
+  const url = "https://track-it-eight-theta.vercel.app/api/v1/company/rider/signIn"
 
 
   const handleLoginAccount = async(e)=>{
