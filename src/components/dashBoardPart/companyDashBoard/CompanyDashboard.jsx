@@ -51,7 +51,6 @@ const CompanyDashboard = () => {
     
       {
         profileShow ? <div className='profileShow'>
-                        <div className='profileShowProfile'>My Profile</div>
                         <button className='profileShowLogoutBtn' onClick={()=>setShowCompanyLogout(true)}>Logout</button>
                       </div> : null
       }

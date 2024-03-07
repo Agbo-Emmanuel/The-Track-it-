@@ -123,6 +123,7 @@ const CompanyLogin = () => {
           </div>
           <button className='loginButton' onClick={handleLoginAccount}>Login</button>
           <p className='linkToLoginPage'>Don't have an Account? <Link to='/companysignup' className='loginLink'>Signup</Link></p>
+          <p><Link>login</Link>as rider</p>
         </div>
       </div>
       {/* <FaSpinner /> */}
